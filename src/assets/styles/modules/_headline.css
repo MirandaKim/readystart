@@ -1,0 +1,16 @@
+.headline {
+
+  &--fixed-margin {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &--extra-large {
+    font-size: 9rem;
+  }
+
+  &--scale-width--large {
+    font-size: 12vw;
+  }
+
+}

@@ -1,0 +1,1 @@
+require('../tmp/modernizr.js');

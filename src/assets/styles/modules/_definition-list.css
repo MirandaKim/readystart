@@ -1,0 +1,16 @@
+.definition-list {
+
+  padding-left: 20px;
+
+  dt {
+    /*display*/
+    display: list-item;
+    /*fancy*/
+    list-style-type: disk;
+  }
+
+  dd {
+    /*spacing*/
+    padding-bottom: 10px;
+  }
+}

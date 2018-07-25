@@ -1,0 +1,76 @@
+
+.link-list {
+  /*spacing*/
+  padding: 0;
+
+  li {
+    /*spacing*/
+    padding-bottom: 20px;
+    /*fancy*/
+    list-style: none;
+  }
+
+  a {
+    /*typography*/
+    text-decoration: none;
+      font-style: normal;
+  }
+
+  &--horiz {
+    li {
+      /*display*/
+      display: inline-block;
+    }
+  }
+
+  &--hang-right {
+    /*position*/
+    float: right;
+  }
+
+  &--no-text-wrap {
+    a {
+      /*typography*/
+      white-space: nowrap;
+    }
+  }
+
+  &--link-full-width {
+
+    a {
+      /*display*/
+      display: block;
+      /*structure*/
+      width: 100%;
+      /*spacing*/
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  &--block-style {
+    li {
+      padding-bottom: 0;
+    }
+    a {
+      padding-left: 15px;
+      padding-right: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+
+  /*******************
+  *  > At Squished   *
+  *******************/
+
+  &--squish-at-squished {
+    @mixin atSquished {
+      a {
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+    }
+  }
+
+}

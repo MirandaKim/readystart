@@ -1,0 +1,17 @@
+.site-body {
+  /*position*/
+  z-index: 0;
+  position: relative;
+  /*structure*/
+
+  /*spacing*/
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @mixin atSmall {
+    /*spacing*/
+    margin-top: 15px;
+    margin-left: 150px;
+  }
+
+}

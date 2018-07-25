@@ -1,0 +1,194 @@
+
+/****************************************************/
+/*                                                 */
+/*   Columns CSS (_columns.css)                   */
+/*                                               */
+/************************************************/
+/*
+
+  - Group all intended columns (pillars) into a group with the class columns
+    and give each pillar the class columns__pillar. This file includes classes
+    for customizing to appearance of these column pillars
+    (e.g. columns__pillar--no-side-margin).
+  - Flexbox is used to help display the columns (but there is a fallback if flexbox isn't desired or available).
+    Tip: Use Modernizr.js to check if flexbox is available to the browser (.has-no-flexbox)
+    (modernizr config: ~/modernizr.config.json)
+    (modernizr gulp task: ~/gulp/tasks/modernizr.task.js)
+  - Pillars are sized to increments of 12.
+    Ex: Class columns__pillar--3o12 will size the column to 3 units (about a forth of the wrapper)
+    Ex: Class columns__pillar--6o12 will size the column to 6 units (about half of the wrapper)
+    Ex: Class columns__pillar--12o12 will size the column to the full width (so... really no point to this one...)
+  - Suggestion:
+    Use class columns__pillar-no-side-margin on the last column of a group
+    so its edge is flush with the edge of the container.
+  - Suggestion:
+    Use class columns--not-for-tiny to vertically stack column pillars
+
+  *************
+  * Contents: *
+  *************
+
+  # Columns
+  # Pillar
+      > Sizing
+      > Spacing
+  # Columns For Tiny Screens
+  # Columns Without Flexbox
+
+*/
+
+/**************************************/
+/*   # Columns                       */
+/************************************/
+
+.columns {
+  /*display*/
+  display: flex;
+  /*position*/
+  position: relative;
+
+  /**************************************/
+  /*   # Pillar                        */
+  /************************************/
+
+  &__pillar {
+    display: inline-block;
+    position: relative;
+    margin-right: 15px;
+
+    /**************
+    *  > Sizing   *
+    **************/
+
+    &--1o12 {
+      flex-grow: 0;
+      width: calc(100% / 12);
+    }
+
+    &--2o12 {
+      flex-grow: 0;
+      width: calc(2*(100% / 12));
+    }
+
+    &--3o12 {
+      flex-grow: 0;
+      width: calc(3*(100% / 12));
+    }
+
+    &--4o12 {
+      flex-grow: 0;
+      width: calc(4*(100% / 12));
+    }
+
+    &--5o12 {
+      flex-grow: 0;
+      width: calc(5*(100% / 12));
+    }
+
+    &--6o12 {
+      flex-grow: 0;
+      width: calc(6*(100% / 12));
+    }
+
+    &--7o12 {
+      flex-grow: 0;
+      width: calc(7*(100% / 12));
+    }
+
+    &--8o12 {
+      flex-grow: 0;
+      width: calc(8*(100% / 12));
+    }
+
+    &--9o12 {
+      flex-grow: 0;
+      width: calc(9*(100% / 12));
+    }
+
+    &--10o12 {
+      flex-grow: 0;
+      width: calc(10*(100% / 12));
+    }
+
+    &--11o12 {
+      flex-grow: 0;
+      width: calc(11*(100% / 12));
+    }
+
+    &--12o12 {
+      flex-grow: 0;
+      width: 100%;
+    }
+
+    /***************
+    *  > Spacing   *
+    ***************/
+
+    &--no-side-margin {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &--side-padding {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    &--full-padding {
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    &--top-margin-for-tiny {
+      @mixin forTiny {
+        margin-top: 15px;
+      }
+    }
+
+  }
+
+  /*****************
+  *  > Alignment   *
+  *****************/
+
+  &--children-align-vert {
+    align-items: center;
+  }
+
+
+}
+
+
+
+/**************************************/
+/*   # Columns For Tiny Screens      */
+/************************************/
+
+@mixin forTiny {
+  .columns--not-for-tiny {
+    display: block;
+      .columns__pillar {
+        width: 100%;
+      }
+    }
+}
+
+/**************************************/
+/*   # Columns Without Flexbox       */
+/************************************/
+
+.has-no-flexbox .columns,
+.columns--no-flex {
+  display: block;
+  position: relative;
+  height: auto;
+  @mixin clearfix;
+
+  .columns__pillar {
+    display: inline-block;
+    position: relative;
+    float: left;
+  }
+}

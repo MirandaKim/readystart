@@ -1,0 +1,53 @@
+.section {
+  display: block;
+  /*position*/
+  position: relative;
+  /*structure*/
+  height: auto;
+  /* min-height: 25vh; */
+  width: 100%;
+  /*spacing*/
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 30px;
+  padding-left: 40px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &__headline {
+
+  }
+
+  &__content {
+
+
+    &--center-vert {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &--extra-margin-bottom {
+    margin-bottom: 100px;
+  }
+
+  @mixin atSmall {
+    /*spacing*/
+    margin-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+
+    &--extra-margin-bottom {
+      margin-bottom: 150px;
+    }
+
+  }
+
+}

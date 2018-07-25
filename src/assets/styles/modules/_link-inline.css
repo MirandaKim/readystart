@@ -1,0 +1,7 @@
+.link-inline {
+  color: rgb($color_textLink_inline);
+  font-style: italic;
+  &:hover {
+    font-style: normal;
+  }
+}

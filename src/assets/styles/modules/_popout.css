@@ -1,0 +1,39 @@
+.popout {
+  padding: 10px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, .2);
+  background-color: rgb($color_neutralMed);
+
+  &--inset {
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, .2);
+  }
+
+
+  &--rounded {
+      border-radius: 5px;
+  }
+
+  &--rounded-nw-se {
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  &--inline {
+    line-height: auto;
+    padding: 2px;
+  }
+
+  &--mild {
+    background-color: rgb($color_accentSec);
+    color: rgb($color_offWhite);
+  }
+
+  &--hot {
+    background-color: rgb($color_attentionMain);
+    color: rgb($color_offWhite);
+  }
+
+  &--text-align-center {
+    text-align: center;
+  }
+
+}

@@ -1,0 +1,49 @@
+
+.--alternate-grey > :nth-child(even) {
+  background-color: rgb($color_grey_light_01);
+}
+
+.--top-margin {
+  margin-top: 15px;
+}
+
+.--full-padding-light {
+  padding: 10px;
+}
+
+.--center-vert {
+  @mixin centerVert;
+}
+
+.--center-align {
+  text-align: center;
+}
+
+
+.--background-light {
+  background-color: rgb($color_neutralLight);
+}
+
+.--background-medium {
+  background-color: rgb($color_neutralMed);
+}
+
+.--background-dark {
+  background-color: rgb($color_neutralDark);
+}
+
+.--background-accent {
+  background-color: rgb($color_accentSec);
+}
+
+.--background-hot {
+  background-color: rgb($color_attentionMain);
+}
+
+.--color-dark {
+  color: rgb($color_offBlack);
+}
+
+.--color-light {
+  color: rgb($color_grey_light_02);
+}

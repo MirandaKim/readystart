@@ -1,0 +1,210 @@
+
+/****************************************************/
+/*                                                 */
+/*   Site Header CSS                              */
+/*                                               */
+/************************************************/
+/*
+
+  - Style for the site header and it's elements
+  - Some elements within the header may be considered separate blocks
+    and will have a separate css file (e.g. logo and main-nav).
+  - The css is handled by PostCSS plugins (see ~/gulp/tasks/styles.task.js)
+
+  *************
+  * Contents: *
+  *************
+
+  # Variables
+  # Site Header
+    > At Small
+  # Logo Wrapper
+    > At Small
+  # Logo Image
+  # Logo Link
+  # Menu Wrapper
+      > At Small
+      > Has No JS
+  # Menu Toggle
+      > At Small
+      > Has No JS
+
+*/
+
+/**************************************/
+/*   # Variables                     */
+/************************************/
+
+$header__menu-transition-time: 1000ms;
+
+/**************************************/
+/*   # Site Header                   */
+/************************************/
+
+.site-header {
+  /*position*/
+  z-index: 500;
+  position: relative;
+  top: 0;
+  /*struture*/
+  width: 100vw;
+  /*spacing*/
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  /****************
+  *  > At Small   *
+  ****************/
+
+  @mixin atSmall {
+    /*position*/
+    position: fixed;
+    /*structure*/
+    height: 100vh;
+    width: 140px;
+    /*spacing*/
+    padding-top: 15px;
+    padding-bottom: 0;
+  }
+
+  /**************************************/
+  /*   # Logo Wrapper                  */
+  /************************************/
+
+  &__logo-wrapper {
+    /*position*/
+    z-index: -1;
+    position: relative;
+    /*structure*/
+    width: 45%;
+    /*spacing*/
+    margin-left: auto;
+    margin-right: auto;
+
+    /****************
+    *  > At Small   *
+    ****************/
+    @mixin atSmall {
+      /*display*/
+      display: inline-block; /*size to width of relative child*/
+      /*structure*/
+      width: auto;
+      /*spacing*/
+      padding-left: 15px;
+    }
+
+    @mixin forTiny {
+      @mixin forLandscape {
+        background-color: green;
+      }
+    }
+
+  }
+
+  /**************************************/
+  /*   # Logo Image                    */
+  /************************************/
+
+  &__logo-image {
+    /*position*/
+    position: relative;
+    /*structure*/
+    height: auto;
+    width: 100%;
+  }
+
+  /**************************************/
+  /*   # Logo Link                     */
+  /************************************/
+
+  &__logo-link {
+    /*position*/
+    z-index: 500;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*structure*/
+    height: 100%;
+    width: 100%;
+  }
+
+
+  /**************************************/
+  /*   # Menu Wrapper                  */
+  /************************************/
+
+  &__menu-wrapper {
+    /*position*/
+    position:relative;
+    left: -50%;
+    /*transform*/
+    /* transform: translateX(-50%); */
+    /*transition*/
+    transition-property: left;
+    transition-duration: $header__menu-transition-time;
+
+    .--menu-visible &{
+      left: 0;
+    }
+
+    /****************
+    *  > At Small   *
+    ****************/
+
+    @mixin atSmall {
+      left: 0;
+      /* transform: translateX(0); */
+    }
+
+
+    /*****************
+    *  > Has No JS   *
+    *****************/
+
+    .has-no-js & {
+      display: none;
+    }
+
+
+  }
+
+  /**************************************/
+  /*   # Menu Toggle                   */
+  /************************************/
+
+  &__menu-toggle {
+    /*position*/
+    position: fixed;
+    top: 10px;
+    /* right: 0; */
+    left: 0;
+    /*structure*/
+    width: 50px;
+    height: 50px;
+    /*transition*/
+    transition-property: left;
+    transition-duration: $header__menu-transition-time;
+
+    .--menu-visible & {
+      left: 50%;
+    }
+
+    /****************
+    *  > At Small   *
+    ****************/
+
+    @mixin atSmall {
+      display: none;
+    }
+
+    /*****************
+    *  > Has No JS   *
+    *****************/
+
+    .has-no-js & {
+      display: none;
+    }
+
+  }
+
+}

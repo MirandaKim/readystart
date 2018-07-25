@@ -1,0 +1,26 @@
+.site-footer {
+  /*display*/
+  display: block;
+  /*position*/
+  position: relative;
+  /*structure*/
+  width: 100vw;
+  height: 100px;
+  /*spacing*/
+  padding: 15px;
+  /*colors*/
+  background-color: rgb($color_accentSec);
+
+  @mixin atSmall {
+    height: 100px;
+  }
+
+}
+
+.site-footer--fixed {
+  /*position*/
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 500;
+}

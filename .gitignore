@@ -16,6 +16,8 @@ node_modules/
 tmp/
 design/
 working/
+.test/
+.trashed/
 
 # OS or Editor folders
 .DS_Store

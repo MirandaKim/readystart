@@ -306,11 +306,34 @@
             <li>Clean task give you a good starting point with elements and selectors you can customize.</li>
             <li>Bare tasks give you the bare bones that you then can fill in as you wish.</li>
           </ul>
-          <p>Want to see the templates before you commit? All template files are located within ~/gulp/templates</p>
-          <p class="popout popout--rounded popout--hot"><strong>WARNING:</strong> These tasks are designed to override existing source content (including this file). Make sure you are ready before running these commands as they may not be reversed. You may want to delete these gulp tasks after initial use to avoid accidentally overriding all of your custom source code. <strong>ALWAYS BACK UP YOUR CODE</strong> (use Git, it's great)!</p>
+          <p class="popout popout--rounded popout--mild">Want to see the templates before you commit? All template files are located within ~/gulp/templates</p>
+          <p class="popout popout--rounded popout--hot"><strong>WARNING:</strong> These tasks are designed to override existing source content (including this file). Make sure you are ready before running these commands. If run by mistake, check for your original files under ~/.trashed.</p>
+          <p class="popout popout--rounded popout--mild">You may want to delete these gulp tasks after initial use to avoid loss of your custom source code. For more information, see ~/gulp/clean-slate/README.md</p>
+          <p class="popout popout--rounded popout--hot"><strong>ALWAYS BACK UP YOUR CODE</strong></p>
           <dl class="definition-list">
-            <dt>X</dt>
-            <dd>XX</dd>
+            <dt>gulp clean</dt>
+            <dd>Console will log a brief summary of the Clean-Slate Clean and what tasks are available. Nothing will be moved/deleted/created.</dd>
+            <!--  -->
+            <dt>gulp clean --html</dt>
+            <dd>Replace the existing html (~/src/index.html) with a template containing useful content to get you going faster. See template ~/gulp/clean-slate/templates/html/index--clean.html</dd>
+            <!--  -->
+            <dt>gulp clean --css</dt>
+            <dd>Replace the existing styles (~/src/assets/styles) with templates containing few css styles and modular files. See style files under ~/gulp/clean-slate/templates/styles/styles--clean</dd>
+            <!--  -->
+            <dt>gulp clean --html --css</dt>
+            <dd>Run both clean html and clean css.</dd>
+            <!--  -->
+            <dt>gulp bare</dt>
+            <dd>Console will log a brief summary of the Clean-Slate Bare and what tasks are available. Nothing will be moved/deleted/created.</dd>
+            <!--  -->
+            <dt>gulp bare --html</dt>
+            <dd>Replace the existing html (~/src/index.html) with a template containing the bare minimals. See template ~/gulp/clean-slate/templates/html/index--bare.html</dd>
+            <!--  -->
+            <dt>gulp bare --css</dt>
+            <dd>Replace the existing styles (~/src/assets/styles) with the bare minimal styles structure. See file structure ~/gulp/clean-slate/templates/styles/styles--bare</dd>
+            <!--  -->
+            <dt>gulp bare --html --css</dt>
+            <dd>Run both bare css and bare html.</dd>
             <!--  -->
           </dl>
         </div>

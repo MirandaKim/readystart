@@ -5,6 +5,10 @@
     margin-bottom: 2rem;
   }
 
+  &--large {
+    font-size: 5rem;
+  }
+
   &--extra-large {
     font-size: 9rem;
   }

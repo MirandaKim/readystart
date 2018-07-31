@@ -10,6 +10,9 @@ require('./gulp/tasks/scripts.task');
 require('./gulp/tasks/styles.task');
 require('./gulp/tasks/watch.task');
 
+/*delete the following clean-slate require statement when done with clean-slate*/
+require('./gulp/clean-slate/index.tasks');
+
 /****************************************************/
 /*                                                 */
 /*   Gulp File (gulpfile.js)                      */

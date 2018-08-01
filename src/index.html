@@ -224,12 +224,21 @@
       <div class="section__content">
         <h2 class="section__headline">Don't forget!</h2>
         <p><em>Wait!</em> Before publishing your site, make sure to check these items off you list!</p>
-        <ul>
+        <ul class="list">
           <li>
             <p>Change the title tag in <b>~/src/index.html</b></p>
           </li>
           <li>
             <p>Make the site accessible! <a href="https://www.w3.org/TR/html-aria/">See the current requirements!</a></p>
+            <p>Here is <em>just some</em> of the things you should consider</p>
+            <ul class="list list__sub-list">
+              <li>Is your site fully functional with just a keyboard? Tab through your links to see. If you have some kind of drag interaction, make sure there is a keyboard alternative.</li>
+              <li>Have a "skip to main content" link at the top of the page/html <em>before</em> your main navigtion.</li>
+              <li>Use strong and em tags when the words need emphasis. Use b and i tags when it's just for style.</li>
+              <li>Don't depend on color alone to convey meaning. Things (such as selected links) should be clear even in grayscale.</li>
+              <li>Be purposeful with your image alts. If the image is a link, describe the destination--not the image itself. If the image is purely decorative, the user does not need an alt description. Set the alt to null if no text is required to prevent screen-readers from reading the image url to the user.</li>
+              <li>Change the default text size if your browser preferences. <b>Does the text size of your site change?</b> If not, try use rem for text sizing. <b>Can you still see everything?</b> Adjust your CSS to accommodate.</li>
+            </ul>
           </li>
           <li>Insert your logo. Or at least delete the placeholder. (<b>~/src/assets/images/logo.png</b>)</li>
           <li>
@@ -301,7 +310,7 @@
         <div class="--background-medium --full-padding-light --top-margin">
           <h3>Clean-Slate</h3>
           <p>Want to start coding, but don't want to clean out all this HTML and CSS that you don't want to use? Here are the tasks for you! These tasks can be run to clean out the source code to varying degrees: </p>
-          <ul>
+          <ul class="list">
             <li>Clean task give you a good starting point with elements and selectors you can customize.</li>
             <li>Bare tasks give you the bare bones that you then can fill in as you wish.</li>
           </ul>

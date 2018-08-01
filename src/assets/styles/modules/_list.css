@@ -1,0 +1,7 @@
+.list {
+
+  &__sub-list {
+    padding-bottom: 30px;
+  }
+
+}

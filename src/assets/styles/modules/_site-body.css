@@ -9,7 +9,7 @@
   padding-right: 10px;
 
   &--restrict-width {
-    max-width: 700px;
+    max-width: 750px;
   }
 
   @mixin atSmall {

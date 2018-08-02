@@ -1,6 +1,5 @@
 const gulp = require('gulp');
 const del = require('del');
-const browserSync = require('browser-sync').create();
 
 require('./copyGeneral.task');
 require('./images.task');
@@ -16,14 +15,12 @@ require('./html.task');
 /*
 
   - Run task 'build' to optimize src content within the dist directory
-  - Run task 'previewDist' to view dist content in the browser
 
   *************
   * Contents: *
   *************
 
   # Configs
-  # Preview Dist
   # Build Sub Tasks
     > Set Prod Env
     > Begin Clean
@@ -37,19 +34,6 @@ require('./html.task');
 
 let distPath = './dist';
 let workingPath = './src';
-
-/*************************************/
-/*   # Preview Dist                 */
-/***********************************/
-
-gulp.task('previewDist', () => {
-  browserSync.init({
-    notify: false,
-    server: {
-      baseDir: 'dist'
-    }
-  });
-});
 
 /*************************************/
 /*   # Build Sub Tasks              */

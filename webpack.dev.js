@@ -18,7 +18,7 @@ const common = require('./webpack.common');
 module.exports = merge(common, {
     mode: 'development',
     output: {
-      path: path.resolve(__dirname, 'tmp/scripts'),
+      path: path.resolve(__dirname, 'tmp/assets/scripts'),
       filename: '[name].js'
     },
 });

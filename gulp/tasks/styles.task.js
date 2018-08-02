@@ -37,7 +37,7 @@ const presetEnv = require('postcss-preset-env');
 /***********************************/
 
 var srcStyles = './src/assets/styles/styles.css';
-var destDev = './tmp/styles';
+var destDev = './tmp/assets/styles';
 var destProd = './dist/assets';
 
 let basePlugins = [ // include plugins common to all process environments

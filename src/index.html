@@ -260,49 +260,80 @@
       <div class="section__content">
         <h2>Available Gulp Tasks</h2>
         <p>To run gulp tasks: in the terminal/command line, navigate into the root directory and enter 'gulp' followed by the command name. Example: <span class="popout popout--inline">gulp watch</span></p>
+        <p>See all the gulp files under <b>~/gulp</b>. The default gulp task is in the file <b>~/gulpfile.js</b></p>
         <div class="columns columns--not-for-tiny">
           <div class="columns__pillar columns__pillar--6o12 columns__pillar--side-padding --background-medium">
             <h3>Development</h3>
             <dl class="definition-list">
-              <dt>(default)</dt>
-              <dd>Trigger dev task then watch</dd>
+              <dt>gulp (default)</dt>
+              <dd>
+                <p>Triggers the tasks "gulp dev" then "gulp watch"</p>
+              </dd>
               <!-- -->
-              <dt>"dev"</dt>
-              <dd>(Dev) Process html/style/script source files using a development environment. The resulting files can be found in ~/tmp. These files are intended for development, not distribution.</dd>
+              <dt>gulp copyGeneral</dt>
+              <dd>
+                <p>Copy general files into the temporary directory (~/tmp)</p>
+              </dd>
               <!-- -->
-              <dt>"watch"</dt>
-              <dd>(Dev)</dd>
+              <dt>gulp dev</dt>
+              <dd>
+                <p>Process html/style/script source files using a development environment. The resulting files can be found in ~/tmp. These files are intended for development, not distribution.</p>
+                <p>This task does not copy over other files such as images. See the other gulp tasks for those functions.</p>
+              </dd>
               <!-- -->
-              <dt>"favicons"</dt>
-              <dd></dd>
+              <dt>gulp favicons</dt>
+              <dd>
+                <p>Create optimized versions of the favicon image file(s) from ~/src/assets/favicons. These optimized images will be placed under ~/tmp</p>
+              </dd>
               <!-- -->
-              <dt>"html"</dt>
-              <dd></dd>
+              <dt>gulp html</dt>
+              <dd>
+                <p>Copy ~/src/index into ~/tmp while injecting script and style addresses.</p>
+              </dd>
               <!-- -->
-              <dt>"images"</dt>
-              <dd></dd>
+              <dt>gulp images</dt>
+              <dd>
+                <p>Create optimized versions of the image files from ~/src/assets/images. These optimized images will be placed under ~/tmp/assets/images</p>
+              </dd>
               <!-- -->
-              <dt>"modernizr"</dt>
-              <dd></dd>
+              <dt>gulp modernizr</dt>
+              <dd>
+                <p>Generate a modernizr script file within the script assets directory (~/src/assets/scripts). The current Vendors.js (~/src/assets/scripts) file imports this file into the site.</p>
+                <p>This task is triggered automatically by the task gulp scripts</p>
+              </dd>
               <!-- -->
-              <dt>"scripts"</dt>
-              <dd></dd>
+              <dt>gulp scripts</dt>
+              <dd>
+                <p>Bundles scripts into a single file under ~/tmp/assets/scripts.</p>
+              </dd>
               <!-- -->
-              <dt>"styles"</dt>
-              <dd></dd>
+              <dt>gulp styles</dt>
+              <dd>
+                <p>Processes PostCSS and bundles script files into a single file under ~/tmp/assets/styles. Several PostCSS plugins are used to form the resulting CSS, including: autoprefixer, postcss-mixins, and postcss-nested.</p>
+              </dd>
+              <!--  -->
+              <dt>gulp watch</dt>
+              <dd>
+                <p>This will run browsersync and open a browser window to view the development version of the site. If no content is displayed, run the task <span class="popout popout--inline popout--rounded-nw-se popout--mild">gulp</span> or <span class="popout popout--inline popout--rounded-nw-se popout--mild">gulp dev</span> first. Then any other copy tasks such as gulp images, gulp favicons, and gulp copyGeneral.</p>
+                <p>While it is running, the watch task will keep an eye on changes to html, js, and css files within the src file and reload or sync the browser so you can see a live version of the development site.</p>
+              </dd>
+              <!-- -->
             </dl>
           </div>
           <div class="columns__pillar columns__pillar--6o12 columns__pillar--side-padding columns__pillar--no-side-margin columns__pillar--top-margin-for-tiny --background-medium">
               <h3>Production</h3>
+              <p><i>Note:</i> Many of the gulp development tasks have a production version that may be accessed by appending '--prod' to the task name. These are not intended to be accessed independently (though possible) but will be triggered via the task: gulp build.</p>
             <dl class="definition-list">
-              <dt>"build"</dt>
-              <dd>(Prod) Run all tasks for greating a full site suitable to a produciton environment in the distribution folder (~/dist).</dd>
+              <dt>gulp build</dt>
+              <dd>
+                <p>Run all tasks for greating a full site suitable to a produciton environment in the distribution folder (~/dist).</p>
+                <p>These tasks include production versions of the gulp development tasks, such as: gulp html--prod, gulp scripts--prod, gulp styles--prod, etc.</p>
+              </dd>
               <!-- -->
-              <dt>"previewDist"</dt>
-              <dd>(Prod) </dd>
-              <!-- -->
-              <dt></dt>
-              <dd></dd>
+              <dt>gulp previewDist</dt>
+              <dd>
+                <p>This will run browsersync and open a browser window to view the distribution/production version of the site. If no content is displayed, run the task <span class="popout popout--inline popout--rounded-nw-se popout--mild">gulp build</span> first to generate the distribution files.</p>
+              </dd>
               <!-- -->
             </dl>
           </div>
@@ -320,28 +351,44 @@
           <p class="popout popout--rounded popout--hot"><strong>ALWAYS BACK UP YOUR CODE</strong></p>
           <dl class="definition-list">
             <dt>gulp clean</dt>
-            <dd>Console will log a brief summary of the Clean-Slate Clean and what tasks are available. Nothing will be moved/deleted/created.</dd>
+            <dd>
+              <p>Console will log a brief summary of the Clean-Slate Clean and what tasks are available. Nothing will be moved/deleted/created.</p>
+            </dd>
             <!--  -->
             <dt>gulp clean --html</dt>
-            <dd>Replace the existing html (~/src/index.html) with a template containing useful content to get you going faster. See template ~/gulp/clean-slate/templates/html/index--clean.html</dd>
+            <dd>
+              <p>Replace the existing html (~/src/index.html) with a template containing useful content to get you going faster. See template ~/gulp/clean-slate/templates/html/index--clean.html</p>
+            </dd>
             <!--  -->
             <dt>gulp clean --css</dt>
-            <dd>Replace the existing styles (~/src/assets/styles) with templates containing few css styles and modular files. See style files under ~/gulp/clean-slate/templates/styles/styles--clean</dd>
+            <dd>
+              <p>Replace the existing styles (~/src/assets/styles) with templates containing few css styles and modular files. See style files under ~/gulp/clean-slate/templates/styles/styles--clean</p>
+            </dd>
             <!--  -->
             <dt>gulp clean --html --css</dt>
-            <dd>Run both clean html and clean css.</dd>
+            <dd>
+              <p>Run both clean html and clean css.</p>
+            </dd>
             <!--  -->
             <dt>gulp bare</dt>
-            <dd>Console will log a brief summary of the Clean-Slate Bare and what tasks are available. Nothing will be moved/deleted/created.</dd>
+            <dd>
+              <p>Console will log a brief summary of the Clean-Slate Bare and what tasks are available. Nothing will be moved/deleted/created.</p>
+            </dd>
             <!--  -->
             <dt>gulp bare --html</dt>
-            <dd>Replace the existing html (~/src/index.html) with a template containing the bare minimals. See template ~/gulp/clean-slate/templates/html/index--bare.html</dd>
+            <dd>
+              <p>Replace the existing html (~/src/index.html) with a template containing the bare minimals. See template ~/gulp/clean-slate/templates/html/index--bare.html</p>
+            </dd>
             <!--  -->
             <dt>gulp bare --css</dt>
-            <dd>Replace the existing styles (~/src/assets/styles) with the bare minimal styles structure. See file structure ~/gulp/clean-slate/templates/styles/styles--bare</dd>
+            <dd>
+              <p>Replace the existing styles (~/src/assets/styles) with the bare minimal styles structure. See file structure ~/gulp/clean-slate/templates/styles/styles--bare</p>
+            </dd>
             <!--  -->
             <dt>gulp bare --html --css</dt>
-            <dd>Run both bare css and bare html.</dd>
+            <dd>
+              <p>Run both bare css and bare html.</p>
+            </dd>
             <!--  -->
           </dl>
         </div>

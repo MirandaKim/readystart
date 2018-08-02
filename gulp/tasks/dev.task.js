@@ -52,9 +52,6 @@ gulp.task('dev', gulp.series(
   'dev_setDevEnv',
   'styles',
   'scripts',
-  // 'images',
-  // 'favicons',
-  'copyGeneral',
   'html',
 (done) => {
   console.log(`

@@ -6,6 +6,7 @@ require('./gulp/tasks/html.task');
 require('./gulp/tasks/images.task')
 require('./gulp/tasks/favicons.task');
 require('./gulp/tasks/modernizr.task');
+require('./gulp/tasks/previewDist.task');
 require('./gulp/tasks/scripts.task');
 require('./gulp/tasks/styles.task');
 require('./gulp/tasks/watch.task');

@@ -30,8 +30,8 @@ let srcRoot = 'src/index.html';
 
 let devDest = 'tmp';
 let devInjectSrc = [
-  'tmp/styles/*.css',
-  'tmp/scripts/*.js'
+  'tmp/assets/styles/*.css',
+  'tmp/assets/scripts/*.js'
 ];
 
 let prodDest = 'dist';

@@ -10,7 +10,8 @@ const htmlmin = require('gulp-htmlmin');
 /*
 
   - Run task 'html' to copy index.html to it's destination while injecting script and style links.
-  - This file contains tasks for both development ('html') and production ('html--prod')
+  - This file contains tasks for both development (gulp html) and production (gulp html--prod)
+  - The task 'gulp html--prod' is intended to be triggere by task 'gulp build' but can be run independently
 
   *************
   * Contents: *
@@ -26,16 +27,16 @@ const htmlmin = require('gulp-htmlmin');
 /*   # Configs                      */
 /***********************************/
 
-let srcRoot = 'src/index.html';
+let srcRoot = 'src/index.html'; // location of src index.html
 
-let devDest = 'tmp';
-let devInjectSrc = [
+let devDest = 'tmp'; // development destination
+let devInjectSrc = [ // files to inject into the development index.html
   'tmp/assets/styles/*.css',
   'tmp/assets/scripts/*.js'
 ];
 
-let prodDest = 'dist';
-let prodInjectSrc = [
+let prodDest = 'dist'; // production destination
+let prodInjectSrc = [ // files to inject into the production index.html
   'dist/**/*.js',
   'dist/**/*.css'
 ];
@@ -48,6 +49,9 @@ let prodInjectSrc = [
 *  > Development   *
 *******************/
 
+/*
+  Copy html file(s) to development destination and inject style/script files
+*/
 gulp.task('html', gulp.series(() => {
   return gulp.src(srcRoot) // get index template from src
   .pipe(gulp.dest(devDest)) // copy it into the destination directory
@@ -63,6 +67,9 @@ gulp.task('html', gulp.series(() => {
 *  > Production   *
 ******************/
 
+/*
+  Copy html file(s) to production destination and inject style/script files
+*/
 gulp.task('html--prod', gulp.series(() => {
   return gulp.src(srcRoot) // get index template from src
   .pipe(gulp.dest(prodDest)) // copy it into the destination directory

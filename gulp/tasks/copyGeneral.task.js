@@ -9,7 +9,9 @@ const gulp = require('gulp');
 
   - Task for moving general files to the destination directory.
     These are files that would not otherwise be moved by the styles, scripts, index, or image processing tasks.
-  - This file contains a task for development (copyGeneral) and a task for production (copyGeneral--prod)
+  - No optimization is included in these tasks.
+  - This file contains a task for development (gulp copyGeneral) and a task for production (gulp copyGeneral--prod)
+  - Task 'gulp copyGeneral--prod' is intened to run from task 'gulp build' but can be run independently
 
   *************
   * Contents: *
@@ -26,10 +28,10 @@ const gulp = require('gulp');
 /*   # Configs                      */
 /***********************************/
 
-let devDest = 'tmp';
-let prodDest = 'dist';
+let devDest = 'tmp'; // development destination
+let prodDest = 'dist'; // production destination
 
-let copyPaths = [
+let copyPaths = [ // Paths to copy, and NOT copy (!)
   // Paths to copy:
   `.src/**/*`,
   // Exclude from copy:
@@ -50,6 +52,9 @@ let copyPaths = [
 *  > Development   *
 *******************/
 
+/*
+  Copy general files to the development destination
+*/
 gulp.task('copyGeneral', gulp.series(() => {
   console.log(`Copying General to directory ${devDest}`);
   return gulp.src(copyPaths)
@@ -60,6 +65,9 @@ gulp.task('copyGeneral', gulp.series(() => {
 *  > Production   *
 *******************/
 
+/*
+  Copy general files to the production destination
+*/
 gulp.task('copyGeneral--prod', gulp.series(() => {
   console.log(`Copying General to directory ${prodDest}`);
   return gulp.src(copyPaths)

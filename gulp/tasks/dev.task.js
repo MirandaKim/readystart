@@ -14,7 +14,10 @@ require('./html.task');
 /************************************************/
 /*
 
-  - Run task 'dev' to process src files into a tmp directory for development
+  - Run task 'dev' to process src files into a tmp directory for development (~/tmp)
+  - The task will set the environment then call a series of other tasks.
+  - This task does not include copying over image files and general files,
+    those tasks should be called separately
 
 
   *************
@@ -37,10 +40,13 @@ require('./html.task');
 *  > Set Dev Env   *
 *******************/
 
+/*
+  Set node environment to development
+*/
 gulp.task('dev_setDevEnv', gulp.series((done) => {
-  let envVal = "development";
+  let envVal = "development"; // environment value
   console.log(`Environment set to "${envVal}"`);
-  process.env.NODE_ENV = envVal;
+  process.env.NODE_ENV = envVal; // set environment value
   done();
 }));
 
@@ -48,16 +54,19 @@ gulp.task('dev_setDevEnv', gulp.series((done) => {
 /*   # Dev Task                     */
 /***********************************/
 
-gulp.task('dev', gulp.series(
-  'dev_setDevEnv',
-  'styles',
-  'scripts',
-  'html',
+/*
+  Run series of development tasks
+*/
+gulp.task('dev', gulp.series( // run list of synchronous tasks
+  'dev_setDevEnv', // set development environment
+  'styles', // run styles task (development)
+  'scripts', // run scripts task (development)
+  'html', // run html task (development)
 (done) => {
   console.log(`
-      -- --- ---------------------- --- --
-      -- --- BUILD COMPLETE (~/tmp) --- --
-      -- --- ---------------------- --- --
+      -- --- ---------------------------------- --- --
+      -- --- Development Build Complete (~/tmp) --- --
+      -- --- ---------------------------------- --- --
       `);
   done();
 }));

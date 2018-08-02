@@ -9,10 +9,12 @@ const browserSync = require('browser-sync').create();
 /************************************************/
 /*
 
-  - Watch tasks intend to update the browser when changes are made to
-    the specified files. These updates will trigger either a broser refresh
-    or an injection (files changed without refresh).
+  - Watch tasks intend to update the browser when changes are made to the specified files.
+    These updates will trigger either a browser refresh or an injection (files changed without refresh).
   - Watch task uses BrowserSync to connect with the browser(s)
+  - This watch task only preview the generated development files. If no content is displayed,
+    run 'gulp dev' (and optional: 'gulp images', 'gulp favicons', 'gulp copyGeneral'...).
+  - To preview the production site, see gulp task previewDist (~/gulp/tasks/previewDist.task.js)
 
   *************
   * Contents: *
@@ -30,6 +32,9 @@ const browserSync = require('browser-sync').create();
 /*   # Watch Task              */
 /******************************/
 
+/*
+  Use a port to preview the development files while watching for changes.
+*/
 gulp.task('watch', gulp.series(() => {
   browserSync.init({
     notify: false,

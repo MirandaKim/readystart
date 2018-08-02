@@ -11,8 +11,10 @@ require('./modernizr.task');
 /************************************************/
 /*
 
-  - Gulp task for managing/bundling script files.
-  - Webpack is used for bundling, see webpack.config.js at root for more details.
+  - Gulp task for processing/bundling script files.
+  - This file contains a task for development (gulp scripts) and a task for production (gulp scripts--prod)
+  - Task 'gulp scripts--prod' is intened to run from task 'gulp build' but can be run independently
+  - Webpack is used for bundling, see webpack.<env>.js at root for more details.
 
   *************
   * Contents: *
@@ -30,8 +32,8 @@ require('./modernizr.task');
 /*   # Configs                      */
 /***********************************/
 
-  let webpackDev = '../../webpack.dev.js';
-  let webpackProd = '../../webpack.prod.js';
+  let webpackDev = '../../webpack.dev.js'; // Location of webpack config for development environment
+  let webpackProd = '../../webpack.prod.js'; // Location fo webpack config for production environment
 
 /*************************************/
 /*   # Scripts Task                 */
@@ -41,6 +43,9 @@ require('./modernizr.task');
 *  > Development   *
 *******************/
 
+/*
+  Process and bundle script files into the development destination
+*/
 gulp.task('scripts', gulp.series('modernizr',(done) => {
   webpack(require(webpackDev), (err, stats) => {
     handleResults(err, stats);
@@ -52,6 +57,9 @@ gulp.task('scripts', gulp.series('modernizr',(done) => {
 *  > Production   *
 ******************/
 
+/*
+  Process and bundle script files into the production destination
+*/
 gulp.task('scripts--prod', gulp.series('modernizr', (done) => {
   webpack(require(webpackProd), (err, stats) => {
     handleResults(err, stats);

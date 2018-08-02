@@ -16,10 +16,12 @@ const presetEnv = require('postcss-preset-env');
 /************************************************/
 /*
 
-  - Postcss is used to process the style files.
-  - An error handler is included so browserSync will not be interrupted
-    if watch task is active
-  - This file contains a task for development (styles) and a task for production (styles--prod)
+  - Postcss is used to process the style files. See "Configs" below for list of PostCSS plugins.
+  - An error handler is included so browsersync will not be interrupted if watch task is active
+  - This file contains a task for development (gulp styles) and a task for production (gulp styles--prod)
+  - Task 'gulp styles--prod' is intened to run from task 'gulp build' but can be run independently
+  - There may by a PostCSS config file at the root of the file, but that was intentionally created
+    and left without logic to prevent an error. All PostCSS config should be located in this file.
 
   *************
   * Contents: *
@@ -36,9 +38,10 @@ const presetEnv = require('postcss-preset-env');
 /*   # Configs                      */
 /***********************************/
 
-var srcStyles = './src/assets/styles/styles.css';
-var destDev = './tmp/assets/styles';
-var destProd = './dist/assets';
+var srcStyles = './src/assets/styles/styles.css'; // style source files
+
+var destDev = './tmp/assets/styles'; // development destination for processed style files
+var destProd = './dist/assets'; // production destination for processed style files
 
 let basePlugins = [ // include plugins common to all process environments
   cssImport,
@@ -62,10 +65,12 @@ let prodPlugins = []; // include any plugins unique to the production environmen
 *  > Development   *
 *******************/
 
+/*
+  Process and bundle styles files into development destination
+*/
 gulp.task('styles', gulp.series(() => {
   console.log('Loading styles for a development environment...');
   let plugins = basePlugins.concat(devPlugins);
-  console.log(`Post CSS plugin count: ${plugins.length}`);
   return gulp.src(srcStyles)
   .pipe(postcss(plugins)) // postcss processing
   .on('error', function(errorInfo){ // hande error (keep the watch task from breaking)
@@ -79,10 +84,12 @@ gulp.task('styles', gulp.series(() => {
 *  > Production   *
 *******************/
 
+/*
+  Process, bundle and minimize style files into production destination
+*/
 gulp.task('styles--prod', gulp.series(() => {
   console.log('Loading styles for a production environment...');
   let plugins = basePlugins.concat(prodPlugins);
-  console.log(`Post CSS plugin count: ${plugins.length}`);
   return gulp.src(srcStyles)
   .pipe(postcss(plugins)) // postcss processing
   .pipe(cssnano()) // minimize resulting css

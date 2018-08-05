@@ -4,7 +4,7 @@ import $ from 'jquery';
 import CheckHasTouch from './modules/CheckHasTouch.class';
 import NavDisplay from './modules/NavDisplay.class';
 import SectionChange from './modules/SectionChange.class';
-/* import StickyHeader from './modules/StickyHeader.class';*/ // (disabled)
+// import StickyOnScroll from './modules/StickyOnScroll.class'; // disabled, but functional
 
 /****************************************************/
 /*                                                 */
@@ -19,9 +19,9 @@ import SectionChange from './modules/SectionChange.class';
       + Modernizr (via ./Vendors.js)
       + Section change on scroll and link click (using class names for active link)
       + Toggle display of menu (using class names)
-      + Sticky header created on scroll (using class names)
-  - Sticky Header has been disabled because the current design does not require
-    the header to change on scroll, but the module should be functional if desired in future design.
+      + Sticky On Scroll for creating "sticky" elements like banners/headers/menus (using class names)
+  - Sticky On Scroll has been disabled because the current design does not require
+    any elements to change on scroll, but the module should be functional if desired in future design.
 
 
   *************
@@ -33,7 +33,7 @@ import SectionChange from './modules/SectionChange.class';
   # Detect Touch
   # Navigation Display
   # Section Change
-  # Sticky Header (disabled)
+  # Sticky On Scroll (disabled)
 
 */
 
@@ -73,6 +73,11 @@ checkHasTouch.detect(); // the watch event is unbound once a touch event is fire
 /*   # Navigation Display            */
 /************************************/
 
+/*
+  Create user events to toggle the display of the menu navigation.
+  The display is based on class names--thus is dependent on CSS
+  for any change in position, visibility, or animations.
+*/
 let body_visibleMenuClassStr = '--menu-visible';
 let mainNav_visibleClassStr = `${mainNav_block}--visible`;
 let mainNav_toggleSelectors = [`.site-header__menu-toggle`];
@@ -89,7 +94,13 @@ navDisplay.setEvents({ // See NavDisplay.class.js for config options.
 /**************************************/
 /*   # Section Change                */
 /************************************/
-
+/*
+  Change the active section of content based on which link is clicked or where the user scrolls to.
+  This includes:
+    - Adding/removing active classes to anchor links
+    - Setting the focus to the atice section
+    - Changing the section indicator in the body tag (data-section=0)
+*/
 let section_selector = '.section';
 let section_activeLinkClassStr = `active ${mainNav_block}__link--active`;
 
@@ -100,15 +111,16 @@ sectionChange.setEvents();
 
 
 /**************************************/
-/*   # Sticky Header                 */
+/*   # Sticky On Scroll              */
 /************************************/
 
 /*
-let header_block = 'site-header';
-let header_selector = `.${header_block}`;
-let sticky_triggerPtSelector = '.trigger-sticky';
-let sticky_classStr = `sticky ${header_block}--sticky`;
-
-let stickyHeader = new StickyHeader(header_selector, sticky_triggerPtSelector, sticky_classStr);
-stickyHeader.setEvents();
+  DEV NOTE:
+  The following Sticky On Scroll logic is disabled because it's not used for this design.
+  To use: Uncomment the following two lines of code, and uncomment the StickyOnScroll import statement at the top.
+  Give your sticky elements the class name 'make-sticky' and a trigger element the class 'trigger-sticky'.
+  The sticky elements should receive the class '--sticky' when the user scrolls to the trigger element.
+  See the StickyOnScroll module (./modules/StickyOnScroll.class.js) for more information and customization options.
 */
+// let stickyOnScroll = new StickyOnScroll();
+// stickyOnScroll.execute();

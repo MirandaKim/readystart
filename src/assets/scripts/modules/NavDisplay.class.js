@@ -67,6 +67,9 @@ class NavDisplay {
     /**************************
     *   > Set Toggle Events   *
     **************************/
+    /*
+    Set the events for which elements will TOGGLE the menu display class when clicked
+    */
     _setToggleEvents(selectors = []){
       for(let selector of selectors){
         $(selector).click(() => {
@@ -79,6 +82,9 @@ class NavDisplay {
     /*************************
     *   > Set Close Events   *
     *************************/
+    /*
+    Set the events for which element will REMOVE the menu display class when clicked
+    */
     _setCloseEvents(selectors = []){
       for(let selector of selectors){
         $(selector).click(() => {
@@ -91,6 +97,9 @@ class NavDisplay {
     /************************
     *   > Set Open Events   *
     ************************/
+    /*
+    Set the events for which elements will ADD the menu display class when clicked
+    */
     _setOpenEvents(selectors = []){
       for(let selector of selectors){
         $(selector).click(() => {

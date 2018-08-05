@@ -8,7 +8,7 @@ import SectionChange from './modules/SectionChange.class';
 
 /****************************************************/
 /*                                                 */
-/*   APP.js                                       */
+/*   App.js                                       */
 /*                                               */
 /************************************************/
 /*
@@ -41,7 +41,17 @@ import SectionChange from './modules/SectionChange.class';
 /*   # Has No JS                     */
 /************************************/
 
+/*
+  Swap JS Indicator Class
+  Since we've reached this point, the device must have JS
+  so we will swap the has-no-js class for a has-js class.
+  This call may be used is CSS to style accordingly.
+  (Remember: If an element's display is controlled by js,
+  a device may not be able to reach that element if js is
+  not enabled.)
+*/
 document.body.classList.remove('has-no-js');
+document.body.classList.add('has-js');
 
 /**************************************/
 /*   # Common Vars                   */

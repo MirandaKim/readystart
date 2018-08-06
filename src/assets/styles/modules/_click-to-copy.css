@@ -1,0 +1,7 @@
+.click-to-copy {
+  cursor: pointer;
+  /*
+  Consider creating pseudo elements (before/after)
+  to show "copy" on hover with an animation when clicked.
+  */
+}

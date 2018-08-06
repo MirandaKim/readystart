@@ -23,6 +23,7 @@
 @import './modules/_link-inline';
 @import './modules/_headline';
 @import './modules/_list';
+@import './modules/_click-to-copy';
 /*target elements*/
 @import './modules/_body';
 @import './modules/_site-body';

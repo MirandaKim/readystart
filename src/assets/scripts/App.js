@@ -5,6 +5,7 @@ import CheckHasTouch from './modules/CheckHasTouch.class';
 import NavDisplay from './modules/NavDisplay.class';
 import SectionChange from './modules/SectionChange.class';
 // import StickyOnScroll from './modules/StickyOnScroll.class'; // disabled, but functional
+import ClickToCopy from './modules/ClickToCopy.class';
 
 /****************************************************/
 /*                                                 */
@@ -20,6 +21,7 @@ import SectionChange from './modules/SectionChange.class';
       + Section change on scroll and link click (using class names for active link)
       + Toggle display of menu (using class names)
       + Sticky On Scroll for creating "sticky" elements like banners/headers/menus (using class names)
+      + Click To Copy, add the class 'click-to-copy' to an element and it's contents will be copied when clicked.
   - Sticky On Scroll has been disabled because the current design does not require
     any elements to change on scroll, but the module should be functional if desired in future design.
 
@@ -34,6 +36,7 @@ import SectionChange from './modules/SectionChange.class';
   # Navigation Display
   # Section Change
   # Sticky On Scroll (disabled)
+  # Click To Copy
 
 */
 
@@ -124,3 +127,10 @@ sectionChange.setEvents();
 */
 // let stickyOnScroll = new StickyOnScroll();
 // stickyOnScroll.execute();
+
+/**************************************/
+/*   # Click To Copy                 */
+/************************************/
+
+let clickToCopy = new ClickToCopy();
+clickToCopy.setEvents();

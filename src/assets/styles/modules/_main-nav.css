@@ -32,9 +32,7 @@
   position: relative;
   top: 0;
   /*structure*/
-  /* height: 100vh; */
   height: 100%;
-  /* width: 50%; */
   width: 100%;
   /*colors*/
   background-color: rgba($color_offWhite, .95);
@@ -48,8 +46,6 @@
   @mixin atSmall {
     /*position*/
     position: relative;
-    /*structure*/
-    width: 100%;
     /*spacing*/
     padding-left: 5px;
     padding-right: 10px;

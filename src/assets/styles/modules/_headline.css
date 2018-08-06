@@ -13,8 +13,16 @@
     font-size: 9rem;
   }
 
+
+
   &--scale-width--large {
     font-size: 12vw;
+  }
+
+  @mixin forTiny {
+    &--med-for-tiny {
+      font-size: 3rem;
+    }
   }
 
 }

@@ -19,8 +19,10 @@
   # Variables
   # Site Header
     > At Small
+    > Tiny Landscape
   # Logo Wrapper
     > At Small
+    > For Tiny
   # Logo Image
   # Logo Link
   # Menu Wrapper
@@ -68,6 +70,17 @@ $header__menu-transition-time: 1000ms;
     padding-bottom: 0;
   }
 
+  /**********************
+  *  > Tiny Landscape   *
+  **********************/
+
+  @mixin forTiny {
+    @mixin forLandscape {
+      padding-top: 10px;
+      padding-bottom: 0px;
+    }
+  }
+
   /**************************************/
   /*   # Logo Wrapper                  */
   /************************************/
@@ -81,7 +94,7 @@ $header__menu-transition-time: 1000ms;
     /*spacing*/
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 20px;
+    padding-bottom: 0;
 
     /****************
     *  > At Small   *
@@ -96,11 +109,21 @@ $header__menu-transition-time: 1000ms;
       padding-bottom: 0;
     }
 
+    /****************
+    *  > For Tiny   *
+    ****************/
+
     @mixin forTiny {
       @mixin forLandscape {
-        background-color: green;
+        width: 20%;
       }
+
+      .has-no-js &--padding-bottom-for-no-js {
+        padding-bottom: 30px;
+      }
+
     }
+
 
   }
 

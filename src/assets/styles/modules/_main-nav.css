@@ -18,7 +18,7 @@
   # Link
     > At Small
     > Hover (Small+ only)
-  # Link Displaced Till Focus
+  # Link Displaced Till Focus (Skip to main content)
 
 */
 
@@ -57,6 +57,11 @@
   /**************************************/
   /*   # Link                          */
   /************************************/
+
+  &__links {
+    /*spacing*/
+    margin-top: 0;
+  }
 
   &__link {
 
@@ -147,14 +152,25 @@
     transform: translateX(-110%);
     transition-property: transform;
     transition-duration: 500ms;
+    opacity: 0;
 
     &::before {
       display: none;
     }
 
     &:focus {
-      /* left: 0; */
+      opacity: 1;
       transform: translateX(0);
+    }
+
+
+    @mixin atCrushed {
+      .site-header--columns-at-crushed & {
+        transform: translateX(-200%);
+      }
+      .site-header--columns-at-crushed &:focus {
+        transform: translateX(-80%);
+      }
     }
   }
 }

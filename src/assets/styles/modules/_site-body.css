@@ -25,4 +25,13 @@
     }
   }
 
+  @mixin atCrushed {
+    &--left-space-at-crushed {
+      width: auto;
+      max-width: unset;
+      margin-left: 250px;
+      /* margin-right: inherit; */
+    }
+  }
+
 }

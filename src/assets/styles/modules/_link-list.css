@@ -73,6 +73,19 @@
     }
   }
 
+  /******************
+  *  > At Pancake   *
+  ******************/
+
+  &--ex-squish-at-pancake {
+    @mixin atPancake {
+      a {
+        padding-top: 2px;
+        padding-bottom: 2px;
+      }
+    }
+  }
+
   /*****************
   *  > Has No JS   *
   *****************/

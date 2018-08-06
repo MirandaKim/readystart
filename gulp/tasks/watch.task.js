@@ -68,7 +68,7 @@ gulp.task('watch', gulp.series(() => {
   (this will update the browser window to the current css WITHOUT refreshing)
   */
   watch('./src/assets/styles/**/*.css', gulp.series('styles', () => {
-    return gulp.src('./tmp/styles/styles.css')
+    return gulp.src('./tmp/assets/styles/styles.css')
     .pipe(browserSync.stream());
   }));
 }));

@@ -1,1 +1,23 @@
-.link {}
+.link {
+
+   color: rgb($color_textLink_inline);
+
+   font-style: italic;
+
+
+     .has-no-touch &:hover{
+       font-style: normal;
+       font-weight: bolder;
+     }
+
+   &--inline {
+
+
+   }
+
+   &--light {
+     color: rgb($color_neutralLight);
+   }
+
+
+}

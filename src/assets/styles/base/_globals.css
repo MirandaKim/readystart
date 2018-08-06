@@ -11,17 +11,3 @@ p, div, li {}
 p, dd, li {
   line-height: 1.5;
 }
-
-p a,
-li a,
-dd a {
-  color: rgb($color_textLink_inline);
-  font-style: italic;
-
-  @mixin atSmall {
-    &:hover{
-      font-style: normal;
-      font-weight: bolder;
-    }
-  }
-}

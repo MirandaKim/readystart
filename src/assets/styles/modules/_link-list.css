@@ -73,4 +73,12 @@
     }
   }
 
+  /*****************
+  *  > Has No JS   *
+  *****************/
+
+  .has-no-js &--center-text-for-no-js {
+    text-align: center;
+  }
+
 }

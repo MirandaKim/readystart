@@ -1,5 +1,4 @@
 
-
 /****************************************************/
 /*                                                 */
 /*   Main Navication CSS                          */
@@ -7,7 +6,8 @@
 /************************************************/
 /*
 
-  -
+  Style for the main navigation menu/links.
+  The following styles account for screen size and touch events.
 
   *************
   * Contents: *
@@ -29,13 +29,13 @@
 .main-nav {
   cursor: pointer;
   /*position*/
-  position: fixed;
+  position: relative;
   top: 0;
   /*structure*/
-  height: 100vh;
-  width: 50%;
-  /*spacing*/
-
+  /* height: 100vh; */
+  height: 100%;
+  /* width: 50%; */
+  width: 100%;
   /*colors*/
   background-color: rgba($color_offWhite, .95);
   /*overflow*/
@@ -75,21 +75,23 @@
 
     @mixin atSmall {
       &::before {
+        /*variables*/
         $border-size: 8px;
-        z-index: -1;
+        /*content*/
         content: "";
-        /* display: inline-block; */
+        /*display*/
         display: none;
+        /*position*/
+        z-index: -1;
         position: absolute;
+        top: 50%;
+        left: 0;
+        /*structure*/
         width: 0;
         height: 0;
-        /* border-radius: 50%; */
-        /* margin-right: 5px; */
-        top: 50%;
-        /* left: -12px; */
-        left: 0;
+        /*transform*/
         transform: translateY(-50%);
-
+        /*borders*/
         border-style: solid;
         border-color: rgb($color_accentTir);
         border-left-width: $border-size;
@@ -121,7 +123,6 @@
     *******************/
 
     &--active {
-
 
       color: rgb($color_offWhite);
       background-color: rgb($color_accentMain);

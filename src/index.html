@@ -43,7 +43,7 @@
     <div class="site-header__menu-wrapper">
       <nav class="main-nav">
         <a href="#welcome" class="main-nav__link main-nav__link--displace-till-focus">Skip to main content</a>
-        <ul class="main-nav__links link-list link-list--no-text-wrap link-list--link-full-width link-list--block-style link-list--squish-at-squished link-list--ex-squish-at-pancake link-list--center-text-for-no-js-tiny">
+        <ul class="main-nav__links list list--links list--link-no-text-wrap list--links--link-full-width list--links--block-style list--links-squish-at-squished list--links-ex-squish-at-pancake list--center-text-for-no-js-tiny">
           <li><a id="welcome-link" href="#welcome" class="main-nav__link">Welcome</a></li>
           <li><a id="get-started-link" href="#get-started" class="main-nav__link">Get Started</a></li>
           <li><a id="structure-overview-link" href="#structure-overview" class="main-nav__link">The Structure</a></li>
@@ -78,7 +78,7 @@
       <div class="section__content">
         <h2 class="section__headline">The Structure</h2>
         <p>Here is an overview of the file structure to give you an idea of what they are for and where to find stuff.</p>
-        <dl class="definition-list">
+        <dl class="list list--definitions">
           <dt>~/src</dt>
           <dd>
             <p>This is the working directory. Make your changes within this directory then propagate those changes using the available gulp tasks.</p>
@@ -124,7 +124,7 @@
       <div class="section__content">
         <h2 class="section__headline">Useful Tools</h2>
         <p>Here are a list of modules already incorporated in this site to make life a it easier. Based on when this is used, some of these modules may need to be updated or replaced.</p>
-        <dl class="definition-list">
+        <dl class="list list--definitions">
           <dt>Gulp</dt>
           <dd>
             <p>"Gulp is a toolkit for automating painful or time-consuming tasks in your development workflow, so you can stop messing around and build something." See more at <a class="link link--inline link--dot-on-hover" href="https://gulpjs.com/">gulpjs.com/</a></p>
@@ -273,7 +273,7 @@
         <div class="columns columns--not-for-tiny">
           <div class="columns__pillar columns__pillar--6o12 columns__pillar--side-padding --background-medium">
             <h3>Development</h3>
-            <dl class="definition-list">
+            <dl class="list list--definitions">
               <dt>gulp (default)</dt>
               <dd>
                 <p>Triggers the tasks "gulp dev" then "gulp watch"</p>
@@ -332,7 +332,7 @@
           <div class="columns__pillar columns__pillar--6o12 columns__pillar--side-padding columns__pillar--no-side-margin columns__pillar--top-margin-for-tiny --background-medium">
               <h3>Production</h3>
               <p><i>Note:</i> Many of the gulp development tasks have a production version that may be accessed by appending '--prod' to the task name. These are not intended to be accessed independently (though possible) but will be triggered via the task: gulp build.</p>
-            <dl class="definition-list">
+            <dl class="list list--definitions">
               <dt>gulp build</dt>
               <dd>
                 <p>Run all tasks for greating a full site suitable to a produciton environment in the distribution folder (~/dist).</p>
@@ -358,7 +358,7 @@
           <p class="popout popout--rounded popout--hot"><strong>WARNING:</strong> These tasks are designed to override existing source content (including this file). Make sure you are ready before running these commands. If run by mistake, check for your original files under ~/.trashed.</p>
           <p class="popout popout--rounded popout--mild">You may want to delete these gulp tasks after initial use to avoid loss of your custom source code. For more information, see ~/gulp/clean-slate/README.md</p>
           <p class="popout popout--rounded popout--hot"><strong>ALWAYS BACK UP YOUR CODE</strong></p>
-          <dl class="definition-list">
+          <dl class="list list--definitions">
             <dt>gulp clean</dt>
             <dd>
               <p>Console will log a brief summary of the Clean-Slate Clean and what tasks are available. Nothing will be moved/deleted/created.</p>

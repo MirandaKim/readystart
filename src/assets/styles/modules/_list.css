@@ -1,7 +1,195 @@
+
+/****************************************************/
+/*                                                 */
+/*   List CSS                                     */
+/*                                               */
+/************************************************/
+/*
+
+  - Styles for lists.
+  - These styles can be applied to tags like ul, ol, and dl.
+  - Example of class use:
+      <dl class="list list--definitions list--hang-right">...</dl>
+
+  *************
+  * Contents: *
+  *************
+
+  # List
+    > Horizontal
+    > Hang Right
+    > Has No JS
+  # Sub List
+  # Link List
+    > Full Width
+    > No Text Wrap
+    > Block Style
+    > At Squished
+    > At Pancake
+  # Definition List
+
+*/
+
+/**************************************/
+/*   # List                          */
+/************************************/
+
 .list {
+
+  /******************
+  *  > Horizontal   *
+  ******************/
+
+  &--horiz {
+    li {
+      /*display*/
+      display: inline-block;
+    }
+  }
+
+  /******************
+  *  > Hang Right   *
+  ******************/
+
+  &--hang-right {
+    /*position*/
+    float: right;
+  }
+
+
+
+  /*****************
+  *  > Has No JS   *
+  *****************/
+
+  .has-no-js &--center-text-for-no-js-tiny {
+    @mixin forTiny {
+      text-align: center;
+    }
+  }
+
+  /**************************************/
+  /*   # Sub List                      */
+  /************************************/
 
   &__sub-list {
     padding-bottom: 30px;
   }
+
+
+  /**************************************/
+  /*   # Link List                     */
+  /************************************/
+
+  &--links {
+    /*spacing*/
+    padding: 0;
+
+    li {
+      /*spacing*/
+      padding-bottom: 20px;
+      /*fancy*/
+      list-style: none;
+    }
+
+    a {
+      /*typography*/
+      text-decoration: none;
+        font-style: normal;
+    }
+
+    /******************
+    *  > Full Width   *
+    ******************/
+
+    &--link-full-width {
+
+      a {
+        /*display*/
+        display: block;
+        /*structure*/
+        width: 100%;
+        /*spacing*/
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+    /********************
+    *  > No Text Wrap   *
+    ********************/
+
+    &--link-no-text-wrap {
+      a {
+        /*typography*/
+        white-space: nowrap;
+      }
+    }
+
+    /*******************
+    *  > Block Style   *
+    *******************/
+
+    &--block-style {
+      li {
+        padding-bottom: 0;
+      }
+      a {
+        padding-left: 15px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    }
+
+    /*******************
+    *  > At Squished   *
+    *******************/
+
+    &--links-squish-at-squished {
+      @mixin atSquished {
+        a {
+          padding-top: 5px;
+          padding-bottom: 5px;
+        }
+      }
+    }
+
+    /******************
+    *  > At Pancake   *
+    ******************/
+
+    &--links-ex-squish-at-pancake {
+      @mixin atPancake {
+        a {
+          padding-top: 2px;
+          padding-bottom: 2px;
+        }
+      }
+    }
+
+  }
+
+  /**************************************/
+  /*   # Definition List               */
+  /************************************/
+
+  &--definitions {
+
+    padding-left: 20px;
+
+    dt {
+      /*display*/
+      display: list-item;
+      /*list style*/
+      list-style-type: disk;
+    }
+
+    dd {
+      /*spacing*/
+      padding-bottom: 10px;
+    }
+  }
+
 
 }

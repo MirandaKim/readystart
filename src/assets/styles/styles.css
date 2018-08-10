@@ -1,29 +1,60 @@
-/****************/
-/*   Vendors   */
-/**************/
+
+/****************************************************/
+/*                                                 */
+/*   Styles (styles.css)                          */
+/*                                               */
+/************************************************/
+/*
+
+  - Import style files in here!
+  - This file is being accessed by other processes such as PostCSS, Webpack, and Modernizr.
+    If any styles are not imported into this file, they may not appear on the site.
+  - Remember, the order these files are imported in may make a difference.
+
+  *************
+  * Contents: *
+  *************
+
+  # Vendors
+  # Base
+  # Modules
+    > General Elements
+    > Target Elements
+*/
+
+
+/**************************************/
+/*   # Vendors                       */
+/************************************/
 
 @import 'normalize.css';
 
-/*************/
-/*   Base   */
-/***********/
+/**************************************/
+/*   # Base                          */
+/************************************/
 @import './base/_fonts';
 @import './base/_variables';
 @import './base/_mixins';
 @import './base/_globals';
 @import './base/_general-modifiers';
 
-/****************/
-/*   Modules   */
-/**************/
+/**************************************/
+/*   # Modules                       */
+/************************************/
 
-/* general elements */
+/************************
+*  > General Elements   *
+************************/
 @import './modules/_list';
 @import './modules/_link';
 @import './modules/_headline';
 @import './modules/_click-to-copy';
-/*target elements*/
-@import './modules/_body';
+@import './modules/_popout';
+@import './modules/_columns';
+
+/***********************
+*  > Target Elements   *
+***********************/
 @import './modules/_site-body';
 @import './modules/_site-header';
 @import './modules/_main-nav';
@@ -32,5 +63,3 @@
 @import './modules/_main';
 @import './modules/_section';
 @import './modules/_site-footer';
-@import './modules/_columns';
-@import './modules/_popout';

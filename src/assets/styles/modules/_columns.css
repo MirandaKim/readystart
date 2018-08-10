@@ -29,11 +29,12 @@
   *************
 
   # Columns
+    > Alignment
+    > For Tiny
   # Pillar
       > Sizing
       > Spacing
-  # Columns For Tiny Screens
-  # Columns Without Flexbox
+  # No Flexbox
 
 */
 
@@ -47,13 +48,39 @@
   /*position*/
   position: relative;
 
+  /*****************
+  *  > Alignment   *
+  *****************/
+
+  &--children-align-vert {
+    /*position*/
+    align-items: center;
+  }
+
+  /****************
+  *  > For Tiny   *
+  ****************/
+
+  @mixin forTiny {
+    &--not-for-tiny {
+      /*display*/
+      display: block;
+        .columns__pillar {
+          width: 100%;
+        }
+      }
+  }
+
   /**************************************/
   /*   # Pillar                        */
   /************************************/
 
   &__pillar {
+    /*display*/
     display: inline-block;
+    /*position*/
     position: relative;
+    /*spacing*/
     margin-right: 15px;
 
     /**************
@@ -61,62 +88,86 @@
     **************/
 
     &--1o12 {
+      /*flex*/
       flex-grow: 0;
+      /*structure*/
       width: calc(100% / 12);
     }
 
     &--2o12 {
+      /*flex*/
       flex-grow: 0;
+      /*structure*/
       width: calc(2*(100% / 12));
     }
 
     &--3o12 {
+      /*flex*/
       flex-grow: 0;
+      /*structure*/
       width: calc(3*(100% / 12));
     }
 
     &--4o12 {
+      /*flex*/
       flex-grow: 0;
+      /*structure*/
       width: calc(4*(100% / 12));
     }
 
     &--5o12 {
+      /*flex*/
       flex-grow: 0;
+      /*structure*/
       width: calc(5*(100% / 12));
     }
 
     &--6o12 {
+      /*flex*/
       flex-grow: 0;
+      /*structure*/
       width: calc(6*(100% / 12));
     }
 
     &--7o12 {
+      /*flex*/
       flex-grow: 0;
+      /*structure*/
       width: calc(7*(100% / 12));
     }
 
     &--8o12 {
+      /*flex*/
       flex-grow: 0;
+      /*structure*/
       width: calc(8*(100% / 12));
     }
 
     &--9o12 {
+      /*flex*/
       flex-grow: 0;
+      /*structure*/
       width: calc(9*(100% / 12));
     }
 
     &--10o12 {
+      /*flex*/
       flex-grow: 0;
+      /*structure*/
       width: calc(10*(100% / 12));
     }
 
     &--11o12 {
+      /*flex*/
       flex-grow: 0;
+      /*structure*/
       width: calc(11*(100% / 12));
     }
 
     &--12o12 {
+      /*flex*/
       flex-grow: 0;
+      /*structure*/
       width: 100%;
     }
 
@@ -125,16 +176,19 @@
     ***************/
 
     &--no-side-margin {
+      /*spacing*/
       margin-left: 0;
       margin-right: 0;
     }
 
     &--side-padding {
+      /*spacing*/
       padding-left: 10px;
       padding-right: 10px;
     }
 
     &--full-padding {
+      /*spacing*/
       padding-left: 10px;
       padding-right: 10px;
       padding-top: 10px;
@@ -143,51 +197,35 @@
 
     &--top-margin-for-tiny {
       @mixin forTiny {
+        /*spacing*/
         margin-top: 15px;
       }
     }
 
   }
 
-  /*****************
-  *  > Alignment   *
-  *****************/
-
-  &--children-align-vert {
-    align-items: center;
-  }
-
-
 }
 
 
-
 /**************************************/
-/*   # Columns For Tiny Screens      */
-/************************************/
-
-@mixin forTiny {
-  .columns--not-for-tiny {
-    display: block;
-      .columns__pillar {
-        width: 100%;
-      }
-    }
-}
-
-/**************************************/
-/*   # Columns Without Flexbox       */
+/*   # No Flexbox                    */
 /************************************/
 
 .has-no-flexbox .columns,
 .columns--no-flex {
+  /*display*/
   display: block;
+  /*position*/
   position: relative;
+  /*structure*/
   height: auto;
+  /*fancy*/
   @mixin clearfix;
 
   .columns__pillar {
+    /*display*/
     display: inline-block;
+    /*position*/
     position: relative;
     float: left;
   }

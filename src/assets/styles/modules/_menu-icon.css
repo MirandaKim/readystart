@@ -51,13 +51,14 @@ $menuIcon__color: rgb($color_accentMain);
     /*position*/
     position: relative;
     top: 50%;
-    transform: translateY(-50%);
     /*structure*/
     height: $menuIcon__lineHeight;
     width: $menuIcon__lineWidth;
     /*spacing*/
     margin-left: auto;
     margin-right: auto;
+    /*transform*/
+    transform: translateY(-50%);
     /*colors*/
     background-color: $menuIcon__color;
 
@@ -113,7 +114,6 @@ $menuIcon__color: rgb($color_accentMain);
       *  > Transition Settings   *
       ****************************/
 
-
       /*transition*/
       transition-property: all;
       transition-duration: 400ms;
@@ -143,6 +143,7 @@ $menuIcon__color: rgb($color_accentMain);
         /*structure*/
         width: $menuIcon__lineWidth;
         height: $menuIcon__lineHeight;
+        /*borders*/
         border-radius: 0;
         /*transform*/
         transform: translateY(-50%) rotate(45deg);
@@ -163,6 +164,7 @@ $menuIcon__color: rgb($color_accentMain);
           /*structure*/
           width: $menuIcon__lineWidth;
           height: $menuIcon__lineHeight;
+          /*borders*/
           border-radius: 0;
           /*colors*/
           opacity: 1;

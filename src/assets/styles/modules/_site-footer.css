@@ -1,3 +1,28 @@
+
+/****************************************************/
+/*                                                 */
+/*   Site Footer CSS (_site-footer.css)           */
+/*                                               */
+/************************************************/
+/*
+
+  - The site footer contains the footer information for the site.
+  - This the site-footer class may be applied to a footer tag, but it is not required.
+
+  *************
+  * Contents: *
+  *************
+
+  # Site Footer
+    > At Small
+  # Fixed Footer
+
+*/
+
+/**************************************/
+/*   # Site Footer                   */
+/************************************/
+
 .site-footer {
   /*display*/
   display: block;
@@ -11,16 +36,25 @@
   /*colors*/
   background-color: rgb($color_accentSec);
 
+  /****************
+  *  > At Small   *
+  ****************/
+
   @mixin atSmall {
+    /*structure*/
     height: 100px;
   }
 
-}
+  /**************************************/
+  /*   # Fixed Footer                   */
+  /************************************/
 
-.site-footer--fixed {
-  /*position*/
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  z-index: 500;
+  &--fixed {
+    /*position*/
+    z-index: 500;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+  }
+
 }

@@ -1,7 +1,7 @@
 
 /****************************************************/
 /*                                                 */
-/*   Site Header CSS                              */
+/*   Site Header CSS (_site-header.css)           */
 /*                                               */
 /************************************************/
 /*
@@ -117,10 +117,12 @@ $header__menu-transition-time: 1000ms;
 
     @mixin forTiny {
       @mixin forLandscape {
+        /*structure*/
         width: 20%;
       }
 
       .has-no-js &--padding-bottom-for-no-js {
+        /*spacing*/
         padding-bottom: 30px;
       }
 
@@ -132,6 +134,7 @@ $header__menu-transition-time: 1000ms;
 
     @mixin atSquished {
       &--smaller-at-squished {
+        /*structure*/
         width: 85%;
       }
     }
@@ -142,6 +145,7 @@ $header__menu-transition-time: 1000ms;
 
     @mixin atCrushed {
       .site-header--columns-at-crushed & {
+        /*position*/
         top: 20px;
       }
     }
@@ -193,6 +197,7 @@ $header__menu-transition-time: 1000ms;
     transition-duration: $header__menu-transition-time;
 
     .--menu-visible &{
+      /*position*/
       left: 0;
     }
 
@@ -216,9 +221,10 @@ $header__menu-transition-time: 1000ms;
 
       @mixin atCrushed {
         .site-header--columns-at-crushed & {
+          /*position*/
+          position: absolute;
           left: 85%;
           top: 0;
-          position: absolute;
         }
       }
     }
@@ -230,13 +236,14 @@ $header__menu-transition-time: 1000ms;
 
     .has-no-js & {
       /*position*/
-      left: 0;
       position: relative;
+      left: 0;
       /*structure*/
       height: auto;
       width: 100%;
 
       @mixin forTiny {
+        /*spacing*/
         margin-left: auto;
         margin-right: auto;
       }
@@ -254,7 +261,6 @@ $header__menu-transition-time: 1000ms;
     /*position*/
     position: fixed;
     top: 10px;
-    /* right: 0; */
     left: 0;
     /*structure*/
     width: 50px;
@@ -264,6 +270,7 @@ $header__menu-transition-time: 1000ms;
     transition-duration: $header__menu-transition-time;
 
     .--menu-visible & {
+      /*position*/
       left: 50%;
     }
 
@@ -272,6 +279,7 @@ $header__menu-transition-time: 1000ms;
     ****************/
 
     @mixin atSmall {
+      /*display*/
       display: none;
     }
 
@@ -280,6 +288,7 @@ $header__menu-transition-time: 1000ms;
     *****************/
 
     .has-no-js & {
+      /*display*/
       display: none;
     }
 

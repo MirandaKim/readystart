@@ -1,7 +1,7 @@
 
 /****************************************************/
 /*                                                 */
-/*   List CSS                                     */
+/*   List CSS (_list.css)                         */
 /*                                               */
 /************************************************/
 /*
@@ -64,6 +64,7 @@
 
   .has-no-js &--center-text-for-no-js-tiny {
     @mixin forTiny {
+      /*typography*/
       text-align: center;
     }
   }
@@ -73,6 +74,7 @@
   /************************************/
 
   &__sub-list {
+    /*spacing*/
     padding-bottom: 30px;
   }
 
@@ -95,7 +97,7 @@
     a {
       /*typography*/
       text-decoration: none;
-        font-style: normal;
+      font-style: normal;
     }
 
     /******************
@@ -132,9 +134,11 @@
 
     &--block-style {
       li {
+        /*spacing*/
         padding-bottom: 0;
       }
       a {
+        /*spacing*/
         padding-left: 15px;
         padding-right: 20px;
         padding-top: 10px;
@@ -149,6 +153,7 @@
     &--links-squish-at-squished {
       @mixin atSquished {
         a {
+          /*spacing*/
           padding-top: 5px;
           padding-bottom: 5px;
         }
@@ -162,6 +167,7 @@
     &--links-ex-squish-at-pancake {
       @mixin atPancake {
         a {
+          /*spacing*/
           padding-top: 2px;
           padding-bottom: 2px;
         }
@@ -176,6 +182,7 @@
 
   &--definitions {
 
+    /*spacing*/
     padding-left: 20px;
 
     dt {

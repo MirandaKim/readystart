@@ -1,7 +1,7 @@
 
 /****************************************************/
 /*                                                 */
-/*   Main Navication CSS                          */
+/*   Main Navication CSS (_main-nav.css)          */
 /*                                               */
 /************************************************/
 /*
@@ -18,7 +18,9 @@
   # Link
     > At Small
     > Hover (Small+ only)
+    > Active Link
   # Link Displaced Till Focus (Skip to main content)
+    > At Crushed
 
 */
 
@@ -109,9 +111,13 @@
 
     @mixin atSmall {
         .has-no-touch &:not(&--active):hover {
+          /*typography*/
           font-weight: bold;
+          /*colors*/
           color: rgb($color_accentTir);
+
           &::before {
+            /*display*/
             display: inline-block;
 
           }
@@ -123,17 +129,21 @@
     *******************/
 
     &--active {
-
+      /*colors*/
       color: rgb($color_offWhite);
       background-color: rgb($color_accentMain);
 
       @mixin atSmall {
+        /*typography*/
         font-weight: bold;
+        /*colors*/
         color: rgb($color_accentMain);
         background-color: transparent;
 
         &::before {
+          /*display*/
           display: inline-block;
+          /*borders*/
           border-left-color: rgb($color_accentMain);
         }
       }
@@ -147,27 +157,39 @@
   /************************************/
 
   &__link--displace-till-focus {
+    /*position*/
     position: fixed;
+    /*transform*/
     transform: translateX(-110%);
+    /*colors*/
+    opacity: 0;
+    /*transition*/
     transition-property: transform;
     transition-duration: 500ms;
-    opacity: 0;
 
     &::before {
+      /*display*/
       display: none;
     }
 
     &:focus {
+      /*colors*/
       opacity: 1;
+      /*transform*/
       transform: translateX(0);
     }
 
+    /******************
+    *  > At Crushed   *
+    ******************/
 
     @mixin atCrushed {
       .site-header--columns-at-crushed & {
+        /*transform*/
         transform: translateX(-200%);
       }
       .site-header--columns-at-crushed &:focus {
+        /*transform*/
         transform: translateX(-80%);
       }
     }

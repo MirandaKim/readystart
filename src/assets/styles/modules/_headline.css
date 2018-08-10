@@ -1,26 +1,83 @@
+
+/****************************************************/
+/*                                                 */
+/*   Headline CSS (_headline.css)                 */
+/*                                               */
+/************************************************/
+/*
+
+  Style for headlines/headers (e.g. h1, h2, ...)
+
+  *************
+  * Contents: *
+  *************
+
+  # Headline
+    > Fixed Margin
+    > Large
+    > Extra Large
+    > Scale Width
+    > For Tiny
+
+*/
+
+/**************************************/
+/*   # Headline                      */
+/************************************/
+
 .headline {
 
+  /********************
+  *  > Fixed Margin   *
+  ********************/
   &--fixed-margin {
+    /*spacing*/
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
 
+  /*************
+  *  > Large   *
+  *************/
+
   &--large {
+    /*typography*/
     font-size: 5rem;
   }
 
+  /*******************
+  *  > Extra Large   *
+  *******************/
+
   &--extra-large {
+    /*typography*/
     font-size: 9rem;
   }
 
+  /*******************
+  *  > Scale Width   *
+  *******************/
+  /*
+  Font size is determined by the width of the window
+  */
 
+  &--scale-width {
+    /*typography*/
+    font-size: 5vw;
+  }
 
   &--scale-width--large {
+    /*typography*/
     font-size: 12vw;
   }
 
+  /****************
+  *  > For Tiny   *
+  ****************/
+
   @mixin forTiny {
     &--med-for-tiny {
+      /*typography*/
       font-size: 3rem;
     }
   }

@@ -72,9 +72,19 @@
   background-color: rgb($color_accentSec);
 }
 
-.--background-hot {
+.--background-attention-mild {
   /*colors*/
-  background-color: rgb($color_attentionMain);
+  background-color: rgb($color_attentionMild);
+}
+
+.--background-attention-med {
+  /*colors*/
+  background-color: rgb($color_attentionMed);
+}
+
+.--background-attention-hot {
+  /*colors*/
+  background-color: rgb($color_attentionHot);
 }
 
 /*apply a light grey background to all the even immediate children of the element*/

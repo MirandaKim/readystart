@@ -86,7 +86,9 @@ $color_accentSec: $color_blue_med_01;
 $color_accentTir: $color_blue_med_02;
 
 /*Attention*/
-$color_attentionMain: $color_pink_med_01;
+$color_attentionMild: $color_grey_med_01;
+$color_attentionMed: $color_blue_med_01;
+$color_attentionHot: $color_pink_med_01;
 
 
 /*************************

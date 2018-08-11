@@ -71,13 +71,19 @@
 
   &--mild {
     /*colors*/
-    background-color: rgb($color_accentSec);
+    background-color: rgb($color_attentionMild);
+    color: rgb($color_offWhite);
+  }
+
+  &--med {
+    /*colors*/
+    background-color: rgb($color_attentionMed);
     color: rgb($color_offWhite);
   }
 
   &--hot {
     /*colors*/
-    background-color: rgb($color_attentionMain);
+    background-color: rgb($color_attentionHot);
     color: rgb($color_offWhite);
   }
 

@@ -33,7 +33,10 @@
    color: rgb($color_textLink_inline);
    /*hover*/
    .has-no-touch &:hover{
-      font-style: normal;
+     /*colors*/
+     color: rgb($color_textLink_inline_hover);
+     /*typography*/
+    font-style: normal;
    }
 
    /**************************************/

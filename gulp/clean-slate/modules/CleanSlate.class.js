@@ -10,7 +10,7 @@ const fs = require('fs-extra');
   - Swap out existing source files for clean templates
   - This functionality is for both html and css assets.
   - Public Access: Execute
-    Execute expects a template type ('bare' or 'clean') that determines which templates will be copied into the source directory.
+    Execute expects a template type ('bare', 'clean', or 'full') that determines which templates will be copied into the source directory.
     It also expects booleans for html and css to determine which (or both) will be swapped out.
   - On execute, the original files will be moved to a trash directory
     and the selected template files will be copied into their place.
@@ -69,6 +69,7 @@ class CleanSlate {
     this._htmlFile = this._srcDir + '/index.html';
     this._htmlTemplateClean = this._templatesDir + '/html/index--clean.html';
     this._htmlTemplateBare = this._templatesDir + '/html/index--bare.html';
+    this._htmlTemplateFull = this._templatesDir + '/html/index--full.html';
     this._htmlTrashDest = `${this._trashDir}/index${midfix}.html`;
 
     /*********************
@@ -77,6 +78,7 @@ class CleanSlate {
     this._cssDir = this._srcDir + '/assets/styles';
     this._cssTemplateClean = this._templatesDir + '/styles/styles--clean';
     this._cssTemplateBare = this._templatesDir + '/styles/styles--bare';
+    this._cssTemplateFull = this._tempaltesDir + '/styles/styles--full';
     this._cssTrashDest = `${this._trashDir}/styles-${this._timestamp}`;
   }
 
@@ -93,7 +95,7 @@ class CleanSlate {
   Move original css and html src files into a trash directory
   and replace them with premade template/quick-start files/directories.
 
-  type(string) -> either 'bare' or 'clean' to determine which templates should be copied into the source directory
+  type(string) -> either 'bare', 'clean', or 'full' to determine which templates should be copied into the source directory
   cleanHtml(boolean) -> if true, the original html will be swapped out for the template version. Else, ignored.
   cleanCss(boolean) -> if true, the original css will be swapped out for the template version. Else, ignored.
   */
@@ -152,6 +154,9 @@ class CleanSlate {
       case 'clean':
         this._copyHtmlTemplate_clean();
       break;
+      case 'full':
+        this._copyHtmlTemplate_full();
+      break;
       default:
         console.log('Clean Slate: No HTML template option was selected. No HTML templates were moved into the desired directory.');
       break;
@@ -168,6 +173,11 @@ class CleanSlate {
     this._copyFileSync(this._htmlTemplateClean, this._htmlFile);
   }
 
+  _copyHtmlTemplate_full (){
+    console.log('COPY HTML TEMPLATE REACHED (Full)');
+    this._copyFileSync(this._htmlTemplateFull, this._htmlFile);
+  }
+
 
   /**************************
   *  > Copy CSS Templates   *
@@ -180,6 +190,9 @@ class CleanSlate {
       break;
       case 'clean':
         this._copyCssTemplate_clean();
+      break;
+      case 'full':
+        this._copyCssTemplate_full();
       break;
       default:
         console.log('Clean Slate: No CSS template option was selected. No CSS templates were moved into the desired directory.');
@@ -195,6 +208,11 @@ class CleanSlate {
   _copyCssTemplate_clean() {
     console.log('COPY CSS TEMPLATE REACHED (CLEAN)');
     this._copyFileSync(this._cssTemplateClean, this._cssDir);
+  }
+
+  _copyCssTemplate_full() {
+    console.log('COPY CSS TEMPLATE REACHED (FULL)');
+    this._copyFileSync(this._cssTemplateFull, this._cssDir);
   }
 
 

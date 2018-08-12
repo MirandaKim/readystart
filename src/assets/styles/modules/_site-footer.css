@@ -30,9 +30,11 @@
   position: relative;
   /*structure*/
   width: 100vw;
-  height: 100px;
   /*spacing*/
-  padding: 15px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
   /*colors*/
   background-color: rgb($color_accentSec);
 
@@ -40,10 +42,7 @@
   *  > At Small   *
   ****************/
 
-  @mixin atSmall {
-    /*structure*/
-    height: 100px;
-  }
+  @mixin atSmall {}
 
   /**************************************/
   /*   # Fixed Footer                   */

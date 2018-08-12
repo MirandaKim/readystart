@@ -78,7 +78,7 @@
       <div class="section__content">
         <h2 class="section__headline">The Structure</h2>
         <p>Here is an overview of the file structure to give you an idea of what they are for and where to find stuff.</p>
-        <dl class="list list--definitions">
+        <dl class="list list--definitions list--definitions--bold-terms">
           <dt>~/src</dt>
           <dd>
             <p>This is the working directory. Make your changes within this directory then propagate those changes using the available gulp tasks.</p>
@@ -124,7 +124,7 @@
       <div class="section__content">
         <h2 class="section__headline">Useful Tools</h2>
         <p>Here are a list of modules already incorporated in this site to make life a it easier. Based on when this is used, some of these modules may need to be updated or replaced.</p>
-        <dl class="list list--definitions">
+        <dl class="list list--definitions list--definitions--bold-terms">
           <dt>Gulp</dt>
           <dd>
             <p>"Gulp is a toolkit for automating painful or time-consuming tasks in your development workflow, so you can stop messing around and build something." See more at <a class="link link--inline link--dot-on-hover" href="https://gulpjs.com/">gulpjs.com/</a></p>
@@ -229,14 +229,14 @@
       <div class="section__content">
         <h2 class="section__headline">Don't Forget</h2>
         <p><em>Wait!</em> Before publishing your site, make sure to check these items off you list!</p>
-        <ul class="list">
+        <ul class="list list--small-left-padding-for-tiny">
           <li>
             <p>Change the title tag in <b>~/src/index.html</b></p>
           </li>
           <li>
             <p>Make the site accessible! See the current requirements at <a href="https://www.w3.org/TR/html-aria/" class="link link--inline link--dot-on-hover">w3.org/TR/html-aria</a></p>
             <p>Some more things you should consider to make your site more accessible:</p>
-            <ul class="list list__sub-list">
+            <ul class="list list__sub-list list--small-left-padding-for-tiny">
               <li><b>Is your site fully functional with just a keyboard?</b> Tab through your links to see. If you have some kind of drag interaction, make sure there is a keyboard alternative.</li>
               <li>Have a <b>"skip to main content"</b> link at the top of the page/html <em>before</em> your main navigtion.</li>
               <li>Use <b>strong and em</b> tags when the words need emphasis. Use <b>b and i</b> tags when it's just for style.</li>
@@ -366,12 +366,12 @@
             <!--  -->
             <dt>gulp clean --html</dt>
             <dd>
-              <p>Replace the existing html (~/src/index.html) with a template containing useful content to get you going faster. See template ~/gulp/clean-slate/templates/html/index--clean.html</p>
+              <p>Replace the existing html (~/src/index.html) with a template containing useful content to get you going faster. See template ~/gulp/clean-slate/<wbr>templates/html/<wbr>index--clean.html</p>
             </dd>
             <!--  -->
             <dt>gulp clean --css</dt>
             <dd>
-              <p>Replace the existing styles (~/src/assets/styles) with templates containing few css styles and modular files. See style files under ~/gulp/clean-slate/templates/styles/styles--clean</p>
+              <p>Replace the existing styles (~/src/assets/styles) with templates containing few css styles and modular files. See style files under ~/gulp/clean-slate/<wbr>templates/styles/<wbr>styles--clean</p>
             </dd>
             <!--  -->
             <dt>gulp clean --html --css</dt>
@@ -386,12 +386,12 @@
             <!--  -->
             <dt>gulp bare --html</dt>
             <dd>
-              <p>Replace the existing html (~/src/index.html) with a template containing the bare minimals. See template ~/gulp/clean-slate/templates/html/index--bare.html</p>
+              <p>Replace the existing html (~/src/index.html) with a template containing the bare minimals. See template ~/gulp/clean-slate/<wbr>templates/html/<wbr>index--bare.html</p>
             </dd>
             <!--  -->
             <dt>gulp bare --css</dt>
             <dd>
-              <p>Replace the existing styles (~/src/assets/styles) with the bare minimal styles structure. See file structure ~/gulp/clean-slate/templates/styles/styles--bare</p>
+              <p>Replace the existing styles (~/src/assets/styles) with the bare minimal styles structure. See file structure ~/gulp/clean-slate/<wbr>templates/styles/<wbr>styles--bare</p>
             </dd>
             <!--  -->
             <dt>gulp bare --html --css</dt>
@@ -405,8 +405,8 @@
     </section>
   </article>
   <footer class="site-footer --color-light">
-    <div class="columns columns--children-vert-align --center-vert">
-      <div class="columns__pillar columns__pillar--6o12">
+    <div class="columns columns--children-vert-align columns--not-for-tiny">
+      <div class="columns__pillar columns__pillar--6o12 columns__pillar--bottom-padding-for-tiny">
         <div class="--center-align">See the GitHub repository: <a href="https://github.com/MirandaKim/readystart" class="link link--inline link--dot-on-hover link--light">github.com/MirandaKim/readystart</a></div>
       </div>
       <div class="columns__pillar columns__pillar--6o12 columns__pillar--no-side-margin">

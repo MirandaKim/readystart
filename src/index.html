@@ -187,13 +187,13 @@
           <dt>Has No JS</dt>
           <dd>
             <p>The body tag is given a 'has-no-js' class until removed by script logic, so the styling of devices without JavaScript may be handled accordingly.</p>
-            <p>This logic can be found within ~/src/assets/scripts/App.js.</p>
+            <p>This logic can be found within ~/src/assets/<wbr>scripts/<wbr>App.js.</p>
           </dd>
           <!-- -->
           <dt>Check Has Touch</dt>
           <dd>
             <p>Switch class names on initial user touch event. The html tag is given a the classes waiting-for-touch and has-no-touch until the user touches the screen--then those classes will be removed and has-touch will be added. This is so you can plan your js and css around the user's device (e.g. only having hover styles for a device without touch).</p>
-            <p>CheckHasTouch.class.js can be found under ~/src/assets/scripts/modules.</p>
+            <p>CheckHasTouch.class.js can be found under ~/src/assets/scripts/<wbr>modules.</p>
           </dd>
           <!-- -->
           <dt>Section Change (on click and scroll)</dt>
@@ -211,13 +211,13 @@
           <dt>Sticky Header</dt>
           <dd>
             <p>Give the header or top banner a selector class based on the document's position. </p>
-            <p>This module is currently dependent on the Waypoints module. SectionChange.class.js can be found under ~/src/assets/scripts/modules.</p>
+            <p>This module is currently dependent on the Waypoints module. SectionChange.class.js can be found under ~/src/assets/scripts/<wbr>modules.</p>
           </dd>
           <!-- -->
           <dt>Click To Copy</dt>
           <dd>
             <p>Copy the contents of an element to the clipboard by clicking it. Add the class 'click-to-copy' to an element.</p>
-            <p>This behavior is enabled by the ClickToCopy module (~/src/assets/scripts/modules/ClickToCopy.class.js), which is imported and instantiated by App.js. There is also a CSS file for styling these elements (~/src/assets/styles/modules/_click-to-copy.css)</p>
+            <p>This behavior is enabled by the ClickToCopy module (~/src/assets/scripts/<wbr>modules/<wbr>ClickToCopy.class.js), which is imported and instantiated by App.js. There is also a CSS file for styling these elements (~/src/assets/styles/<wbr>modules/<wbr>_click-to-copy.css)</p>
           </dd>
         </dl>
         <p class="popout popout--rounded popout--mild">
@@ -246,7 +246,7 @@
               <li><p><b>Is your site fully functional without JavaScript enabled?</b> Disable Javascript in your browsers and test it out.</p></li>
             </ul>
           </li>
-          <li>Insert your logo. Or at least delete the placeholder. (<b>~/src/assets/images/logo.png</b>)</li>
+          <li>Insert your logo. Or at least delete the placeholder. (<b>~/src/assets/images/<wbr>logo.png</b>)</li>
           <li>
             <p>Create and apply the favicon (or at least delete the placeholder provided). I recommend using <a class="link link--inline link--dot-on-hover" href="http://www.favicomatic.com">FAVIC-O-MATIC</a> for converting your image and generating head tag links!</p>
           </li>
@@ -254,7 +254,7 @@
             <p>Check your site on a range of browser sizes and devices. Make sure it it's responsive and still looks good.</p>
           </li>
           <li>
-            <p>Make user responsive images sizing for different devices/screen sizes. <b>NOTE:</b> if using something like LazyImages, make sure there is no conflict with Waypoints. If so there try incorporating the FixLazyWaypoints module found under ~src/assets/scripts/modules</p>
+            <p>Make user responsive images sizing for different devices/screen sizes. <b>NOTE:</b> if using something like LazyImages, make sure there is no conflict with Waypoints. If so there try incorporating the FixLazyWaypoints module found under ~src/assets/scripts/<wbr>modules</p>
           </li>
           <li>
             <p>Test the production build (gulp build) before you need it. Modules are updated all the time and things may not always work as expected. Make sure the site looks good and the files you want compressed are compressed. Remember you can preview the production build by running the gulp task <span class="popout popout--inline popout--rounded-nw-se">gulp build</span> then <span class="popout popout--inline popout--rounded-nw-se">gulp previewDist</span>.</p>

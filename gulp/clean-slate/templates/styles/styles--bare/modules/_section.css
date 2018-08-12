@@ -1,0 +1,25 @@
+
+/****************************************************/
+/*                                                 */
+/*   Section CSS (_main-nav.css)                  */
+/*                                               */
+/************************************************/
+/*
+
+  - A section is considered an independent grouping of content.
+  - The section class may be applied to a section tag,
+    but it is not required.
+
+  *************
+  * Contents: *
+  *************
+
+  # Section
+
+*/
+
+/**************************************/
+/*   # Section                       */
+/************************************/
+
+.section {}

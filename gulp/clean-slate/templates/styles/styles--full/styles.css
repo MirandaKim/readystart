@@ -49,6 +49,7 @@
 @import './modules/_link';
 @import './modules/_headline';
 @import './modules/_click-to-copy';
+@import './modules/_popout';
 @import './modules/_columns';
 
 /***********************

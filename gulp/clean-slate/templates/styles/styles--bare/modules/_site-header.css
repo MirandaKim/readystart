@@ -1,0 +1,104 @@
+
+/****************************************************/
+/*                                                 */
+/*   Site Header CSS (_site-header.css)           */
+/*                                               */
+/************************************************/
+/*
+
+  - Style for the site header and it's elements
+  - Some elements within the header may be considered separate blocks
+    and will have a separate css file (e.g. logo and main-nav).
+  - The css is handled by PostCSS plugins (see ~/gulp/tasks/styles.task.js)
+  - These styles account for screen size and JS availablity (has-no-js).
+
+  *************
+  * Contents: *
+  *************
+
+  # Site Header
+  # Logo Wrapper
+  # Logo Image
+  # Logo Link
+  # Menu Wrapper
+      > At Small
+      > Has No JS
+  # Menu Toggle
+      > At Small
+      > Has No JS
+
+*/
+
+/**************************************/
+/*   # Site Header                   */
+/************************************/
+
+.site-header {
+
+  /**************************************/
+  /*   # Logo Wrapper                  */
+  /************************************/
+
+  &__logo-wrapper {}
+
+  /**************************************/
+  /*   # Logo Image                    */
+  /************************************/
+
+  &__logo-image {}
+
+  /**************************************/
+  /*   # Logo Link                     */
+  /************************************/
+
+  &__logo-link {}
+
+
+  /**************************************/
+  /*   # Menu Wrapper                  */
+  /************************************/
+
+  &__menu-wrapper {
+
+    .--menu-visible &{}
+
+
+    /****************
+    *  > At Small   *
+    ****************/
+
+    @mixin atSmall {}
+
+
+    /*****************
+    *  > Has No JS   *
+    *****************/
+
+    .has-no-js & {}
+
+
+  }
+
+  /**************************************/
+  /*   # Menu Toggle                   */
+  /************************************/
+
+  &__menu-toggle {
+
+    .--menu-visible & {}
+
+    /****************
+    *  > At Small   *
+    ****************/
+
+    @mixin atSmall {}
+
+    /*****************
+    *  > Has No JS   *
+    *****************/
+
+    .has-no-js & {}
+
+  }
+
+}

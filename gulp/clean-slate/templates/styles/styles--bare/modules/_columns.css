@@ -1,0 +1,44 @@
+
+/****************************************************/
+/*                                                 */
+/*   Columns CSS (_columns.css)                   */
+/*                                               */
+/************************************************/
+/*
+
+  - Group all intended columns (pillars) into a group with the class columns
+    and give each pillar the class columns__pillar. This file includes classes
+    for customizing to appearance of these column pillars
+    (e.g. columns__pillar--no-side-margin).
+
+  *************
+  * Contents: *
+  *************
+
+  # Columns
+  # Pillar
+  # No Flexbox
+
+*/
+
+/**************************************/
+/*   # Columns                       */
+/************************************/
+
+.columns {
+
+  /**************************************/
+  /*   # Pillar                        */
+  /************************************/
+
+  &__pillar {}
+
+
+/**************************************/
+/*   # No Flexbox                    */
+/************************************/
+
+.has-no-flexbox .columns,
+.columns--no-flex {}
+
+}

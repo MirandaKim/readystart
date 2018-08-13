@@ -1,0 +1,31 @@
+/****************************************************/
+/*                                                 */
+/*   Menu Icon (_menu-icon.css)                   */
+/*                                               */
+/************************************************/
+/*
+
+  - This contains a menu icon and any available transitions.
+
+  *************
+  * Contents: *
+  *************
+
+  # Menu Icon
+      > Middle Line
+      > Top Line
+      > Bottom Line
+  # Transition to X
+      > Transition Settings
+      > X Structure
+
+*/
+
+
+/**************************************/
+/*   # Menu Icon                     */
+/************************************/
+
+  .menu-icon {
+    .--menu-visible & {}
+  }

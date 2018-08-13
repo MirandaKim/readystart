@@ -1,0 +1,24 @@
+/****************************************************/
+/*                                                 */
+/*   Site Body CSS (_site-body.css)               */
+/*                                               */
+/************************************************/
+/*
+
+  - The site body contains the main content of the site
+  (this excludes the site header/navigation and footer content).
+  - The site-body class may be applied to an article tag, but it is not required.
+
+  *************
+  * Contents: *
+  *************
+
+  # Site Body
+
+*/
+
+/**************************************/
+/*   # Site Body                     */
+/************************************/
+
+.site-body {}

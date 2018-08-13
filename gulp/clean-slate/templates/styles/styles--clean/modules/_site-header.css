@@ -23,8 +23,6 @@
   # Logo Wrapper
     > At Small
     > For Tiny
-    > At Squished
-    > At Crushed
   # Logo Image
   # Logo Link
   # Menu Wrapper
@@ -121,36 +119,7 @@ $header__menu-transition-time: 1000ms;
         width: 20%;
       }
 
-      .has-no-js &--padding-bottom-for-no-js {
-        /*spacing*/
-        padding-bottom: 30px;
-      }
-
     }
-
-    /*******************
-    *  > At Squished   *
-    *******************/
-
-    @mixin atSquished {
-      &--smaller-at-squished {
-        /*structure*/
-        width: 85%;
-      }
-    }
-
-    /******************
-    *  > At Crushed   *
-    ******************/
-
-    @mixin atCrushed {
-      .site-header--columns-at-crushed & {
-        /*position*/
-        top: 20px;
-      }
-    }
-
-  }
 
   /**************************************/
   /*   # Logo Image                    */
@@ -215,18 +184,6 @@ $header__menu-transition-time: 1000ms;
       /*spacing*/
       margin-top: 15px;
 
-      /************************
-      *  > At Small Crushed   *
-      ************************/
-
-      @mixin atCrushed {
-        .site-header--columns-at-crushed & {
-          /*position*/
-          position: absolute;
-          left: 85%;
-          top: 0;
-        }
-      }
     }
 
 

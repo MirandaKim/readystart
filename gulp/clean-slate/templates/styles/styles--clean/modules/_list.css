@@ -18,18 +18,13 @@
   # List
     > Horizontal
     > Hang Right
-    > For Tiny
-    > Has No JS
   # Sub List
   # Link List
     > Full Width
     > No Text Wrap
     > Block Style
-    > At Squished
-    > At Pancake
   # Definition List
     > Modifiers
-    > At Small
 
 */
 
@@ -59,26 +54,6 @@
     float: right;
   }
 
-  /****************
-  *  > For Tiny   *
-  ****************/
-
-  @mixin forTiny {
-    &--small-left-padding-for-tiny {
-     padding-left: 20px;
-    }
-  }
-
-  /*****************
-  *  > Has No JS   *
-  *****************/
-
-  .has-no-js &--center-text-for-no-js-tiny {
-    @mixin forTiny {
-      /*typography*/
-      text-align: center;
-    }
-  }
 
   /**************************************/
   /*   # Sub List                      */
@@ -99,8 +74,6 @@
     padding: 0;
 
     li {
-      /*spacing*/
-      padding-bottom: 20px;
       /*fancy*/
       list-style: none;
     }
@@ -157,34 +130,6 @@
       }
     }
 
-    /*******************
-    *  > At Squished   *
-    *******************/
-
-    &--links-squish-at-squished {
-      @mixin atSquished {
-        a {
-          /*spacing*/
-          padding-top: 5px;
-          padding-bottom: 5px;
-        }
-      }
-    }
-
-    /******************
-    *  > At Pancake   *
-    ******************/
-
-    &--links-ex-squish-at-pancake {
-      @mixin atPancake {
-        a {
-          /*spacing*/
-          padding-top: 2px;
-          padding-bottom: 2px;
-        }
-      }
-    }
-
   }
 
   /**************************************/
@@ -208,17 +153,6 @@
     &--bold-terms {
       dt {
         font-weight: bold;
-      }
-    }
-
-    /****************
-    *  > At Small   *
-    ****************/
-
-    @mixin atSmall {
-
-      dd {
-        margin-left: 40px;
       }
     }
 

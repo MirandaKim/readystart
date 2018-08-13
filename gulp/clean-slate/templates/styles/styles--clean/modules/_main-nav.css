@@ -16,11 +16,9 @@
   # Main Navigation
     > At Small
   # Link
-    > At Small
     > Hover (Small+ only)
     > Active Link
   # Link Displaced Till Focus (Skip to main content)
-    > At Crushed
 
 */
 
@@ -71,40 +69,6 @@
     /*colors*/
     color: rgb($color_accentSec);
 
-    /****************
-    *  > At Small   *
-    ****************/
-
-    @mixin atSmall {
-      &::before {
-        /*variables*/
-        $border-size: 8px;
-        /*content*/
-        content: "";
-        /*display*/
-        display: none;
-        /*position*/
-        z-index: -1;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        /*structure*/
-        width: 0;
-        height: 0;
-        /*transform*/
-        transform: translateY(-50%);
-        /*borders*/
-        border-style: solid;
-        border-color: rgb($color_accentTir);
-        border-left-width: $border-size;
-        border-right-width: 0;
-        border-top-width: $border-size;
-        border-top-color: transparent;
-        border-bottom-width: $border-size;
-        border-bottom-color: transparent;
-      }
-    }
-
     /***************************
     *  > Hover (Small+ only)   *
     ***************************/
@@ -140,12 +104,6 @@
         color: rgb($color_accentMain);
         background-color: transparent;
 
-        &::before {
-          /*display*/
-          display: inline-block;
-          /*borders*/
-          border-left-color: rgb($color_accentMain);
-        }
       }
     }
 
@@ -179,19 +137,5 @@
       transform: translateX(0);
     }
 
-    /******************
-    *  > At Crushed   *
-    ******************/
-
-    @mixin atCrushed {
-      .site-header--columns-at-crushed & {
-        /*transform*/
-        transform: translateX(-200%);
-      }
-      .site-header--columns-at-crushed &:focus {
-        /*transform*/
-        transform: translateX(-80%);
-      }
-    }
   }
 }

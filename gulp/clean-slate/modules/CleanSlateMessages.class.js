@@ -23,6 +23,7 @@
     > Log Summary Message
     > Log Execute Message
     > Log Completion Message
+    > Log What's Next Message
 
   # Export
 
@@ -38,7 +39,7 @@ class CleanSlateMessages {
   constructor(command, description = ''){
     this.command = command.toLowerCase();
     this.commandTitled = command.charAt(0).toUpperCase() + command.slice(1);
-    this.description = description.length < 1 ? `${command} version`;
+    this.description = description.length < 1 ? `${command} version` : description;
   }
 
   /**************************************/
@@ -90,6 +91,22 @@ class CleanSlateMessages {
       -- The Clean-Slate -- ${this.commandTitled} -- COMPLETE --
       ------------------------------------------
       Check ~/.trashed for your original files if you ran this command by mistake.
+     `);
+  }
+
+  /*******************************
+  *  > Log What's Next Message   *
+  *******************************/
+
+  logWhatsNextMessage(){
+    console.log(`
+      ------------------
+      -- What's Next? --
+      ------------------
+      To see your changes
+      - run the task 'gulp dev' to process source files into the temporary development directory (~/tmp)
+      - run the task 'gulp watch' to see your site in the browser
+      - if you don't see your changes, try refreshing your browser (and possibly clearing your cache)
      `);
   }
 

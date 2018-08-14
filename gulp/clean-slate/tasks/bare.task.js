@@ -41,10 +41,10 @@ gulp.task(taskName, gulp.series((done) => {
   Else, log a summary of the task.
   **/
   if(bareHtml || bareCss){
-    cleanSlate_sendExecuteMessage_bare();
     csMsgs.logExecuteMessage(); // log console message before execute
     cleanSlate.execute(taskName, bareHtml, bareCss);
     csMsgs.logCompletionMessage(); // log console message now that task is complete
+    csMsgs.logWhatsNextMessage();
   }else{
     csMsgs.logSummaryMessage(); // log a summary of what this task is supposed to do
   }

@@ -57,6 +57,7 @@ class CleanSlateMessages {
       --------------------
       The Clean-Slate Full task is designed to swap out existing source files for the ${this.description}.
       - To view the templates that will be used, look under the directory ~/gulp/clean-slate/templates
+      - For more information open ~/gulp/clean-slate/README.md
       - Existing files will be relocated to ~/.trashed
       --------
       Commands

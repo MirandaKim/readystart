@@ -259,9 +259,13 @@ This will run browsersync and open a browser window to view the distribution/pro
 ### Clean-Slate
 Want to start coding, but don't want to clean out all this HTML and CSS that you don't want to use? Here are the tasks for you! These tasks can be run to clean out the source code to varying degrees:
 
-Clean task give you a good starting point with elements and selectors you can customize. Use this if you want to have some basic structure when starting out.
-Bare tasks give you the bare bones that you then can fill in as you wish. Use this if you're just here for the pre-made gulp tasks and want to make your own structure.
-Full tasks give you the initial starting point of this site (for whatever reason you might like it).
+The **Clean** tasks give you a good starting point with elements and selectors you can customize. Use this if you want to have some basic structure when starting out.
+
+The **Bare** tasks give you the bare bones that you then can fill in as you wish. Use this if you're just here for the pre-made gulp tasks and want to make your own structure.
+
+The **Full** tasks give you the initial starting point of this site (for whatever reason you might like it).
+
+_For more detailed information, open ~/gulp/clean-slate/README.md_
 
 _Want to see the templates before you commit? All template files are located within ~/gulp/templates_
 

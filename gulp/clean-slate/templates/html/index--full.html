@@ -65,7 +65,7 @@ If this was done by mistake, check ~/.trashed for your original files.-->
       <div class="section__content">
         <h1 class="section__headline headline--fixed-margin headline--large headline--med-for-tiny">Welcome!</h1>
         <p>This is something I've created for myself as a starting template for a simple website. This includes Gulp for task running, Babel for translating Javascript, Webpack for bundling scripts, PostCSS for CSS processing, and other thing... Jump to <a class="link link--inline link--dot-on-hover" href="#useful-tools">Useful Tools</a> for an updated list of tools already available.</p>
-        <p>If you've stumbled upon this, feel free to use it.</p>
+        <p>If you've stumbled upon this, feel free to use it. Just make sure you swap-out the logo, favicons, and any other images for your own (they are not available for use).</p>
       </div>
     </section>
     <section class="section" id="get-started">
@@ -126,7 +126,7 @@ If this was done by mistake, check ~/.trashed for your original files.-->
     <section class="section" id="useful-tools">
       <div class="section__content">
         <h2 class="section__headline">Useful Tools</h2>
-        <p>Here are a list of modules already incorporated in this site to make life a it easier. Based on when this is used, some of these modules may need to be updated or replaced.</p>
+        <p>Here is a list of modules already incorporated in this site to make life a it easier. Based on when this is used, some of these modules may need to be updated or replaced.</p>
         <dl class="list list--definitions list--definitions--bold-terms">
           <dt>Gulp</dt>
           <dd>
@@ -134,11 +134,11 @@ If this was done by mistake, check ~/.trashed for your original files.-->
             <p>You can find all Gulp tasks designed for this project under ~/gulp/tasks. The gulp config file can be found at root (~/gulpfile.js).</p>
           </dd>
           <!-- -->
-          <dt>Browser Sync</dt>
+          <dt>BrowserSync</dt>
           <dd>
             <p>"Time-saving synchronized browser testing." See more at <a class="link link--inline link--dot-on-hover" href="https://browsersync.io/">browsersync.io/</a></p>
-            <p>Browser Sync is currently set up with the gulp tasks "watch" and "previewDist"</p>
-            <p class="popout popout--med popout--rounded"><b>NOTE:</b> If the smooth scroll between anchor links is jumpy, this may be a result of Browser Sync compensating for multiple browsers or browser windows. Close all but one browser window to see if the issue persists, as it may be an issue unique to the development environment.</p>
+            <p>BrowserSync is currently set up with the gulp tasks "watch" and "previewDist"</p>
+            <p class="popout popout--med popout--rounded"><b>NOTE:</b> If the smooth scroll between anchor links is jumpy, this may be a result of BrowserSync compensating for multiple browsers or browser windows. Close all but one browser window to see if the issue persists, as it may be an issue unique to the development environment.</p>
           </dd>
           <!-- -->
           <dt>PostCSS</dt>
@@ -190,13 +190,13 @@ If this was done by mistake, check ~/.trashed for your original files.-->
           <dt>Has No JS</dt>
           <dd>
             <p>The body tag is given a 'has-no-js' class until removed by script logic, so the styling of devices without JavaScript may be handled accordingly.</p>
-            <p>This logic can be found within ~/src/assets/scripts/App.js.</p>
+            <p>This logic can be found within ~/src/assets/<wbr>scripts/<wbr>App.js.</p>
           </dd>
           <!-- -->
           <dt>Check Has Touch</dt>
           <dd>
             <p>Switch class names on initial user touch event. The html tag is given a the classes waiting-for-touch and has-no-touch until the user touches the screen--then those classes will be removed and has-touch will be added. This is so you can plan your js and css around the user's device (e.g. only having hover styles for a device without touch).</p>
-            <p>CheckHasTouch.class.js can be found under ~/src/assets/scripts/modules.</p>
+            <p>CheckHasTouch.class.js can be found under ~/src/assets/scripts/<wbr>modules.</p>
           </dd>
           <!-- -->
           <dt>Section Change (on click and scroll)</dt>
@@ -214,13 +214,13 @@ If this was done by mistake, check ~/.trashed for your original files.-->
           <dt>Sticky Header</dt>
           <dd>
             <p>Give the header or top banner a selector class based on the document's position. </p>
-            <p>This module is currently dependent on the Waypoints module. SectionChange.class.js can be found under ~/src/assets/scripts/modules.</p>
+            <p>This module is currently dependent on the Waypoints module. SectionChange.class.js can be found under ~/src/assets/scripts/<wbr>modules.</p>
           </dd>
           <!-- -->
           <dt>Click To Copy</dt>
           <dd>
             <p>Copy the contents of an element to the clipboard by clicking it. Add the class 'click-to-copy' to an element.</p>
-            <p>This behavior is enabled by the ClickToCopy module (~/src/assets/scripts/modules/ClickToCopy.class.js), which is imported and instantiated by App.js. There is also a CSS file for styling these elements (~/src/assets/styles/modules/_click-to-copy.css)</p>
+            <p>This behavior is enabled by the ClickToCopy module (~/src/assets/scripts/<wbr>modules/<wbr>ClickToCopy.class.js), which is imported and instantiated by App.js. There is also a CSS file for styling these elements (~/src/assets/styles/<wbr>modules/<wbr>_click-to-copy.css)</p>
           </dd>
         </dl>
         <p class="popout popout--rounded popout--mild">
@@ -249,7 +249,7 @@ If this was done by mistake, check ~/.trashed for your original files.-->
               <li><p><b>Is your site fully functional without JavaScript enabled?</b> Disable Javascript in your browsers and test it out.</p></li>
             </ul>
           </li>
-          <li>Insert your logo. Or at least delete the placeholder. (<b>~/src/assets/images/logo.png</b>)</li>
+          <li>Insert your logo. Or at least delete the placeholder. (<b>~/src/assets/images/<wbr>logo.png</b>)</li>
           <li>
             <p>Create and apply the favicon (or at least delete the placeholder provided). I recommend using <a class="link link--inline link--dot-on-hover" href="http://www.favicomatic.com">FAVIC-O-MATIC</a> for converting your image and generating head tag links!</p>
           </li>
@@ -257,7 +257,7 @@ If this was done by mistake, check ~/.trashed for your original files.-->
             <p>Check your site on a range of browser sizes and devices. Make sure it it's responsive and still looks good.</p>
           </li>
           <li>
-            <p>Make user responsive images sizing for different devices/screen sizes. <b>NOTE:</b> if using something like LazyImages, make sure there is no conflict with Waypoints. If so there try incorporating the FixLazyWaypoints module found under ~src/assets/scripts/modules</p>
+            <p>Make user responsive images sizing for different devices/screen sizes. <b>NOTE:</b> if using something like LazyImages, make sure there is no conflict with Waypoints. If so there try incorporating the FixLazyWaypoints module found under ~src/assets/scripts/<wbr>modules</p>
           </li>
           <li>
             <p>Test the production build (gulp build) before you need it. Modules are updated all the time and things may not always work as expected. Make sure the site looks good and the files you want compressed are compressed. Remember you can preview the production build by running the gulp task <span class="popout popout--inline popout--rounded-nw-se">gulp build</span> then <span class="popout popout--inline popout--rounded-nw-se">gulp previewDist</span>.</p>
@@ -353,10 +353,11 @@ If this was done by mistake, check ~/.trashed for your original files.-->
         <div class="--background-medium --full-padding-light --top-margin">
           <h3>Clean-Slate</h3>
           <p>Want to start coding, but don't want to clean out all this HTML and CSS that you don't want to use? Here are the tasks for you! These tasks can be run to clean out the source code to varying degrees: </p>
+          <p>For more detailed information, open <b>~/gulp/clean-slate/<wbr>README.md</b></p>
           <ul class="list">
-            <li>Clean task give you a good starting point with elements and selectors you can customize. Use this if you want to have some basic structure when starting out.</li>
-            <li>Bare tasks give you the bare bones that you then can fill in as you wish. Use this if you're just here for the pre-made gulp tasks and want to make your own structure.</li>
-            <li>Full tasks give you the initial starting point of this site (for whatever reason you might like it).</li>
+            <li>The <b>Clean</b> tasks give you a good starting point with elements and selectors you can customize. Use this if you want to have some basic structure when starting out.</li>
+            <li>The <b>Bare</b> tasks give you the bare bones that you then can fill in as you wish. Use this if you're just here for the pre-made gulp tasks and want to make your own structure.</li>
+            <li>The <b>Full</b> tasks give you the initial starting point of this site (for whatever reason you might like it).</li>
           </ul>
           <p class="popout popout--rounded popout--mild">Want to see the templates before you commit? All template files are located within ~/gulp/templates</p>
           <p class="popout popout--rounded popout--hot"><strong>WARNING:</strong> These tasks are designed to override existing source content (including this file). Make sure you are ready before running these commands. If run by mistake, check for your original files under ~/.trashed.</p>
@@ -430,7 +431,7 @@ If this was done by mistake, check ~/.trashed for your original files.-->
   <footer class="site-footer --color-light">
     <div class="columns columns--children-vert-align columns--not-for-tiny">
       <div class="columns__pillar columns__pillar--6o12 columns__pillar--bottom-padding-for-tiny">
-        <div class="--center-align">See the GitHub repository: <a href="https://github.com/MirandaKim/readystart" class="link link--inline link--dot-on-hover link--light">github.com/MirandaKim/readystart</a></div>
+        <div class="--center-align">See the GitHub repository: <a href="https://github.com/MirandaKim/readystart" class="link link--inline link--light">github.com/MirandaKim/readystart</a></div>
       </div>
       <div class="columns__pillar columns__pillar--6o12 columns__pillar--no-side-margin">
         <div class="--center-align">Original template created by Miranda Hoover</div>

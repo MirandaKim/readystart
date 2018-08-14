@@ -24,7 +24,7 @@ _See "Available clean-slate task" for the actual task commands._
 
   - The **Clean** task give you a good starting point with elements and selectors you can customize. Some styles including globals, mixins, general modifiers, and variables are left in place. For html, index.html has some useful tags with class names to make starting out easier. Use this task if you want to have some basic structure when starting out.
 
-  - The **Bare** tasks give you the bare bones that you then can fill in as you wish. Most of the styles file structure is left in place with class names, but very few contain styles. For html, the index.html file is left with the bare minimum tags. Use this task if you're just here for the pre-made gulp tasks and want to make your own structure.
+  - The **Bare** tasks give you the bare bones that you then can fill in as you wish. Most of the styles file structure is left in place with class names, but very few contain styles (some mixins and variables are included, mainly for media queries). For html, the index.html file is left with the bare minimum tags. Use this task if you're just here for the pre-made gulp tasks and want to make your own structure.
 
   - The **Full** tasks give you the initial starting point of this repository (aka the html and styles that are available when the repository was first downloaded) for whatever reason you might like it.
 

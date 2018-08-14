@@ -1,56 +1,50 @@
 const gulp = require('gulp');
 const argv = require('yargs').argv;
 const CleanSlate = require('../modules/CleanSlate.class');
+const CleanSlateMessages = require('../modules/CleanSlateMessages.class');
 
-gulp.task('full', gulp.series((done) => {
+/****************************************************/
+/*                                                 */
+/*   Clean-Slate Full Task (full.task.js)         */
+/*                                               */
+/************************************************/
+/*
+
+  - Swap out existing source files for the full/initial version.
+  - This task primarily accesses the clean-slate module
+    See module for more details (~/gulp/clean-slate/modules/CleanSlate.class.js)
+  - Also refer to ~/gulp/clean-slate/README.md for more details.
+
+
+  *************
+  * Contents: *
+  *************
+
+  # Task
+
+*/
+
+/**************************************/
+/*   # Task                          */
+/************************************/
+let taskName = 'full';
+gulp.task(taskName, gulp.series((done) => {
   let timestamp = Date.now();
   let renameMedfix = '.' + timestamp;
-  let fullSlate = new CleanSlate(renameMedfix);
   let fullHtml = argv.html;
   let fullCss = argv.css;
+  let csMsgs = new CleanSlateMessages(taskName, 'initial site content (in case you wanted it for any reason)');
+  /**
+  If either html or css was flagged to be swapped out, enter the process.
+  Else, log a summary of the task.
+  **/
   if(fullHtml || fullCss){
-    cleanSlate_sendExecuteMessage_full();
-    cleanSlate.execute('full', fullHtml, fullCss);
-    cleanSlate_sendCompletionMessage_full();
+    let cleanSlate = new CleanSlate(renameMedfix);
+    csMsgs.logExecuteMessage(); // log console message before execute
+    cleanSlate.execute(taskName, fullHtml, fullCss);
+    csMsgs.logCompletionMessage(); // log console message now that task is complete
   }else{
-    cleanSlate_sendSummaryMessage_full();
+    csMsgs.logSummaryMessage(); // log a summary of what this task is supposed to do
   }
-  done();
+  done(); // let everyone know you're done
 }));
-
-function cleanSlate_sendSummaryMessage_full(){
-  console.log(`
-    --------------------
-    The Clean-Slate Full
-    --------------------
-    The Clean-Slate Full task is designed to swap out existing source files for the initial site content (in case you wanted it for any reason).
-    - To view the templates that will be used, look under the directory ~/gulp/clean-slate/templates
-    - Existing files will be relocated to ~/.trashed
-    --------
-    Commands
-    --------
-    run task: gulp full (this will give you this summary message)
-    run task: gulp full --html (this will swap out only html)
-    run task: gulp full --css (this will swap out only css)
-    run task: gulp full --html --css  (this will swap out both html and css)
-    `);
-}
-
-
-function cleanSlate_sendExecuteMessage_full(){
-  console.log(`
-    ---------------------------------------
-    -- The Clean-Slate -- Full -- STARTING...
-    ---------------------------------------
-    Please wait while files are being moved and copied...
-   `);
-}
-
-function cleanSlate_sendCompletionMessage_full(){
-  console.log(`
-    ------------------------------------------
-    -- The Clean-Slate -- Full -- COMPLETE --
-    ------------------------------------------
-    Check ~/.trashed for your original files if you ran this command by mistake.
-   `);
-}

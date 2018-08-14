@@ -60,8 +60,8 @@ class CleanSlate {
     *********************/
     this._templatesDir = 'gulp/clean-slate/templates';// Where the templates are located
     this._trashDir = '.trashed';// Where the original files will be renamed to
-    // this._srcDir = 'src'; //Where the source files are located
-    this._srcDir = '.test'; //currently set to test directory to avoid accidental override while testing
+    this._srcDir = 'src'; //Where the source files are located
+    // this._srcDir = '.test'; //currently set to test directory to avoid accidental override while testing
 
     /******************
     *  > HTML Paths   *

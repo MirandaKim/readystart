@@ -43,6 +43,7 @@ gulp.task(taskName, gulp.series((done) => {
     csMsgs.logExecuteMessage(); // log console message before execute
     cleanSlate.execute(taskName, fullHtml, fullCss);
     csMsgs.logCompletionMessage(); // log console message now that task is complete
+    csMsgs.logWhatsNextMessage();
   }else{
     csMsgs.logSummaryMessage(); // log a summary of what this task is supposed to do
   }

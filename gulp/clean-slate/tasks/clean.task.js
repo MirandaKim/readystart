@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const argv = require('yargs').argv;
 const CleanSlate = require('../modules/CleanSlate.class');
+const CleanSlateMessages = require('../modules/CleanSlateMessages.class');
 
 /****************************************************/
 /*                                                 */
@@ -41,7 +42,7 @@ gulp.task(taskName, gulp.series((done) => {
   if(cleanHtml || cleanCss){
     let cleanSlate = new CleanSlate(renameMedfix);
     csMsgs.logExecuteMessage(); // log console message before execute
-    cleanSlate.execute(taskName, fullHtml, fullCss);
+    cleanSlate.execute(taskName, cleanHtml, cleanCss);
     csMsgs.logCompletionMessage(); // log console message now that task is complete
   }else{
     csMsgs.logSummaryMessage(); // log a summary of what this task is supposed to do

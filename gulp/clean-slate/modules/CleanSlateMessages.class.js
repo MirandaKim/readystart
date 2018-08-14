@@ -38,7 +38,7 @@ class CleanSlateMessages {
   constructor(command, description = ''){
     this.command = command.toLowerCase();
     this.commandTitled = command.charAt(0).toUpperCase() + command.slice(1);
-    this.description = description.length < 1 ? `${command} version`;
+    this.description = description.length < 1 ? `${command} version` : description;
   }
 
   /**************************************/

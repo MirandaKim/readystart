@@ -117,6 +117,7 @@ class CleanSlate {
   ***********************/
 
   _runCleanSlate(type, cleanHtml, cleanCss) {
+    this._createDirIfNotExists(this._trashDir);
     if(cleanHtml) {
       this._moveOrigHtml();
       this._copyHtmlTemplate(type);
@@ -236,6 +237,12 @@ class CleanSlate {
       preserveTimestamps: true
     });
     console.log(`Clean Slate -- Copy FIle: File Copied: ${src} COPIED TO ${dest}`);
+  }
+
+  _createDirIfNotExists(dir){
+    if(!fs.existsSync(dir)) {
+      fs.mkdirSync(dir);
+    }
   }
 
   /*********************

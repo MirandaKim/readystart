@@ -4,8 +4,7 @@ import $ from 'jquery';
 import CheckHasTouch from './modules/CheckHasTouch.class';
 import NavDisplay from './modules/NavDisplay.class';
 import SectionChange from './modules/SectionChange.class';
-// import StickyOnScroll from './modules/StickyOnScroll.class'; // disabled, but functional
-import ClickToCopy from './modules/ClickToCopy.class';
+import StickyOnScroll from './modules/StickyOnScroll.class';
 
 /****************************************************/
 /*                                                 */
@@ -21,9 +20,7 @@ import ClickToCopy from './modules/ClickToCopy.class';
       + Section change on scroll and link click (using class names for active link)
       + Toggle display of menu (using class names)
       + Sticky On Scroll for creating "sticky" elements like banners/headers/menus (using class names)
-      + Click To Copy, add the class 'click-to-copy' to an element and it's contents will be copied when clicked.
-  - Sticky On Scroll has been disabled because the current design does not require
-    any elements to change on scroll, but the module should be functional if desired in future design.
+
 
 
   *************
@@ -36,7 +33,6 @@ import ClickToCopy from './modules/ClickToCopy.class';
   # Navigation Display
   # Section Change
   # Sticky On Scroll (disabled)
-  # Click To Copy
 
 */
 
@@ -118,19 +114,9 @@ sectionChange.setEvents();
 /************************************/
 
 /*
-  DEV NOTE:
-  The following Sticky On Scroll logic is disabled because it's not used for this design.
-  To use: Uncomment the following two lines of code, and uncomment the StickyOnScroll import statement at the top.
   Give your sticky elements the class name 'make-sticky' and a trigger element the class 'trigger-sticky'.
   The sticky elements should receive the class '--sticky' when the user scrolls to the trigger element.
   See the StickyOnScroll module (./modules/StickyOnScroll.class.js) for more information and customization options.
 */
-// let stickyOnScroll = new StickyOnScroll();
-// stickyOnScroll.execute();
-
-/**************************************/
-/*   # Click To Copy                 */
-/************************************/
-
-let clickToCopy = new ClickToCopy();
-clickToCopy.setEvents();
+let stickyOnScroll = new StickyOnScroll();
+stickyOnScroll.execute();

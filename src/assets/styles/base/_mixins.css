@@ -40,10 +40,6 @@
     > Crushed Screen
     > Pancake Screen
 
-  # Structural
-    > Clearfix
-    > Center Vertically
-
 */
 
 /**************************************/
@@ -154,31 +150,4 @@ but with about as little height as you can get
   @media only screen and (max-height: $screen_pancake_height) and (min-width: $screen_pancake_width) {
     @mixin-content;
   }
-}
-
-
-/**************************************/
-/*   # Structural                    */
-/************************************/
-
-/****************
-*  > Clearfix   *
-****************/
-@define-mixin clearfix {
-  &::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-}
-
-/*************************
-*  > Center Vertically   *
-**************************
-This mixin centers the element vertically within its parent (assuming position).
-NOTE: the element and container must both have a position for this to work!
-*/
-@define-mixin centerVert {
-  top: 50%;
-  transform: translateY(-50%);
 }

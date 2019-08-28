@@ -15,11 +15,6 @@
   *************
 
   # Section
-    > Focus
-    > Modifiers
-    > At Small
-  # Headline
-  # Content
 
 */
 
@@ -27,80 +22,4 @@
 /*   # Section                       */
 /************************************/
 
-.section {
-  /*display*/
-  display: block;
-  /*position*/
-  position: relative;
-  /*structure*/
-  height: auto;
-  width: 100%;
-  /*spacing*/
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 15px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 30px;
-  padding-left: 40px;
-
-  /*************
-  *  > Focus   *
-  *************/
-
-  &:focus {
-    /*outline*/
-    outline: none;
-  }
-
-  /*****************
-  *  > Modifiers   *
-  *****************/
-
-  &--extra-margin-bottom {
-    /*spacing*/
-    margin-bottom: 100px;
-  }
-
-  /****************
-  *  > At Small   *
-  ****************/
-
-  @mixin atSmall {
-    /*spacing*/
-    margin-bottom: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
-
-    &--extra-margin-bottom {
-      /*spacing*/
-      margin-bottom: 150px;
-    }
-
-  }
-
-  /**************************************/
-  /*   # Headline                      */
-  /************************************/
-
-  &__headline {
-    /*Apply any styles for a section headline here.
-    Headlines also have thier own style file ./_headline.css*/
-  }
-
-  /**************************************/
-  /*   # Content                       */
-  /************************************/
-
-  &__content {
-
-    &--center-vert {
-      /*position*/
-      position: absolute;
-      top: 50%;
-      /*transform*/
-      transform: translateY(-50%);
-    }
-  }
-
-}
+.section {}

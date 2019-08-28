@@ -18,9 +18,6 @@
   *************
 
   # Link
-  # Inline Link
-  # Light
-  # Dot On Hover
 
 */
 
@@ -29,81 +26,6 @@
 /************************************/
 
 .link {
-  /*colors*/
-   color: rgb($color_textLink_inline);
    /*hover*/
-   .has-no-touch &:hover{
-     /*colors*/
-     color: rgb($color_textLink_inline_hover);
-     /*typography*/
-    font-style: normal;
-   }
-
-   /**************************************/
-   /*   # Inline Link                   */
-   /************************************/
-
-   &--inline {
-     /*position*/
-     z-index: 0;
-     position: relative;
-     /*typography*/
-     text-align: center;
-     white-space: nowrap;
-     /*hover*/
-     .has-no-touch &:hover {
-       font-weight: bold;
-     }
-   }
-
-   /**************************************/
-   /*   # Light                         */
-   /************************************/
-
-   &--light {
-     /*colors*/
-     color: rgb($color_neutralLight);
-   }
-
-   /**************************************/
-   /*   # Dot On Hover                  */
-   /************************************/
-
-  .has-no-touch &--dot-on-hover {
-    &::before {
-      /*content*/
-      content: "";
-      /*display*/
-      display: block;
-      /*position*/
-      z-index: -1;
-      position: absolute;
-      top: 1rem;
-      left: 50%;
-      /*transform*/
-      transform: translateX(-50%);
-      /*structure*/
-      height: 0;
-      width: 0;
-      /*borders*/
-      border-radius: 50%;
-      /*colors*/
-      background-color: rgba($color_accentSec, .1);
-      /*transition*/
-      transition-property: all;
-      transition-duration: 100ms;
-    }
-    /*hover*/
-    &:hover::before {
-      /*position*/
-      top: -.25rem;
-      /*structure*/
-      height: 2rem;
-      width: 2rem;
-      /*transform*/
-      tranform: translateX(-50%);
-    }
-  }
-
-
+   .has-no-touch &:hover{}
 }

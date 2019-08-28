@@ -14,10 +14,6 @@
   *************
 
   # Site Body
-    > Restrict Width
-    > At Small
-    > At Large
-    > At Crushed
 
 */
 
@@ -25,57 +21,4 @@
 /*   # Site Body                     */
 /************************************/
 
-.site-body {
-  /*position*/
-  z-index: 0;
-  position: relative;
-  /*spacing*/
-  padding-left: 10px;
-  padding-right: 10px;
-
-  /**********************
-  *  > Restrict Width   *
-  **********************/
-
-  &--restrict-width {
-    /*structure*/
-    max-width: 750px;
-  }
-
-  /****************
-  *  > At Small   *
-  ****************/
-
-  @mixin atSmall {
-    /*spacing*/
-    margin-top: 15px;
-    margin-left: 150px;
-  }
-
-  /****************
-  *  > At Large   *
-  ****************/
-
-  @mixin atLarge {
-    &--center-at-large {
-      /*spacing*/
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-
-  /******************
-  *  > At Crushed   *
-  ******************/
-
-  @mixin atCrushed {
-    &--left-space-at-crushed {
-      /*structure*/
-      width: auto;
-      max-width: unset;
-      /*spacing*/
-      margin-left: 250px;
-    }
-  }
-
-}
+.site-body {}

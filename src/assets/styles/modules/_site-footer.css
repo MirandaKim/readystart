@@ -14,8 +14,6 @@
   *************
 
   # Site Footer
-    > At Small
-  # Fixed Footer
 
 */
 
@@ -23,37 +21,4 @@
 /*   # Site Footer                   */
 /************************************/
 
-.site-footer {
-  /*display*/
-  display: block;
-  /*position*/
-  position: relative;
-  /*structure*/
-  width: 100vw;
-  /*spacing*/
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 15px;
-  padding-right: 15px;
-  /*colors*/
-  background-color: rgb($color_offBlack);
-
-  /****************
-  *  > At Small   *
-  ****************/
-
-  @mixin atSmall {}
-
-  /**************************************/
-  /*   # Fixed Footer                   */
-  /************************************/
-
-  &--fixed {
-    /*position*/
-    z-index: 500;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-  }
-
-}
+.site-footer {}

@@ -22,7 +22,7 @@
 /**************************************/
 /*   # Import                        */
 /************************************/
-/* @import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,900,900i'); */
+@import url('https://fonts.googleapis.com/css?family=Alegreya|Karla:400,700&display=swap');
 
 /**************************************/
 /*   # Variables                     */
@@ -31,9 +31,14 @@
 /*********************
 *  > Font Families   *
 *********************/
-/* $font_roboto: 'Roboto', 'Ariel', sans-serif; */
+
+$font_alegreya: 'Alegreya', serif;
+
+$font_karla: 'Karla', sans-serif;
 
 /***************
 *  > General   *
 ***************/
-/* $font_sansSerif: $font_roboto; */
+
+$font_serif: $font_alegreya;
+$font_sans: $font_karla;

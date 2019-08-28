@@ -47,11 +47,12 @@ If this was done by mistake, check ~/.trashed for your original files.*/
 /************************
 *  > General Elements   *
 ************************/
+@import './modules/_wrapper';
 @import './modules/_list';
 @import './modules/_link';
+@import './modules/_button';
 @import './modules/_headline';
-@import './modules/_click-to-copy';
-@import './modules/_columns';
+@import './modules/_column';
 
 /***********************
 *  > Target Elements   *

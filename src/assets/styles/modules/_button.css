@@ -1,0 +1,39 @@
+
+/****************************************************/
+/*                                                 */
+/*   Button CSS (_button.css)                     */
+/*                                               */
+/************************************************/
+/*
+
+  - Class for creating a button style (this can be used with a button or a tag)
+
+  - A mulitple buttons can be grouped within the class button__group
+
+  - Change the style of the button with available modifier classes.
+
+  *************
+  * Contents: *
+  *************
+
+  # Button Group
+  # Button
+
+*/
+
+/**************************************/
+/*   # Button Group                  */
+/************************************/
+
+.button__group {
+
+}
+
+
+/**************************************/
+/*   # Button                        */
+/************************************/
+
+.button {
+  
+}

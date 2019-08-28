@@ -1,0 +1,51 @@
+
+/****************************************************/
+/*                                                 */
+/*   Column CSS (_column.css)                     */
+/*                                               */
+/************************************************/
+/*
+
+  - Group the 'column' (class) into within a 'column__group' (class).
+  This file includes classes for customizing to appearance of these column
+    (e.g. columns__pillar--no-side-margin).
+
+  *************
+  * Contents: *
+  *************
+
+  # Column
+  # Column
+  # No Flexbox
+
+*/
+
+/**************************************/
+/*   # Column Group                  */
+/************************************/
+
+.column__group {
+  /*position*/
+  position: relative;
+  display: flex;
+}
+
+/**************************************/
+/*   # Column                        */
+/************************************/
+
+.column {
+
+  background-color: red;
+
+}
+
+
+/**************************************/
+/*   # No Flexbox                    */
+/************************************/
+
+.has-no-flexbox .column__group,
+.column__group--no-flex {
+  display: block;
+}

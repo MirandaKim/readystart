@@ -1,25 +1,200 @@
 <!DOCTYPE html>
 
-<!-- This file has been copies over from the Clean-Slate templates (bare version).
-If this was done by mistake, check ~/.trashed for your original files.-->
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>XXXXXX</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="">
+  <title>Miranda Hoover: Web Developer</title>
+  <meta name="description" content="My name is Miranda Hoover and I'm a web developer. Learn a little about me, my skill sets, and how to contact me.">
+  <meta name="keywords" content="web developer, front-end developer, back-end developer, full-stack developer, mobile-friendly, responsive web design, object-oriented programming, HTML, CSS, JavaScript, portfolio">
+  <meta name="author" content="Miranda Hoover">
   <!-- end favidon data -->
   <!-- inject:css -->
+  <link rel="stylesheet" href="assets/styles/styles.css">
   <!-- endinject -->
 </head>
+
 <body>
-  <h1>Hello.</h1>
-  <p>You are seeing his file because you ran a clean-slate gulp task.</br>
-  <strong>If this was by mistake</strong>, check the folder ~/.trashed for what was here and swap it back into ~/src/assets.</br>
-  If this was your intent, then delete this message and start working. Your working css and js are under ~/src/assets</p>
-  <p>For more information on the clean-slate tasks, go to <b>~/gulp/clean-slate/README.md</b></p>
-  <p>P.S. Don't forget to give this site a title, meta data, a favicon, and your own logo.</p>
-  <!-- inject:js -->
-  <!-- endinject -->
+  <header class="site-header" id="site-header">
+    <div class="wrapper wrapper--outer">
+      <div class="logo__wrapper">
+        <a class="logo__link" href="#"></a>
+        <p class="logo__text">Miranda Hoover</p>
+      </div>
+      <nav class="nav">
+        <ul class="nav__link-list">
+          <li>
+            <a class="nav__link" href="#about">about</a>
+          </li>
+          <li>
+            <a class="nav__link" href="#skills">skills</a>
+          </li>
+          <li>
+            <a class="nav__link" href="#hobbies">hobbies</a>
+          </li>
+          <li>
+            <a class="nav__link" href="#contact">contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="site-body" id="site-body">
+
+    <article class="main-content wrapper">
+
+      <section class="section" id="home">
+        <div class="wrapper wrapper--body column__group">
+          <div class="column"></div>
+          <div class="column">
+            <div class="wrapper wrapper--body page__content">
+              <h1 class="headline headline--xl page__headline">Hello,</h1>
+              <p class="page__paragraph">my name is Miranda Hoover, <br> and I'm a web developer.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="wrapper wrapper--body page__content">
+          <h2 class="headline page__headline">About Me</h2>
+          <p class="page__paragraph">Quisque et imperdiet turpis. In sed lacus ipsum. Nunc condimentum massa dignissim, commodo quam elementum, dapibus est. Curabitur leo est, vulputate ac maximus at, finibus posuere risus. </p>
+          <p class="page__paragraph">Ut dignissim nisi nec arcu ullamcorper, et auctor justo commodo. Fusce elementum eu diam vel tincidunt. Maecenas aliquam et nisl id feugiat.</p>
+          <p class="page__paragraph">Mauris at felis sapien. In rhoncus facilisis dui et tristique. Mauris venenatis eleifend purus, vitae bibendum massa iaculis eget. </p>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="wrapper wrapper--body page__content">
+          <h2>Skills</h2>
+          <div class="column__group">
+            <div class="column">
+              <div class="notecard">
+                <h3>Web Development</h3>
+                <ul class="list list--edge-bullets">
+                  <li>testing</li>
+                  <li>testing</li>
+                  <li>testing</li>
+                </ul>
+              </div>
+            </div>
+            <div class="column">
+              <div class="notecard">
+                <h3>Design Programs</h3>
+                <ul class="list list--edge-bullets">
+                  <li>testing</li>
+                  <li>testing</li>
+                  <li>testing</li>
+                </ul>
+              </div>
+              <div class="notecard">
+                <h3>Learning</h3>
+                <p>Mauris at felis sapien. In rhoncus facilisis dui et tristique.</p>
+                <ul class="list list--edge-bullets">
+                  <li>testing</li>
+                  <li>testing</li>
+                  <li>testing</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="hobbies">
+        <div class="wrapper wrapper--body page__content">
+          <h2>Hobbies</h2>
+          <p>Quisque et imperdiet turpis. In sed lacus ipsum. Nunc condimentum massa dignissim, commodo quam elementum, dapibus est.</p>
+          <ul class="list list--edge-bullets list--eye-bullets">
+            <li>
+              <h3 class="headline">Crochet</h3>
+              <p>Ut dignissim nisi nec arcu ullamcorper, et auctor justo commodo. Fusce elementum eu diam vel tincidunt. Maecenas aliquam et nisl id feugiat.</p>
+              <div class="button__group">
+                <div class="button__wrapper">
+                  <div class="button__desc button__desc--popout"></div>
+                  <a class="button button--popout" href="https://woolenyeti.com">WoolenYeti.com</a>
+                </div>
+                <div class="button__wrapper">
+                  <div class="button__desc button__desc--popout"></div>
+                  <a class="button button--popout" href="#">Woolen Yeti on Instagram</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <h3 class="headline">Art</h3>
+              <p>Ut dignissim nisi nec arcu ullamcorper, et auctor justo commodo. Fusce elementum eu diam vel tincidunt. Maecenas aliquam et nisl id feugiat.</p>
+              <div class="button__group">
+                <div class="button__wrapper">
+                  <div class="button__desc button__desc--popout"></div>
+                  <a class="button button--popout" href="https://woolenyeti.com">Mirananemone on Instagram</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="wrapper wrapper--body page__content">
+          <h2 class="headline page__headline">Contact</h2>
+          <ul class="list list--edge-bullets list--eye-bullets">
+            <li>
+              <h3 class="headline">Email:</h3>
+              <p class="email">Miranda.WebD@gmail.com</p>
+              <div class="button__wrapper">
+                <div class="button__desc button__desc--popout"></div>
+                <button class="button button--popout">Email Me!</button>
+              </div>
+            </li>
+            <li>
+              <h3 class="headline">Find Me Online:</h3>
+              <ul class="button__group">
+                <div class="button__wrapper">
+                  <div class="button__desc button__desc--popout"></div>
+                  <a class="button button--popout" href="#">GitHub</a>
+                </div>
+                <div class="button__wrapper">
+                  <div class="button__desc button__desc--popout"></div>
+                  <a class="button button--popout" href="#">LinkedIn</a>
+                </div>
+                <div class="button__wrapper">
+                  <div class="button__desc button__desc--popout"></div>
+                  <a class="button button--popout" href="#">WoolenYeti</a>
+                </div>
+                <div class="button__wrapper">
+                  <div class="button__desc button__desc--popout"></div>
+                  <a class="button button--popout" href="#">Art Instagram</a>
+                </div>
+                <div class="button__wrapper">
+                  <div class="button__desc button__desc--popout"></div>
+                  <a class="button button--popout" href="#">Crochet Instagram</a>
+                </div>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </article>
+
+  </div>
+
+  <footer class="site-footer" id="site-footer">
+      <div class="wrapper wrapper--outer column__group">
+        <div class="column">
+          <p class="color--light">This site is designed & built by Miranda Hoover</p>
+          <p class="color--light">This site is hosted by <a class="link link--inline" href="https://pages.github.com/">GitHub Pages</a></p>
+        </div>
+        <div class="column">
+          <ul class="button__group social-links">
+            <a class="button button--social" href="#">X</a>
+            <a class="button button--social" href="#">X</a>
+            <a class="button button--social" href="#">X</a>
+          </ul>
+        </div>
+      </div>
+  </footer>
+
 </body>
+
 </html>

@@ -35,6 +35,18 @@
 
 .site-header {
 
+  /*position*/
+  position: relative;
+  z-index: 5000;
+  /*structure*/
+  width: 100%;
+  /*spacing*/
+  padding: 0;
+  margin: 0;
+
+  background-color: grey;
+
+
   /**************************************/
   /*   # Logo Wrapper                  */
   /************************************/

@@ -21,4 +21,14 @@
 /*   # Site Body                     */
 /************************************/
 
-.site-body {}
+.site-body {
+  /*position*/
+  position: relative;
+
+  /*structure*/
+  max-width: 900px;
+  /*spacing*/
+  margin-left: auto;
+  margin-right: auto;
+
+}

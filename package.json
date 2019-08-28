@@ -1,14 +1,14 @@
 {
-  "name": "readystart",
+  "name": "portfolio_v2",
   "version": "1.0.0",
-  "description": "Starting point for creating websites with tools including: gulp, webpack, postcss, jquery...",
+  "description": "Portfolio: Miranda Hoover (v2)",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jquery": "^3.3.1",
+    "jquery": "^3.4.1",
     "normalize.css": "^8.0.0",
     "waypoints": "^4.0.1"
   },
@@ -17,11 +17,11 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
-    "browser-sync": "^2.24.5",
+    "browser-sync": "^2.26.7",
     "del": "^3.0.0",
     "fs-extra": "^7.0.0",
-    "gulp": "github:gulpjs/gulp#4.0",
-    "gulp-cssnano": "^2.1.3",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
     "gulp-hash": "^4.2.2",
     "gulp-htmlmin": "^4.0.0",
     "gulp-imagemin": "^4.1.0",

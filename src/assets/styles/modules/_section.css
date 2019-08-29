@@ -22,4 +22,16 @@
 /*   # Section                       */
 /************************************/
 
-.section {}
+.section {
+
+  /*spacing*/
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  @mixin atMedium {
+    /*spacing*/
+    padding-top: 5rem;
+    padding-bottom: 5rem; 
+  }
+
+}

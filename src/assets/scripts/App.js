@@ -4,7 +4,6 @@ import $ from 'jquery';
 import CheckHasTouch from './modules/CheckHasTouch.class';
 import NavDisplay from './modules/NavDisplay.class';
 import SectionChange from './modules/SectionChange.class';
-import StickyOnScroll from './modules/StickyOnScroll.class';
 
 /****************************************************/
 /*                                                 */
@@ -19,7 +18,6 @@ import StickyOnScroll from './modules/StickyOnScroll.class';
       + Modernizr (via ./Vendors.js)
       + Section change on scroll and link click (using class names for active link)
       + Toggle display of menu (using class names)
-      + Sticky On Scroll for creating "sticky" elements like banners/headers/menus (using class names)
 
 
 
@@ -32,7 +30,6 @@ import StickyOnScroll from './modules/StickyOnScroll.class';
   # Detect Touch
   # Navigation Display
   # Section Change
-  # Sticky On Scroll (disabled)
 
 */
 
@@ -107,16 +104,3 @@ let sectionChange = new SectionChange(section_selector, section_activeLinkClassS
 sectionChange.scrollUpOffset = "-5%";
 sectionChange.scrollDownOffset="20%";
 sectionChange.setEvents();
-
-
-/**************************************/
-/*   # Sticky On Scroll              */
-/************************************/
-
-/*
-  Give your sticky elements the class name 'make-sticky' and a trigger element the class 'trigger-sticky'.
-  The sticky elements should receive the class '--sticky' when the user scrolls to the trigger element.
-  See the StickyOnScroll module (./modules/StickyOnScroll.class.js) for more information and customization options.
-*/
-let stickyOnScroll = new StickyOnScroll();
-stickyOnScroll.execute();

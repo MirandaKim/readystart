@@ -40,6 +40,8 @@ html,body {
   /*spacing*/
   margin: 0;
   padding: 0;
+  /*color*/
+  color: $color_text_main;
 }
 
 
@@ -58,4 +60,22 @@ h3, h4, h5, h6 {
 
 p, a, button, li {
   font-family: $font_karla;
+}
+
+/**************************************/
+/*   # Links                         */
+/************************************/
+
+a {
+  /*pointer*/
+  cursor: pointer;
+  /*typography*/
+  text-decoration: none;
+  font-weight: 700;
+  /*colors*/
+  color: $color_text_link;
+
+  &:hover {
+    color: $color_text_link_hover;
+  }
 }

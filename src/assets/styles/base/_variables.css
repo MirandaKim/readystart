@@ -59,12 +59,15 @@ $site_margin_body_sides: 5rem;
 *************************/
 
 /*Grayscale*/
-$color_black: 0, 0, 0;
 $color_white: 255, 255, 255;
+$color_almostWhite: 207, 209, 210;
+$color_black: 0, 0, 0;
+
 
 /*BLUES*/
-$color_darkBlue: 51, 61, 81;
-/* $color_mediumBlue: ; */
+$color_darkerBlue: 51, 61, 81; /*nearly black*/
+$color_darkBlue: 71, 81, 101;
+$color_mediumBlue: 152, 170, 191;
 $color_lightBlue: 202, 220, 241;
 
 /*YELLOWS*/
@@ -76,19 +79,18 @@ $color_lightYellow: 255, 236, 189;
 *  > Color Designations   *
 **************************/
 
-$color_a: $color_darkBlue;
-$color_b: $color_darkYellow;
-$color_c: $color_lightBlue;
-$color_d: $color_lightYellow;
-$color_e: $color_mediumYellow;
-
+$color_a: rgb($color_darkBlue);
+$color_b: rgb($color_darkYellow);
+$color_c: rgb($color_lightBlue);
+$color_d: rgb($color_lightYellow);
+$color_e: rgb($color_mediumYellow);
 
 /*************************
 *  > Color Assignments   *
 *************************/
 
 /*TEXT*/
-$color_textHeaderMain: $color_darkBlue;
-$color_textHeaderSec: $color_darkBlue;
-$color_textHeaderTert: $color_darkBlue;
-$color_textBody: $color_darkBlue;
+$color_text_main: rgb($color_darkBlue);
+$color_text_link: rgb($color_mediumBlue);
+$color_text_link_hover: rgb($color_darkYellow);
+$color_text_link_button: rgb($color_darkBlue);

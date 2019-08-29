@@ -43,8 +43,12 @@
   /*spacing*/
   padding: 0;
   margin: 0;
-
-  background-color: grey;
+  /*border*/
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  /*colors*/
+  background-color: $color_e;
+  border-color: $color_a;
 
 
   /**************************************/

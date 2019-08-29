@@ -23,6 +23,7 @@
 
 .site-footer {
 
-  background-color: green;
+  /*colors*/
+  background-color: $color_a;
 
 }

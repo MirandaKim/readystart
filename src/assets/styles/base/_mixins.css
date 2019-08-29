@@ -40,6 +40,9 @@
     > Crushed Screen
     > Pancake Screen
 
+  # Clear Fix
+  # Text Styles
+
 */
 
 /**************************************/
@@ -150,4 +153,29 @@ but with about as little height as you can get
   @media only screen and (max-height: $screen_pancake_height) and (min-width: $screen_pancake_width) {
     @mixin-content;
   }
+}
+
+
+/**************************************/
+/*   # Clear Fix                     */
+/************************************/
+
+@define-mixin clearFix {
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+/**************************************/
+/*   # Text Styles                   */
+/************************************/
+
+/* @define-mixin shadowBold $color {
+  text-shadow: 0 0 1px rgba($color, 1);
+} */
+
+@define-mixin shadowBold $color {
+  text-shadow: 0 0 1px rgba($color, 1);
 }

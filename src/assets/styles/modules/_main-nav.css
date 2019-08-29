@@ -25,11 +25,79 @@
 .main-nav {
 
   /**************************************/
+  /*   # Link Group                    */
+  /************************************/
+
+  &__link-group {
+    /*spacing*/
+    margin-top: 1.3rem;
+    margin-bottom: 1.1rem;
+  }
+
+
+  /**************************************/
   /*   # Link                          */
   /************************************/
 
-  &__links {}
+  &__link {
+    /*position*/
+    position: relative;
+    /*typography*/
+    font-weight: 300;
+    font-size: 1rem;
+    /*colors*/
+    color: $color_a;
 
-  &__link {}
+    &::before {
+      content: "";
+      /*display*/
+      display: none;
+      box-sizing: content-box;
+      /*position*/
+      position: absolute;
+      left: calc(50% - 6px);
+      bottom: -25px;
+      /* transform: translateX(55%); */
+      /*structure*/
+      height: 12px;
+      width: 12px;
+      /*borders*/
+      border-radius: 50%;
+      /*colors*/
+      background-color: $color_a;
+
+      opacity: 0;
+
+      /*transition*/
+      transition-property: opacity;
+      transition-duration: 500ms;
+    }
+
+    &:hover {
+
+
+      @mixin shadowBold $color_darkBlue;
+      color: $color_a;
+
+      &:not(.active)::before {
+        opacity: 1;
+        display: block;
+        background-color: rgba($color_white);
+      }
+    }
+
+    &.active {
+
+
+      @mixin shadowBold $color_darkBlue;
+
+      &::before {
+        opacity: 1;
+        display: block;
+
+      }
+    }
+
+  }
 
 }

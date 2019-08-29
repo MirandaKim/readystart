@@ -26,6 +26,26 @@
 
 .list {
 
+
+  /**************************************/
+  /*   # Modifiers                     */
+  /************************************/
+
+  &--no-bullets {
+    list-style: none;
+  }
+
+  &--inline {
+    li {
+      display: inline-block;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
   /**************************************/
   /*   # Sub List                      */
   /************************************/

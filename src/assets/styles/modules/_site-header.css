@@ -50,12 +50,19 @@
   background-color: $color_e;
   border-color: $color_a;
 
+  @mixin clearFix;
+
 
   /**************************************/
   /*   # Logo Wrapper                  */
   /************************************/
 
-  &__logo-wrapper {}
+  &__logo-wrapper {
+    /*display*/
+    display: inline-block;
+    /*position*/
+    position: relative;
+  }
 
   /**************************************/
   /*   # Logo Image                    */
@@ -75,6 +82,12 @@
   /************************************/
 
   &__menu-wrapper {
+
+    /*display*/
+    display: inline-block;
+    position: relative;
+    float: right;
+
 
     .--menu-visible &{}
 

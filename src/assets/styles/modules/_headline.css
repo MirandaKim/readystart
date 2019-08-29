@@ -14,6 +14,10 @@
 
   # Headline
   # Sizes
+    > XL
+    > Large
+    > Medium
+    > Small
 
 */
 
@@ -27,9 +31,40 @@
   /*   # Sizes                         */
   /************************************/
 
+  /**********
+  *  > XL   *
+  **********/
+
   &--xl {
     font-size: 3.9rem;
     font-weight: 300;
+  }
+
+  /*************
+  *  > Large   *
+  *************/
+
+  &--large {
+    font-size: 2.7rem;
+    font-weight: 300;
+  }
+
+  /**************
+  *  > Medium   *
+  **************/
+
+  &--medium {
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+
+  /*************
+  *  > Small   *
+  *************/
+
+  &--small {
+    font-size: 1.2rem;
+    line-height: 1.6;
   }
 
 

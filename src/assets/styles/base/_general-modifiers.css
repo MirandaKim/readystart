@@ -25,3 +25,13 @@
     color: rgb($color_almostWhite);
   }
 }
+
+
+/**************************************/
+/*   # Stylize                       */
+/************************************/
+
+.popout {
+  position: relative;
+  @mixin popout $color_c, 6px, 8px;
+}

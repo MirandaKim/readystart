@@ -18,6 +18,8 @@
 
   # Button Group
   # Button
+  # Popout Button
+    > Hover
 
 */
 
@@ -27,6 +29,11 @@
 
 .button__group {
 
+  .button, .button__wrapper {
+    /*display*/
+    display: inline-block;
+  }
+
 }
 
 
@@ -35,5 +42,31 @@
 /************************************/
 
 .button {
-  
+
+    position: relative;
+
+  /**************************************/
+  /*   # Popout Button                 */
+  /************************************/
+
+  &--popout {
+
+    @mixin popout $color_d, 4px, 8px;
+
+    /**************
+    *   > Hover   *
+    **************/
+
+    &:hover {
+      /*colors*/
+      color: rgb($color_mediumBlue);
+      /*after*/
+      &::after {
+        background-color: $color_c;
+      }
+
+    }
+
+
+  }
 }

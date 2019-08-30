@@ -179,3 +179,57 @@ but with about as little height as you can get
 @define-mixin shadowBold $color {
   text-shadow: 0 0 1px rgba($color, 1);
 }
+
+/**************************************/
+/*   # Stylize                       */
+/************************************/
+
+
+/*
+  POPOUT
+  Create a popout effect.
+
+  Requires:
+  - the element has a position
+  - the use the element's after.
+*/
+@define-mixin popout $afterColor, $shiftAmount: 4px, $borderRadius: 0 {
+  /*spacing*/
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+
+  /*borders*/
+  border-radius: $borderRadius;
+  border-style: solid;
+  border-width: 2px;
+  /*colors*/
+  border-color: rgb($color_darkBlue);
+  color: rgb($color_darkBlue);
+  background-color: white;
+
+  &::after {
+    content: "";
+    /*display*/
+    display: block;
+    /*position*/
+    position: absolute;
+    top: $shiftAmount;
+    left: $shiftAmount;
+    z-index: -1;
+    /*structure*/
+    width: 100%;
+    height: 100%;
+    /*borders*/
+    border-style: solid;
+    border-width: 2px;
+    border-radius: $borderRadius;
+    /*colors*/
+    background-color: $afterColor;
+    border-color: rgb($color_darkBlue);
+
+  }
+}

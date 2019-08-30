@@ -14,9 +14,9 @@
   * Contents: *
   *************
 
+  # Column Group
   # Column
-  # Column
-  # No Flexbox
+  # For Tiny
 
 */
 
@@ -27,7 +27,11 @@
 .column__group {
   /*position*/
   position: relative;
-  display: flex;
+
+  .column {
+    display: inline-block;
+    vertical-align: top;
+  }
 }
 
 /**************************************/
@@ -35,15 +39,33 @@
 /************************************/
 
 .column {
+  /* flex-grow: 1; */
+
+
+  &--1-2 {
+    width: calc(50% - 5px);
+    margin-right: 5px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
 
 }
 
-
 /**************************************/
-/*   # No Flexbox                    */
+/*   # For Tiny                      */
 /************************************/
 
-.has-no-flexbox .column__group,
-.column__group--no-flex {
-  display: block;
+.column__group {
+  @mixin forTiny {
+
+  &--not-for-tiny { /**/
+
+      .column {
+        width: 100%;
+      }
+
+    }
+  }
 }

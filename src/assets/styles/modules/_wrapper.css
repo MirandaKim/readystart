@@ -14,9 +14,14 @@
   *************
 
   # Wrapper
-  # Outer
-  # Body
-  # Other
+  # Types
+    > Outer
+    > Body
+  # Display
+    > Flex
+  # Sizing
+  # Alignment
+  # Spacing
 
 */
 
@@ -27,8 +32,12 @@
 .wrapper {
 
   /**************************************/
-  /*   # Outer                         */
+  /*   # Types                         */
   /************************************/
+
+  /**************
+  *   > Outer   *
+  **************/
 
   &--outer {
     margin-left: $site_margin_outer_sides;
@@ -37,9 +46,9 @@
     margin-bottom: 0;
   }
 
-  /**************************************/
-  /*   # Body                          */
-  /************************************/
+  /*************
+  *   > Body   *
+  *************/
 
   &--body {
     margin-left: $site_margin_body_sides;
@@ -47,8 +56,60 @@
   }
 
   /**************************************/
-  /*   # Other                         */
+  /*   # Display                       */
   /************************************/
+
+  &--child-inline {
+    &>* {
+      display: inline-block;
+    }
+  }
+
+  /*************
+  *   > Flex   *
+  *************/
+
+  &--flex {
+    display: flex;
+  }
+
+  &--space-even {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &--f-align-center { /*requires flex class/property*/
+    align-items: center;
+  }
+
+  &--f-baseline { /*requires flex class/property*/
+    align-items: baseline;
+  }
+
+  /**************************************/
+  /*   # Sizing                        */
+  /************************************/
+
+  &--max-30 {
+    max-width: 30rem;
+  }
+
+  /**************************************/
+  /*   # Alignment                     */
+  /************************************/
+
+  &--center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /**************************************/
+  /*   # Spacing                       */
+  /************************************/
+
+  &--margin-bottom-slight {
+    margin-bottom: .5rem;
+  }
 
 
 }

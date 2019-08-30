@@ -17,6 +17,7 @@
   *************
 
   # Button Group
+    > Children
   # Button
   # Popout Button
     > Hover
@@ -28,6 +29,12 @@
 /************************************/
 
 .button__group {
+
+  position: relative;
+
+  /*****************
+  *   > Children   *
+  *****************/
 
   .button, .button__wrapper {
     /*display*/
@@ -44,6 +51,7 @@
 .button {
 
     position: relative;
+    white-space: nowrap;
 
   /**************************************/
   /*   # Popout Button                 */

@@ -35,3 +35,17 @@
   position: relative;
   @mixin popout $color_c, 6px, 8px;
 }
+
+/**************************************/
+/*   # Flex                          */
+/************************************/
+
+.flex {
+  display: flex;
+}
+
+.flex-even {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}

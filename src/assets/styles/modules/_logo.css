@@ -13,6 +13,8 @@
   *************
 
   # Logo
+  # Image
+  # link
 
 */
 
@@ -21,7 +23,36 @@
 /************************************/
 
 .logo {
-  &__text {
-    margin-top: 0; /*Stops logo text p tag from creating gap over body tag*/
+
+  /**************************************/
+  /*   # Image                         */
+  /************************************/
+
+  &__image {
+    svg {
+      fill: red;
+    }
   }
+
+  /**************************************/
+  /*   # Link                          */
+  /************************************/
+
+  &__link {
+    box-sizing: content-box;
+    /*position*/
+    position: absolute;
+    top: 8px;
+    left: -6px;
+    z-index: 10;
+    /*structure*/
+    height: 100%;
+    width: 100%;
+    /*spacing*/
+    padding-left: 6px;
+    padding-right: 6px;
+
+  }
+
+
 }

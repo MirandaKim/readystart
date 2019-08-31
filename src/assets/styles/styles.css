@@ -53,6 +53,7 @@ If this was done by mistake, check ~/.trashed for your original files.*/
 @import './modules/_button';
 @import './modules/_headline';
 @import './modules/_column';
+@import './modules/_notecard';
 
 /***********************
 *  > Target Elements   *

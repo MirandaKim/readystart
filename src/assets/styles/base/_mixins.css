@@ -42,6 +42,8 @@
 
   # Clear Fix
   # Text Styles
+  # List Styles
+  # Wrapper Styles
 
 */
 
@@ -172,16 +174,51 @@ but with about as little height as you can get
 /*   # Text Styles                   */
 /************************************/
 
-/* @define-mixin shadowBold $color {
-  text-shadow: 0 0 1px rgba($color, 1);
-} */
-
 @define-mixin shadowBold $color {
   text-shadow: 0 0 1px rgba($color, 1);
 }
 
 /**************************************/
-/*   # Stylize                       */
+/*   # List Styles                   */
+/************************************/
+
+/*
+Edge Bullets:
+Center the bullets over the edge of the wrapper.
+Accuracy may very based on any additional styles applied to the ul or li children.
+Style requires li children and the use of the li children's before*/
+@define-mixin edgeBullets $bHeight: 12px, $bWidth: 12px, $topShift: 0{
+  /*list style*/
+  list-style: none;
+  /*spacing -- remove ul default left spacing*/
+  margin-block-start: 0;
+  padding-inline-start: 0;
+
+  & > li {
+    /*position*/
+    position: relative;
+    /*THE BULLET*/
+    &::before {
+      content: "";
+      /*display*/
+      display: block;
+      /*position*/
+      position: absolute;
+      top: calc($bHeight / 2 - $topShift);
+      left: calc((17px + $bWidth/2) * -1);
+      /*structure*/
+      height: $bHeight;
+      width: $bWidth;
+      /*borders*/
+      border-radius: 50%;
+      /*colors*/
+      background-color: $color_a;
+    }
+  }
+}
+
+/**************************************/
+/*   # Wrapper Styles                */
 /************************************/
 
 
@@ -193,7 +230,7 @@ but with about as little height as you can get
   - the element has a position
   - the use the element's after.
 */
-@define-mixin popout $afterColor, $shiftAmount: 4px, $borderRadius: 0 {
+@define-mixin popout $afterColor: $color_a, $shiftAmount: 4px, $borderRadius: 0 {
   /*spacing*/
   padding-left: 1rem;
   padding-right: 1rem;

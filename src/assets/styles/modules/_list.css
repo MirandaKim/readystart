@@ -16,6 +16,7 @@
   *************
 
   # List
+  # Modifiers
   # Sub List
 
 */
@@ -30,6 +31,10 @@
   /**************************************/
   /*   # Modifiers                     */
   /************************************/
+
+  &--edge-bullets {
+    @mixin edgeBullets;
+  }
 
   &--no-bullets {
     list-style: none;

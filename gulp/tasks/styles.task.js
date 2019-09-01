@@ -7,6 +7,7 @@ const nested = require('postcss-nested');
 const cssImport = require('postcss-import');
 const mixins = require('postcss-mixins');
 const hexRgba = require('postcss-hexrgba');
+const cssFor = require('postcss-for');
 const presetEnv = require('postcss-preset-env');
 
 /****************************************************/
@@ -45,6 +46,7 @@ var destProd = './dist/assets'; // production destination for processed style fi
 
 let basePlugins = [ // include plugins common to all process environments
   cssImport,
+  cssFor,
   mixins,
   cssvars,
   nested,

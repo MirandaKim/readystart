@@ -9,14 +9,16 @@
   - Styles for lists.
   - These styles can be applied to tags like ul, ol, and dl.
   - Example of class use:
-      <dl class="list list--definitions list--hang-right">...</dl>
+      <dl class="list list--no-start-padding list--no-bullets">...</dl>
 
   *************
   * Contents: *
   *************
 
   # List
-  # Modifiers
+  # Spacing
+  # Display
+  # Bullets
   # Sub List
 
 */
@@ -29,25 +31,24 @@
 
 
   /**************************************/
-  /*   # Modifiers                     */
+  /*   # Spacing                       */
   /************************************/
 
+  /*
+  No Start Padding
+  Remove the default (some browsers) start padding*/
   &--no-start-padding {
     padding-inline-start: 0;
   }
 
-  &--edge-bullets {
-    @mixin edgeBullets;
-  }
+  /**************************************/
+  /*   # Display                       */
+  /************************************/
 
-  &--eye-bullets {
-    @mixin eyeBullets;
-  }
-
-  &--no-bullets {
-    list-style: none;
-  }
-
+  /*
+  Inline
+  Display the list items inline with a slight margin BETWEEN the items.
+  */
   &--inline {
     li {
       display: inline-block;
@@ -58,6 +59,40 @@
       }
     }
   }
+
+  /**************************************/
+  /*   # Bullets                       */
+  /************************************/
+
+  /*
+  No Bullets
+  Remove the list style
+  */
+  &--no-bullets {
+    list-style: none;
+  }
+
+  /*
+  Edge Bullets
+  Create slightly larger bullets that center over the edge of the wrapper.
+  Requires the use of children li::before.
+  See edgeBullets mixin for customizing options*/
+  &--edge-bullets {
+    @mixin edgeBullets;
+  }
+
+  /*
+  Eye Bullets
+  Stylize list with large eye-like circular bullets.
+  Requires the use of children li::before and li::after.
+  See eyeBullets mixin for customizing options
+  */
+  &--eye-bullets {
+    @mixin eyeBullets;
+  }
+
+
+
 
   /**************************************/
   /*   # Sub List                      */

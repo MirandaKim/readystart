@@ -88,7 +88,11 @@
   See eyeBullets mixin for customizing options
   */
   &--eye-bullets {
-    @mixin eyeBullets;
+    @mixin eyeBullets 28px, -5px, -6px;
+
+    @mixin atSmall {
+      @mixin eyeBullets;
+    }
   }
 
 

@@ -49,6 +49,7 @@ $screen_pancake_width: $screen_small;
 
 $site_margin_outer_sides: 2.5rem;
 $site_margin_body_sides: 5rem;
+$site_margin_body_sides_tiny: 2em;
 
 /**************************************/
 /*   # Colors                        */

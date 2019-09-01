@@ -25,12 +25,14 @@
   /*position*/
   position: relative;
 
-  /*structure*/
-  max-width: 900px;
-  /*spacing*/
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 1rem;
-  padding-bottom: 5rem;
+  @mixin atSmall {
+    /*structure*/
+    max-width: 900px;
+    /*spacing*/
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1rem;
+    padding-bottom: 5rem;
+  }
 
 }

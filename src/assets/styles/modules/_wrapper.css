@@ -51,8 +51,14 @@
   *************/
 
   &--body {
-    margin-left: $site_margin_body_sides;
-    margin-right: $site_margin_body_sides;
+
+    margin-left: $site_margin_body_sides_tiny;
+    margin-right: $site_margin_body_sides_tiny;
+
+    @mixin atSmall {
+      margin-left: $site_margin_body_sides;
+      margin-right: $site_margin_body_sides;
+    }
   }
 
   /**************************************/

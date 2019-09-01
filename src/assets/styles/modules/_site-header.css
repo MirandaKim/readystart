@@ -102,6 +102,19 @@
   /************************************/
 
   &__menu-toggle {
+    /*display*/
+    display: inline-block;
+    /*position*/
+    position: relative;
+    float: right;
+    /*spacing*/
+    padding-top: 20px;
+    padding-bottom: 15px;
+    /*borders*/
+    border-style: none; /*override default button style*/
+    /*colors*/
+    background-color: transparent;  /*override default button style*/
+
 
     .--menu-visible & {}
 
@@ -109,13 +122,22 @@
     *  > At Small   *
     ****************/
 
-    @mixin atSmall {}
+    /*Hide for screens larger than tiny
+    (menu will be displayed without need for a toggle at that point)*/
+    @mixin atSmall {
+      /*display*/
+      display: none;
+    }
 
     /*****************
     *  > Has No JS   *
     *****************/
 
-    .has-no-js & {}
+    /*If there is no JS, then don't display the menu toggle--since it won't work anyway*/
+    .has-no-js & {
+      /*display*/
+      display: none;
+    }
 
   }
 

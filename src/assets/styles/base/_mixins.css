@@ -182,8 +182,10 @@ but with about as little height as you can get
 /*   # List Styles                   */
 /************************************/
 
+/*********************
+*   > Edge Bullets   *
+*********************/
 /*
-Edge Bullets:
 Center the bullets over the edge of the wrapper.
 Accuracy may very based on any additional styles applied to the ul or li children.
 Style requires li children and the use of the li children's before*/
@@ -215,6 +217,78 @@ Style requires li children and the use of the li children's before*/
       background-color: $color_a;
     }
   }
+}
+
+/********************
+*   > Eye Bullets   *
+********************/
+/*
+Create a larger bullet with outer circle outline and an inner blue circle.
+Accuracy may very based on any additional styles applied t othe ul or li children.
+Style requires li children and the use of the li children's before and after
+bSize: Size of bullet
+leftShift: Amount to shift the bullet horizontally (positive value moves left)
+topShift: Amount to shift the bullet vertically (positive value moves down)
+*/
+
+@define-mixin eyeBullets $bSize: 36px, $leftShift: 40px, $topShift: 23px{
+  /*list style*/
+  list-style: none;
+  /*spacing -- remove ul default left spacing*/
+  margin-block-start: 0;
+  padding-inline-start: 0;
+
+  /*Variables*/
+  $eyeBullet_outerLeft: ($leftShift + $bSize/2) * -1;
+  $eyeBullet_outerTop: $bSize / 2 - $topShift;
+  $eyeBullet_outerBorderWidth: 2px;
+
+  /*List Items*/
+  & > li {
+
+    /*position*/
+    position: relative;
+    /*THE BULLET*/
+    &::before {
+      content: "";
+      /*display*/
+      display: block;
+      /*position*/
+      position: absolute;
+      top: calc($eyeBullet_outerTop);
+      left: calc($eyeBullet_outerLeft);
+      /*structure*/
+      height: $bSize;
+      width: $bSize;
+      /*borders*/
+      border-radius: 50%;
+      border-style: solid;
+      border-width: $eyeBullet_outerBorderWidth;
+      /*colors*/
+      background-color: rgb($color_white);
+      border-color: $color_a;
+
+    }
+
+    &::after {
+      $eyeBullet_gapSize: 6px;
+      content: "";
+      /*display*/
+      display: block;
+      /*position*/
+      position: absolute;
+      top: calc(($eyeBullet_outerTop) + ($eyeBullet_gapSize) + ($eyeBullet_outerBorderWidth));
+      left: calc(($eyeBullet_outerLeft) + ($eyeBullet_gapSize) + ($eyeBullet_outerBorderWidth));
+      /*structure*/
+      height: calc($bSize - 2 * $eyeBullet_gapSize);
+      width: calc($bSize - 2 * $eyeBullet_gapSize);
+      /*borders*/
+      border-radius: 50%;
+      /*colors*/
+      background-color: $color_c;
+    }
+  }
+
 }
 
 /**************************************/

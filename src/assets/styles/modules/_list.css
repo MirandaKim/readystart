@@ -40,6 +40,10 @@
     @mixin edgeBullets;
   }
 
+  &--eye-bullets {
+    @mixin eyeBullets;
+  }
+
   &--no-bullets {
     list-style: none;
   }

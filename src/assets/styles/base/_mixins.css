@@ -228,10 +228,10 @@ Accuracy may very based on any additional styles applied t othe ul or li childre
 Style requires li children and the use of the li children's before and after
 bSize: Size of bullet
 leftShift: Amount to shift the bullet horizontally (positive value moves left)
-topShift: Amount to shift the bullet vertically (positive value moves down)
+topShift: Amount to shift the bullet vertically (positive value moves up)
 */
 
-@define-mixin eyeBullets $bSize: 36px, $leftShift: 40px, $topShift: 23px{
+@define-mixin eyeBullets $bSize: 36px, $leftShift: 0px, $topShift: 0px{
   /*list style*/
   list-style: none;
   /*spacing -- remove ul default left spacing*/
@@ -239,8 +239,12 @@ topShift: Amount to shift the bullet vertically (positive value moves down)
   padding-inline-start: 0;
 
   /*Variables*/
-  $eyeBullet_outerLeft: ($leftShift + $bSize/2) * -1;
+  /* $eyeBullet_outerLeft: ($leftShift + $bSize/2) * -1;
   $eyeBullet_outerTop: $bSize / 2 - $topShift;
+  $eyeBullet_outerBorderWidth: 2px; */
+
+  $eyeBullet_outerLeft: (40px + $leftShift + $bSize/2) * -1;
+  $eyeBullet_outerTop: $bSize / 2 - 23px - $topShift;
   $eyeBullet_outerBorderWidth: 2px;
 
   /*List Items*/

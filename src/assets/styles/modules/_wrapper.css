@@ -77,11 +77,13 @@
 
   &--flex {
     display: flex;
+    flex-wrap: wrap;
   }
 
   &--space-even {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
   }
 
   &--f-align-center { /*requires flex class/property*/

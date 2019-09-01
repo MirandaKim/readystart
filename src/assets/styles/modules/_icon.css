@@ -1,0 +1,43 @@
+
+/****************************************************/
+/*                                                 */
+/*   Icon CSS (_icon.css)                         */
+/*                                               */
+/************************************************/
+/*
+
+  Style options for icons
+
+  *************
+  * Contents: *
+  *************
+
+  # Icon
+  # On Hover
+
+*/
+
+/**************************************/
+/*   # Icon                          */
+/************************************/
+
+.icon {
+
+
+/**************************************/
+/*   # On Hover                      */
+/************************************/
+
+  .has-no-touch &--scale-on-hover {
+    transform: scale(.9);
+    transition-property: transform;
+    transition-duration: 200ms;
+    transition-timing-function: linear;
+
+    &:hover {
+      transform: scale(1);
+    }
+
+  }
+
+}

@@ -30,6 +30,10 @@
   padding-top: 2rem;
   padding-bottom: 2rem;
 
+  &:focus { /*removes the outline from around the style section when scrolled to with navigation*/
+    outline-style: none;
+  }
+
   @mixin atMedium {
     /*spacing*/
     padding-top: 5rem;

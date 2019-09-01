@@ -22,8 +22,29 @@
 /************************************/
 
 .site-footer {
-
+  /*mixins*/
+  @mixin clearFix;
+  /*spacing*/
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  /*typography*/
+  text-align: center;
   /*colors*/
   background-color: $color_a;
+
+  @mixin atSmall {
+    /*typography*/
+    text-align: left;
+  }
+
+
+  &__social-links {
+    text-align: center;
+
+    @mixin atSmall {
+      text-align: right;
+    }
+  }
+
 
 }

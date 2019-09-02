@@ -40,10 +40,15 @@
   **************/
 
   &--outer {
-    margin-left: $site_margin_outer_sides;
-    margin-right: $site_margin_outer_sides;
+    margin-left: $site_margin_outer_sides_tiny;
+    margin-right: $site_margin_outer_sides_tiny;
     margin-top: 0;
     margin-bottom: 0;
+
+    @mixin atSmall{
+      margin-left: $site_margin_outer_sides;
+      margin-right: $site_margin_outer_sides;
+    }
   }
 
   /*************

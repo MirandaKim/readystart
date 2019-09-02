@@ -63,7 +63,12 @@
     /*position*/
     position: relative;
     /*spacing*/
-    padding-top: 1.3rem;
+    padding-top: .7rem;
+
+    @mixin atSmall {
+      /*spacing*/
+      padding-top: 1.3rem;
+    }
   }
 
   /**************************************/
@@ -129,6 +134,7 @@
     /*position*/
     position: relative;
     float: right;
+    right: -1rem;
     /*spacing*/
     padding-top: 20px;
     padding-bottom: 15px;

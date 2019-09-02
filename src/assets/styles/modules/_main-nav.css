@@ -141,22 +141,22 @@
   .main-nav {
 
       /*mixins*/
-      @mixin popout 0, 10px;
+      @mixin popout $color_a, 5px, 10px;
       /*structure*/
-      /* height: calc(100% - 2rem); */
-      width: 100%;
+      height: auto;
+      /* width: 100%; */
+      width: auto;
       /*spacing*/
       padding-top: 2rem;
       /*borders*/
       border-left-style: none;
       border-top-style: none;
       /*colors*/
-      background-color: $color_e;
+      background-color: $color_d;
+
 
       &::after{
-        /*colors*/
-        background-color: rgb($color_darkYellow);
-        border-color: rgb($color_darkYellow);
+
       }
 
       /******************

@@ -101,7 +101,7 @@
       left: calc(-70vw - 12px);
       /*structure*/
       height: 100vh;
-      width: 70vw;
+      width: 14rem;
 
       transition-property: left;
       transition-duration: 800ms;

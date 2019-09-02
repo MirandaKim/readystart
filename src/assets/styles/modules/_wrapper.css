@@ -116,6 +116,12 @@
     margin-right: auto;
   }
 
+  &--center-text-for-tiny {
+    @mixin forTiny {
+      text-align: center;
+    }
+  }
+
   /**************************************/
   /*   # Spacing                       */
   /************************************/

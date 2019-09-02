@@ -83,7 +83,7 @@
     *   > Hover   *
     **************/
 
-    &:hover {
+    .has-no-touch &:hover {
       /*colors*/
       color: rgb($color_mediumBlue);
       /*after*/

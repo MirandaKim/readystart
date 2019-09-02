@@ -14,7 +14,16 @@
   *************
 
   # Main Navigation
+  # Link Group
   # Link
+    > Before
+    > At Small
+    > Active Link
+  # For Tiny Device
+    > Main Nav
+    > Link Group
+    > Link
+    > Active Link
 
 */
 
@@ -24,6 +33,9 @@
 
 .main-nav {
 
+  /*position*/
+  position: relative;
+
   /**************************************/
   /*   # Link Group                    */
   /************************************/
@@ -32,6 +44,15 @@
     /*spacing*/
     margin-top: 1.3rem;
     margin-bottom: 1.1rem;
+  }
+
+  &__link-group > li {
+    display: inline-block;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
 
@@ -47,6 +68,10 @@
     font-size: 1rem;
     /*colors*/
     color: $color_a;
+
+    /**************
+    *  > Before   *
+    **************/
 
     &::before {
       content: "";
@@ -66,28 +91,29 @@
       /*colors*/
       background-color: $color_a;
 
-      opacity: 0;
-
-      /*transition*/
-      transition-property: opacity;
-      transition-duration: 500ms;
     }
 
-    &:hover {
+    /****************
+    *  > At Small   *
+    ****************/
 
+    @mixin atSmall {
+      .has-no-touch &:hover {
+        @mixin shadowBold $color_darkBlue;
+        color: $color_a;
 
-      @mixin shadowBold $color_darkBlue;
-      color: $color_a;
-
-      &:not(.active)::before {
-        opacity: 1;
-        display: block;
-        background-color: rgba($color_white);
+        &:not(.active)::before {
+          display: block;
+          background-color: rgba($color_white);
+        }
       }
     }
 
-    &.active {
+    /*******************
+    *  > Active Link   *
+    *******************/
 
+    &.active {
 
       @mixin shadowBold $color_darkBlue;
 
@@ -99,5 +125,123 @@
     }
 
   }
+
+}
+
+/**************************************/
+/*   # For Tiny Device               */
+/************************************/
+
+@mixin forTiny {
+
+  /****************
+  *  > Main Nav   *
+  ****************/
+
+  .main-nav {
+
+      /*mixins*/
+      @mixin popout 0, 10px;
+      /*structure*/
+      /* height: calc(100% - 2rem); */
+      width: 100%;
+      /*spacing*/
+      padding-top: 2rem;
+      /*borders*/
+      border-left-style: none;
+      border-top-style: none;
+      /*colors*/
+      background-color: $color_e;
+
+      &::after{
+        /*colors*/
+        background-color: rgb($color_darkYellow);
+        border-color: rgb($color_darkYellow);
+      }
+
+      /******************
+      *  > Link Group   *
+      ******************/
+
+      &__link-group {
+        /*spacing*/
+        margin-top: 0;
+        margin-block-start: 0;
+        padding-inline-start: 0;
+      }
+
+      &__link-group > li {
+        display: block;
+        margin-bottom: 3rem;
+
+        @mixin forLandscape {
+          margin-bottom: 2rem;
+        }
+      }
+
+      /************
+      *  > Link   *
+      ************/
+
+      &__link {
+
+        /*for mouse devices at tiny sizes*/
+        .has-no-touch &:hover {
+          color: rgb($color_darkBlue);
+          font-weight: 900;
+        }
+
+        /*position*/
+        z-index: 1;
+        /*typography*/
+        font-size: 1.2rem;
+        /*spacing*/
+        padding-top: 9px;
+        padding-bottom: 9px;
+        padding-left: 25px;
+        padding-right: 25px;
+
+        &:hover::before {
+          display: none;
+        }
+
+        /*******************
+        *  > Active Link   *
+        *******************/
+
+        /*mixin*/
+        &.active {
+          /*mixins*/
+          @mixin popout rgb($color_white), 5px, 5px;
+          /*position*/
+          left: -2px; /*compensate for border width*/
+          /*spacing*/
+          padding-top: 9px;
+          padding-bottom: 9px;
+          padding-left: 25px;
+          padding-right: 25px;
+          /*typography*/
+          font-weight: 300;
+          /*colors*/
+          background-color: transparent;
+
+          &::after {
+            /*position*/
+            z-index: -1;
+            position: absolute;
+            /*colors*/
+            border-color: rgb($color_white);
+          }
+
+          &::before {
+            display: none;
+          }
+        }
+
+
+      }
+
+    }
+
 
 }

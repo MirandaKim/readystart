@@ -83,7 +83,7 @@ a {
   /*colors*/
   color: $color_text_link;
 
-  &:hover {
+  .has-no-touch &:hover {
     color: $color_text_link_hover;
   }
 }

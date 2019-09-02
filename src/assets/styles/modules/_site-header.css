@@ -74,25 +74,47 @@
 
     /*display*/
     display: inline-block;
+    /*position*/
+    z-index: 100;
     position: relative;
     float: right;
 
 
-    .--menu-visible &{}
+    .--menu-visible & {
+
+    }
 
 
     /****************
-    *  > At Small   *
+    *  > For Tiny   *
     ****************/
 
-    @mixin atSmall {}
+    @mixin forTiny {
+      /*position*/
+      position: fixed;
+      top: 0;
+      left: calc(-70vw - 12px);
+      /*structure*/
+      height: 100vh;
+      width: 70vw;
+
+      transition-property: left;
+      transition-duration: 800ms;
+
+      .--menu-visible & {
+        left: 0;
+      }
+    }
 
 
     /*****************
     *  > Has No JS   *
     *****************/
 
-    .has-no-js & {}
+    .has-no-js & {
+
+      display: none;
+    }
 
 
   }

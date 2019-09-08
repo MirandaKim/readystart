@@ -176,5 +176,10 @@
     margin-bottom: .5rem;
   }
 
+  &--padding-right-at-small {
+    @mixin atSmall {
+      padding-right: 5rem;
+    }
+  }
 
 }

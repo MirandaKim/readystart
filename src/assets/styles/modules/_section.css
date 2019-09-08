@@ -1,7 +1,7 @@
 
 /****************************************************/
 /*                                                 */
-/*   Section CSS (_main-nav.css)                  */
+/*   Section CSS (_section.css)                   */
 /*                                               */
 /************************************************/
 /*
@@ -15,6 +15,7 @@
   *************
 
   # Section
+  # Spacing
 
 */
 
@@ -23,7 +24,8 @@
 /************************************/
 
 .section {
-
+  /*position*/
+  position: relative;
   /*structure*/
   min-height: 50vh;
   /*spacing*/
@@ -34,10 +36,23 @@
     outline-style: none;
   }
 
-  @mixin atMedium {
-    /*spacing*/
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+  /**************************************/
+  /*   # Spacing                       */
+  /************************************/
+
+  &--no-top-padding {
+    padding-top: 0;
+  }
+
+  /**************************************/
+  /*   # Home - Section                */
+  /************************************/
+
+  #home &__content {
+    @mixin atSmall {
+      position: relative;
+      top: 9rem;
+    }
   }
 
 }

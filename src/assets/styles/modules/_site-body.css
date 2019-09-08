@@ -24,6 +24,8 @@
 .site-body {
   /*position*/
   position: relative;
+  /*overflow*/
+  overflow: hidden;
 
   @mixin atSmall {
     /*structure*/

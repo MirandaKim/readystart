@@ -1,0 +1,139 @@
+
+/****************************************************/
+/*                                                 */
+/*   Line CSS (_line.css)                         */
+/*                                               */
+/************************************************/
+/*
+
+  - Decorative lines
+  - Customize lines by adding mulitple style modifier classes
+  - By default: lines are vertical, left side of parent, and 100% of parent's height.
+
+  *************
+  * Contents: *
+  *************
+
+  # Variables
+  # Mixins
+  # Line
+  # Orientation
+  # Position
+  # Length
+  # Decoration
+
+*/
+
+/**************************************/
+/*   # Variables                     */
+/************************************/
+
+$line_defaultThickness: 2px;
+
+/**************************************/
+/*   # Mixins                        */
+/************************************/
+
+
+@define-mixin pseudoBall $size: 12px, $color: $color_a {
+  content: "";
+  /*display*/
+  display: block;
+  /*position*/
+  position: absolute;
+  left: calc($size * -.5 + $line_defaultThickness/2);
+  /*structure*/
+  height: $size;
+  width: $size;
+  /*borders*/
+  border-radius: 50%;
+  /*colors*/
+  background-color: $color;
+}
+
+/**************************************/
+/*   # Line                          */
+/************************************/
+
+.line {
+  /*position*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*structure*/
+  height: 100%;
+  width: $line_defaultThickness;
+  /*color*/
+  background-color: $color_a;
+
+  /**************************************/
+  /*   # Orientation                   */
+  /************************************/
+
+  &--vert {}
+
+  &--horiz {
+    height: $line_defaultThickness;
+    width: 100%;
+  }
+
+  /**************************************/
+  /*   # Position                      */
+  /************************************/
+
+  &--centered {
+    left: calc(50% - $line_defaultThickness/2);
+  }
+
+  &--hang-right {
+    left: auto;
+    right: 0;
+  }
+
+  &--from-bottom{
+     top: auto;
+     bottom: 0;
+  }
+
+  /**************************************/
+  /*   # Length                        */
+  /************************************/
+
+  &--extend {
+    height: 150%;
+  }
+
+  &--short {
+    height: 75%;
+  }
+
+  /**************************************/
+  /*   # Decoration                    */
+  /************************************/
+
+  &--ball-ends {
+    &::before, &::after {
+      @mixin pseudoBall;
+    }
+    &::before {
+      top: -1px;
+    }
+    &::after {
+      bottom: -1px;
+    }
+  }
+
+  &--ball-top {
+    &::before {
+      @mixin pseudoBall;
+      top: -1px;
+    }
+  }
+
+  &--ball-bottom {
+    &::after {
+      @mixin pseudoBall;
+      bottom: -1px;
+    }
+  }
+}

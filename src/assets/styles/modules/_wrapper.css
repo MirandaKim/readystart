@@ -17,6 +17,7 @@
   # Types
     > Outer
     > Body
+    > Decor
   # Display
     > Flex
   # Sizing
@@ -63,6 +64,45 @@
     @mixin atSmall {
       margin-left: $site_margin_body_sides;
       margin-right: $site_margin_body_sides;
+    }
+  }
+
+
+  /**************
+  *   > Decor   *
+  **************/
+  /*Wrapper for decorative items*/
+
+  &--decor {
+    /*variables*/
+    $wrapper_artMargin: 2.5rem;
+    $wrapper_artMargin_narrow: 10rem;
+
+    /*position*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    /*structure*/
+    width: 100%;
+    height: 100%;
+
+    @mixin atSmall {
+      width: calc(100% - $wrapper_artMargin * 2.5);
+      /*spacing*/
+      margin-left: $wrapper_artMargin;
+    }
+
+    @mixin atMedium {
+      width: calc(100% - $wrapper_artMargin * 4);
+      /*spacing*/
+      margin-left: $wrapper_artMargin;
+    }
+
+    &--narrow {
+      /*structure*/
+      width: calc(100% - $wrapper_artMargin_narrow * 2);
+      /*spacing*/
+      margin-left: $wrapper_artMargin_narrow;
     }
   }
 
@@ -114,6 +154,12 @@
   &--center {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  &--center-vert {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   &--center-text-for-tiny {

@@ -12,9 +12,30 @@
   * Contents: *
   *************
 
+  # Display
   # Text
+  # Stylize
+  # Flex
 
 */
+
+/**************************************/
+/*   # Display                       */
+/************************************/
+
+.hide-at-small {
+  visibility: visible;
+  @mixin atSmall {
+    visibility: hidden;
+  }
+}
+
+.hide-for-tiny {
+  visibility: visible;
+  @mixin forTiny {
+    visibility: hidden;
+  }
+}
 
 /**************************************/
 /*   # Text                          */

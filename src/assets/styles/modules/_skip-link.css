@@ -1,0 +1,59 @@
+
+/****************************************************/
+/*                                                 */
+/*   Skip Link CSS (_skip-link.css)               */
+/*                                               */
+/************************************************/
+/*
+
+  Link used to skip content.
+  This link is not visible till in focus as it's intended to be reached via tabbing through content.
+
+
+  *************
+  * Contents: *
+  *************
+
+  # Skip Link
+    > Focus
+
+*/
+
+/**************************************/
+/*   # Variables                     */
+/************************************/
+
+.skip-link {
+  /*display*/
+  display: block;
+  /*position*/
+  z-index: 1000;
+  position: absolute;
+  top: 4rem;
+  /*spacing*/
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  /*borders*/
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  /*colors*/
+  border-color: $color_a;
+  background-color: $color_b;
+  color: $color_a;
+  /*transform*/
+  transform: translateX(calc(-100% - $site_margin_outer_sides));
+  /*transition*/
+  transition-property: transform;
+  transition-duration: 800ms;
+
+  /*************
+  *  > Focus   *
+  *************/
+
+  &:focus {
+    transform: translateX(calc($site_margin_outer_sides * -1));
+  }
+}

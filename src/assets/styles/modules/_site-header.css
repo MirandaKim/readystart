@@ -83,7 +83,7 @@
     /*position*/
     z-index: 100;
     position: relative;
-    /* float: right; */
+    float: right;
     /*spacing*/
     margin-left: auto;
     margin-right: auto;
@@ -101,6 +101,8 @@
     @mixin forTiny {
       /*oveflow*/
       overflow: hidden;
+      /*position*/
+      float: auto;
       /*structure*/
       height: auto;
       max-height: 0;

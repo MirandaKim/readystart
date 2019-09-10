@@ -1,4 +1,216 @@
+
+/****************************************************/
+/*                                                 */
+/*   Circle CSS (_circle.css)                     */
+/*                                               */
+/************************************************/
+/*
+
+  - Decorative circle elements
+  - Customize circles by adding mulitple style modifier classes
+
+  *************
+  * Contents: *
+  *************
+
+  # Variables
+  # Circle
+  # With Ring
+    > North West
+    > North East
+    > South West
+    > South East
+    > East
+    > West
+  # Sizes
+  # Position
+
+*/
+
+/**************************************/
+/*   # Variables                     */
+/************************************/
+
+$withRing_defaultSize: 40px;
+
+/**************************************/
+/*   # Circle                        */
+/************************************/
+
 .circle {
 
-  
+  /*position*/
+  position: absolute;
+  left: -10px;
+  /*structure*/
+  height: 20px;
+  width: 20px;
+  /*borders*/
+  border-radius: 50%;
+  /*colors*/
+  background-color: $color_a;
+
+  /**************************************/
+  /*   # With Ring                     */
+  /************************************/
+
+  &--with-ring {
+    /*variables*/
+
+    /*position*/
+    left: 0;
+    transform: translate(-50%, -50%);
+    /* left: calc($cd_defaultSize / -2); */
+    /*structure*/
+    height: $withRing_defaultSize;
+    width: $withRing_defaultSize;
+    /*colors*/
+    background-color: $color_e;
+
+    &::after {
+      content: "";
+      /*display*/
+      display: block;
+      /*position*/
+      position: absolute;
+      /*structure*/
+      height: 100%;
+      width: 100%;
+      /*borders*/
+      border-radius: 50%;
+      border-style: solid;
+      border-width: 2px;
+      /*colors*/
+      border-color: $color_a;
+    }
+
+    /******************
+    *  > North West   *
+    ******************/
+
+    &--nw {
+      &::after {
+        /*position*/
+        transform: translate(-15%, -15%);
+      }
+    }
+
+    /******************
+    *  > North East   *
+    ******************/
+
+    &--ne {
+      &::after {
+        /*position*/
+        transform: translate(15%, -15%);
+      }
+    }
+
+    /******************
+    *  > South West   *
+    ******************/
+
+    &--sw {
+      &::after {
+        /*position*/
+        transform: translate(-15%, 15%);
+      }
+    }
+
+    /******************
+    *  > South East   *
+    ******************/
+    &--se {
+      &::after {
+        /*position*/
+        transform: translate(15%, 15%);
+      }
+    }
+
+    /************
+    *  > East   *
+    ************/
+
+    &--e {
+      &::after {
+        /*position*/
+        top: -2px;
+        transform: translateX(10%);
+      }
+    }
+
+    /************
+    *  > West   *
+    ************/
+
+    &--w {
+      &::after {
+        /*position*/
+        top: -2px;
+        transform: translateX(-20%);
+
+      }
+    }
+  }
+
+  /**************************************/
+  /*   # Sizes                         */
+  /************************************/
+
+
+  &--xsmall {
+    /*structure*/
+    height: 20px;
+    width: 20px;
+  }
+
+  &--small {
+    /*structure*/
+    height: 40px;
+    width: 40px;
+  }
+
+  &--medium {
+    /*structure*/
+    height: 60px;
+    width: 60px;
+  }
+
+  &--large {
+    /*structure*/
+    height: 80px;
+    width: 80px;
+  }
+
+  &--xlarge {
+    /*structure*/
+    height: 100px;
+    width: 100px;
+  }
+
+  /**************************************/
+  /*   # Position                      */
+  /************************************/
+
+  &--hang-right {
+    /*position*/
+    left: auto;
+    right: 0;
+    /*transform*/
+    transform: translate(50%, -50%);
+  }
+
+  &--from-bottom{
+    /*position*/
+    bottom: 16%;
+  }
+
+  &--centered {
+    /*position*/
+    top: 50%;
+    /*transform*/
+    transform: translate(50%, -50%);
+  }
+
+
 }

@@ -35,7 +35,7 @@ $line_defaultThickness: 2px;
 /************************************/
 
 
-@define-mixin pseudoBall $size: 12px, $color: $color_a {
+@define-mixin pseudoBall $size: 16px, $color: $color_a {
   content: "";
   /*display*/
   display: block;

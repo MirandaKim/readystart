@@ -28,6 +28,13 @@
 */
 
 /**************************************/
+/*   # Variables                     */
+/************************************/
+
+$mn_activeLinkBulletSize: 12px;
+
+
+/**************************************/
 /*   # Main Navigation               */
 /************************************/
 
@@ -50,8 +57,12 @@
     display: inline-block;
     margin-left: 1rem;
     margin-right: 1rem;
-    &:last-child {
-      margin-right: 0;
+
+
+    @mixin atSmall {
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 
@@ -82,10 +93,9 @@
       position: absolute;
       left: calc(50% - 6px);
       bottom: -25px;
-      /* transform: translateX(55%); */
       /*structure*/
-      height: 12px;
-      width: 12px;
+      height: $mn_activeLinkBulletSize;
+      width: $mn_activeLinkBulletSize;
       /*borders*/
       border-radius: 50%;
       /*colors*/
@@ -140,24 +150,14 @@
 
   .main-nav {
 
-      /*mixins*/
-      @mixin popout $color_a, 5px, 10px;
       /*structure*/
       height: auto;
       /* width: 100%; */
       width: auto;
       /*spacing*/
-      padding-top: 2rem;
-      /*borders*/
-      border-left-style: none;
-      border-top-style: none;
-      /*colors*/
-      background-color: $color_d;
-
-
-      &::after{
-
-      }
+      padding-top: 3rem;
+      /*typography*/
+      text-align: center;
 
       /******************
       *  > Link Group   *
@@ -171,7 +171,9 @@
       }
 
       &__link-group > li {
+        /*display*/
         display: block;
+        /*spacing*/
         margin-bottom: 3rem;
 
         @mixin forLandscape {
@@ -201,9 +203,9 @@
         padding-left: 25px;
         padding-right: 25px;
 
-        &:hover::before {
+        /* &:hover::before {
           display: none;
-        }
+        } */
 
         /*******************
         *  > Active Link   *
@@ -211,30 +213,36 @@
 
         /*mixin*/
         &.active {
-          /*mixins*/
-          @mixin popout rgb($color_white), 5px, 5px;
-          /*position*/
-          left: -2px; /*compensate for border width*/
-          /*spacing*/
-          padding-top: 9px;
-          padding-bottom: 9px;
-          padding-left: 25px;
-          padding-right: 25px;
-          /*typography*/
-          font-weight: 300;
-          /*colors*/
-          background-color: transparent;
-
-          &::after {
-            /*position*/
-            z-index: -1;
-            position: absolute;
-            /*colors*/
-            border-color: rgb($color_white);
-          }
 
           &::before {
-            display: none;
+            /*position*/
+            left: auto;
+            right: 100%;
+            top: calc(50% + 1px);
+            /*structure*/
+            width: 50vw;
+            height: 2px;
+            /*borders*/
+            border-radius: initial;
+          }
+
+          &::after {
+            content: "";
+            /*display*/
+            display: inline-block;
+            /*position*/
+            position: absolute;
+            right: auto;
+            left: 100%;
+            top: calc(50% + 1px);
+            /*structure*/
+            width: 50vw;
+            height: 2px;
+            /*borders*/
+            border-radius: initial;
+            /*colors*/
+            background-color: $color_a;
+
           }
         }
 

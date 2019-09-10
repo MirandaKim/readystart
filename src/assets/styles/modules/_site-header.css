@@ -40,6 +40,7 @@
   z-index: 5000;
   /*structure*/
   width: 100%;
+  max-width: 100vw;
   /*spacing*/
   padding: 0;
   margin: 0;
@@ -78,11 +79,14 @@
   &__menu-wrapper {
 
     /*display*/
-    display: inline-block;
+    display: block;
     /*position*/
     z-index: 100;
     position: relative;
-    float: right;
+    /* float: right; */
+    /*spacing*/
+    margin-left: auto;
+    margin-right: auto;
 
 
     .--menu-visible & {
@@ -95,19 +99,19 @@
     ****************/
 
     @mixin forTiny {
-      /*position*/
-      position: fixed;
-      top: 0;
-      left: calc(-70vw - 12px);
+      /*oveflow*/
+      overflow: hidden;
       /*structure*/
-      height: 100vh;
-      width: 14rem;
-
-      transition-property: left;
-      transition-duration: 800ms;
+      height: auto;
+      max-height: 0;
+      width: 100%;
+      /*transition*/
+      transition-property: max-height;
+      transition-duration: 1000ms;
 
       .--menu-visible & {
-        left: 0;
+        /* left: 0; */
+        max-height: 100vh;
       }
     }
 

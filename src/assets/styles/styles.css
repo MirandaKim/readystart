@@ -55,6 +55,7 @@ If this was done by mistake, check ~/.trashed for your original files.*/
 @import './modules/_paragraph';
 @import './modules/_column';
 @import './modules/_notecard';
+@import "./modules/_image";
 @import './modules/_icon';
 @import './modules/_line';
 @import './modules/_circle';
@@ -69,4 +70,5 @@ If this was done by mistake, check ~/.trashed for your original files.*/
 @import './modules/_logo';
 @import './modules/_section';
 @import './modules/_site-footer';
+@import './modules/_avatar';
 @import './modules/_skip-link';

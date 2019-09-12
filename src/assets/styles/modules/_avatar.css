@@ -1,0 +1,229 @@
+
+/****************************************************/
+/*                                                 */
+/*   Avatar CSS (_avatar.css)                     */
+/*                                               */
+/************************************************/
+/*
+
+  - Avatar image and decorative elements
+  - The avatar is designed to change in size and position based on the screen size
+
+  *************
+  * Contents: *
+  *************
+
+  # Avatar
+  # Circles
+    > Wrapper
+    > Cropper
+    > Circle
+  # Line
+  # Image
+
+*/
+
+/**************************************/
+/*   # Avatar                        */
+/************************************/
+
+.avatar {
+  /*posotion*/
+  position: relative;
+  left: 0;
+  /*structure*/
+  width: 250px;
+  height: 400px;
+  min-height: 85vh;
+  /*spacing*/
+  margin-left: auto;
+  margin-right: auto;
+
+
+  @mixin atSmall {
+    /*position*/
+    left: auto;
+    right: 3rem;
+    /*structure*/
+    height: 600px;
+    width: 300px;
+    min-height: auto;
+    /*spacing*/
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  @mixin atMedium {
+    /*structure*/
+    width: 365px;
+  }
+
+  /**************************************/
+  /*   # Circles                       */
+  /************************************/
+
+
+  /***************
+  *  > Wrapper   *
+  ***************/
+
+  &__circle-wrapper {
+    /*position*/
+    position: absolute;
+    top: 6rem;
+    left: calc(50% - 105px);
+    /*structure*/
+    height: 100%;
+
+    @mixin atSmall {
+      /*position*/
+      left: 0;
+    }
+  }
+
+  /***************
+  *  > Cropper   *
+  ***************/
+
+
+  &__circle-cropper {
+    /*position*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*structure*/
+    height: 220px;
+    width: 220px;
+    /*overflow*/
+    overflow: hidden;
+
+    @mixin atSmall {
+      /*structure*/
+      height: 300px;
+      width: 300px;
+    }
+
+    @mixin atMedium {
+      /*structure*/
+      height: 400px;
+      width: 400px;
+    }
+
+    /*Left side of circle*/
+    &--left {
+      /*position*/
+      left: 0;
+      /*structure*/
+      width: 105px;
+      /*transition*/
+      transition-property: width;
+      transition-duration: 500ms;
+
+      .avatar__circle {
+        /*colors*/
+        background-color: rgba($color_white, .5);
+      }
+
+      @mixin atSmall {
+        /*structure*/
+        width: 150px;
+      }
+
+    }
+
+    /*Right side of circle*/
+    &--right{
+    }
+  }
+
+  /**************
+  *  > Circle   *
+  **************/
+
+  &__circle {
+    /*pososition*/
+    top: 15px;
+    left: 15px;
+    /*structure*/
+    height: 200px;
+    width: 200px;
+    /*transform*/
+    transform: none;
+
+    &::after {
+      transform: translate(-10px, -10px);
+    }
+
+    @mixin atSmall {
+      /*structure*/
+      height: 280px;
+      width: 280px;
+    }
+
+    @mixin atMedium {
+      /*structure*/
+      height: 350px;
+      width: 350px;
+
+      &::after {
+        transform: translate(-15px, -15px);
+      }
+    }
+
+
+  }
+
+  /**************************************/
+  /*   # Line                          */
+  /************************************/
+
+  &__line {
+    /*position*/
+    position: absolute;
+    left: 125px;
+    /*structure*/
+    height: calc(100% - 12px);
+    /*transition*/
+    transition-property: left;
+    transition-duration: 500ms;
+
+    @mixin atSmall {
+      /*position*/
+      left: 150px;
+      /*structure*/
+      height: 120%;
+    }
+  }
+
+  /**************************************/
+  /*   # Image                         */
+  /************************************/
+
+  &__image {
+    /*position*/
+    position: relative;
+    left: -4.25rem;
+    /* top: 25%; */
+    margin-top: 2rem;
+    /*transform*/
+    transform: scale(.4);
+
+    @mixin atSmall {
+      /*position*/
+      left: -3rem;
+      /*spacing*/
+      margin-top: 4.8rem;
+      /*transform*/
+      transform: scale(.55);
+    }
+
+    @mixin atMedium {
+      /*position*/
+      left: -1rem;
+      /*spacing*/
+      margin-top: 6rem;
+      /*transform*/
+      transform: scale(.7);
+    }
+  }
+}

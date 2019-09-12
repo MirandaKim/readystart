@@ -55,6 +55,11 @@
   /*   # Spacing                       */
   /************************************/
 
+  &--no-top-space {
+    padding-top: 0;
+    margin-top: 0;
+  }
+
   &--no-top-padding {
     padding-top: 0;
   }

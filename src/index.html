@@ -8,6 +8,8 @@
   <meta name="description" content="My name is Miranda Hoover and I'm a web developer. Learn a little about me, my skill sets, and how to contact me.">
   <meta name="keywords" content="web developer, front-end developer, back-end developer, full-stack developer, mobile-friendly, responsive web design, object-oriented programming, HTML, CSS, JavaScript, portfolio">
   <meta name="author" content="Miranda Hoover">
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
   <!-- end favidon data -->
   <!-- inject:css -->
   <link rel="stylesheet" href="assets/styles/styles.css">
@@ -53,16 +55,21 @@
     <article class="main-content wrapper">
 
       <section class="section section--no-top-space" id="home">
-        <div class="wrapper--decor wrapper--decor--narrow">
-          <div class="line line--ball-bottom hide-for-tiny"></div>
-          <div class="line line--centered line--short line--ball-bottom hide-at-small"></div>
-        </div>
         <div class="wrapper wrapper--body column__group column__group--not-for-tiny">
           <div class="column column--7-12">
-            <div class="image image--featured">
-                <div class="test" style="height: 6rem; width: 2px; background-color: grey; position: relative; margin-left: auto; margin-right: auto;"></div>
-              <div class="test" style="height: 19rem; width: 19rem; background-color: grey; border-radius: 50%; position: relative; margin-left: auto; margin-right: auto;"></div>
-              <div class="test" style="height: 19rem; width: 2px; background-color: grey; position: relative; margin-left: auto; margin-right: auto;"></div>
+
+            <div class="avatar">
+
+              <div class="avatar__circle-wrapper">
+                <div class="avatar__circle-cropper avatar__circle-cropper--right">
+                    <div class="avatar__circle circle circle--with-ring circle--with-ring"></div>
+                </div>
+                <div class="avatar__circle-cropper avatar__circle-cropper--left">
+                    <div class="avatar__circle circle circle--with-ring circle--with-ring"></div>
+                </div>
+              </div>
+              <div class="avatar__line line line--ball-ends"></div>
+              <img class="avatar__image" src="assets/images/avatar.svg">
             </div>
           </div>
           <div class="column column--5-12">

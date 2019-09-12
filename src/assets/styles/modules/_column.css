@@ -15,6 +15,7 @@
   *************
 
   # Column Group
+    > Modify Group
   # Column
     > Modifiers
   # For Tiny
@@ -30,9 +31,12 @@
   position: relative;
 
   .column {
-    display: inline-block;
     vertical-align: top;
   }
+
+  /*********************
+  *   > Modify Group   *
+  *********************/
 
   &--center .column {
     vertical-align: middle;
@@ -44,6 +48,10 @@
 /************************************/
 
 .column {
+  /*display*/
+  display: inline-block;
+  /*position*/
+  position: relative;
 
   /*Loop through to create 12 column sizes 1-12, 2-12, 3-12... 12-12, requires postcss-for*/
   @for $i from 1 to 12 {

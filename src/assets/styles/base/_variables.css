@@ -69,8 +69,10 @@ $color_black: 0, 0, 0;
 /*BLUES*/
 $color_darkerBlue: 51, 61, 81; /*nearly black*/
 $color_darkBlue: 71, 81, 101;
-$color_mediumBlue: 152, 170, 191;
-$color_lightBlue: 202, 220, 241;
+$color_mediumBlue: 132, 170, 191;
+$color_brightBlue: 11, 180, 227;
+/* $color_lightBlue: 202, 220, 241; */
+$color_lightBlue: 180, 220, 241;
 
 /*YELLOWS*/
 $color_darkYellow: 255, 212, 105;
